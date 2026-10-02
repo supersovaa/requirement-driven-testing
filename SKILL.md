@@ -82,5 +82,5 @@ After closing the gap, use the resulting tests as regression protection for the 
 Use the repository's established test framework, fixture structure, naming, placement, and traceability conventions.
 Do not introduce a new documentation or mapping format when the repository already has one that can express the required relationship.
 
-This skill owns deriving and restoring executable test evidence from settled requirements and design.
+This skill owns deriving, preserving, and restoring executable test evidence from settled requirements and design.
 Requirement definition, design definition, implementation planning, implementation execution, and implementation review remain with their owning workflows.
