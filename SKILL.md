@@ -36,7 +36,8 @@ Do not treat incidental execution of a path as sufficient coverage unless the te
 
 When changing tests during behavior-preserving refactoring, preserve the requirement and design guarantees that the existing tests intentionally established.
 
-Tests may change structure with the implementation, but their established evidence must not be weakened unless the underlying settled requirement or design has changed.
+Tests may change structure with the implementation.
+An established guarantee may be weakened or removed only when its authoritative settled requirement or design contract has changed so that the guarantee no longer applies.
 
 ## Establish tests before target implementation
 
