@@ -32,6 +32,12 @@ Before adding a test, inspect existing tests for the guarantee being established
 When an existing test already provides sufficient evidence for the requirement or design contract, use that evidence instead of adding a duplicate test.
 Do not treat incidental execution of a path as sufficient coverage unless the test actually establishes the relevant guarantee.
 
+## Preserve established test evidence
+
+When changing tests during behavior-preserving refactoring, preserve the requirement and design guarantees that the existing tests intentionally established.
+
+Tests may change structure with the implementation, but their established evidence must not be weakened unless the underlying settled requirement or design has changed.
+
 ## Establish tests before target implementation
 
 Establish missing executable tests before the target implementation when the guarantee can be meaningfully tested.
