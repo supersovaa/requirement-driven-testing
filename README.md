@@ -1,6 +1,6 @@
 # requirement-driven-testing
 
-A lightweight skill for deriving executable test evidence from settled requirements and design.
+A lightweight skill for deriving and preserving executable test evidence from settled requirements and design.
 
 ## Core idea
 
