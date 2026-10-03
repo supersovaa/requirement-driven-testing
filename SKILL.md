@@ -1,6 +1,6 @@
 ---
 name: requirement-driven-testing
-description: Derive and preserve executable test evidence from settled requirements and design, establish missing test evidence before target implementation when meaningfully testable, distinguish requirement behavior from design contracts, and prioritize closing test gaps found in implementation review.
+description: Derive and preserve executable test evidence from settled requirements, design, and plan-level testing decisions, establish missing test evidence before target implementation when meaningfully testable, distinguish requirement behavior from design contracts, and prioritize closing test gaps found in implementation review.
 ---
 
 # Requirement-driven testing
@@ -8,6 +8,12 @@ description: Derive and preserve executable test evidence from settled requireme
 Use this skill when implementing or changing behavior governed by settled requirements or design, when behavior-preserving refactoring changes tests that carry established evidence, and when implementation review finds missing or insufficient tests.
 
 Treat tests as executable evidence of established requirements and design rather than as a source for inventing them.
+
+## Consume plan-level testing decisions
+
+When an implementation plan records settled testing decisions, use them with requirements and design as inputs to executable test derivation.
+Apply plan-level validation scope, boundary coverage, combinations, regression scope, validation methods, and test-support constraints when constructing concrete cases.
+Derive the concrete executable cases during testing so the test suite realizes both canonical behavior and the implementation boundary's settled validation intent.
 
 ## Keep requirement and design tests distinct
 
