@@ -1,6 +1,6 @@
 # requirement-driven-testing
 
-A lightweight skill for deriving executable test evidence from settled requirements and design.
+A lightweight skill for deriving and preserving executable test evidence from settled requirements and design.
 
 ## Core idea
 
@@ -9,6 +9,7 @@ Treat tests as executable evidence of already-settled requirements and design.
 - Keep requirement tests and design tests distinct by their authoritative source.
 - Establish missing executable tests before the target implementation when the guarantee can be meaningfully tested.
 - Reuse existing tests when they already provide sufficient evidence.
+- Preserve established test evidence when tests change during behavior-preserving refactoring.
 - Do not manufacture a failing test when existing behavior already satisfies the requirement.
 - Distinguish missing test support from missing production dependencies.
 - Let settled requirements take precedence over design, tests, and implementation; return conflicting design to its owning workflow for alignment.
