@@ -12,21 +12,21 @@ Plan-linked required-test definitions are upstream planning artifacts that defin
 
 ## Consume plan-linked required-test definitions
 
-When a selected implementation plan links required tests, read every linked required test together with the relevant requirements, design, and settled plan-level testing decisions before implementing executable tests.
-Treat the linked required-test definitions as the planning-time definition of the completion cases for that plan.
+When a selected implementation plan links required-test definitions, read every linked definition together with the relevant requirements, design, and settled plan-level testing decisions before implementing executable tests.
+Treat those required-test definitions as the planning-time definition of the completion cases for that plan.
 Requirements and design remain authoritative for guarantees and expected behavior.
 
-Implement executable tests that realize the linked required-test definitions within the selected plan boundary.
+Implement executable tests that realize those required-test definitions within the selected plan boundary.
 Use plan-level validation scope, boundary coverage, combinations, regression scope, validation methods, and test-support constraints when choosing executable structure and coverage.
 Do not independently add a new completion case to a plan-governed implementation.
 
-When executable-test work reveals that a linked required test is missing, ambiguous, inconsistent with canon, or insufficient to express a completion obligation, return that issue to the planning workflow instead of silently redefining or extending the required-test-definition set.
-When no plan-linked required-test-definition set governs the work, derive executable evidence directly from settled requirements and design under the rules below.
+When executable-test work reveals that a required completion case is missing from the linked definitions, or that a linked definition is ambiguous, inconsistent with canon, or insufficient to express its completion obligation, return that issue to the planning workflow instead of silently redefining or extending the required-test contract.
+When no plan-linked required-test definitions govern the work, derive executable evidence directly from settled requirements and design under the rules below.
 
 ## Keep requirement and design tests distinct
 
-For plan-governed work, implement requirement-backed and design-backed tests from the linked required-test-definition set while preserving their canonical provenance.
-When no linked required-test-definition set governs the work, derive requirement tests from settled requirements and design tests from settled design.
+For plan-governed work, implement requirement-backed and design-backed tests from the linked required-test definitions while preserving their canonical provenance.
+When no linked required-test definitions govern the work, derive requirement tests from settled requirements and design tests from settled design.
 
 Use requirement tests to verify externally meaningful behavior, outcomes, constraints, and other requirement-level guarantees.
 Use design tests when APIs, invariants, type guarantees, responsibility boundaries, or other design contracts need executable verification.
@@ -60,7 +60,7 @@ Defer test creation only when a required production dependency prevents the scen
 
 For a new or changed requirement-level behavior:
 
-1. When a plan-linked required-test-definition set governs the work, select the applicable linked required test and its canonical requirement source. Otherwise, identify the smallest observable scenario that demonstrates the requirement.
+1. When plan-linked required-test definitions govern the work, select the applicable definition and its canonical requirement source. Otherwise, identify the smallest observable scenario that demonstrates the requirement.
 2. Add or select the executable test that realizes that case.
 3. Run it before the target implementation.
 4. If the required behavior is not already satisfied, confirm that the test fails because that behavior is missing.
@@ -87,8 +87,8 @@ Return the ambiguity to the workflow that owns the requirement.
 When implementation review finds that an established requirement or design contract lacks sufficient executable test evidence, close that executable-evidence gap before ordinary cleanup or refactoring, except for prerequisites needed to build or run the tests.
 
 For plan-governed work, first distinguish an executable-evidence gap from a missing completion case.
-When the linked required-test-definition set already contains the completion case, add or strengthen executable evidence here.
-When the completion case itself is absent from the linked required-test-definition set, return it to the planning workflow before adding it as a plan completion obligation.
+When the linked required-test definitions already contain the completion case, add or strengthen executable evidence here.
+When the completion case itself is absent from the linked required-test definitions, return it to the planning workflow before adding it as a plan completion obligation.
 
 When the implementation is incorrect and the applicable completion case is already established, first add or strengthen a test that demonstrates the missing guarantee, then fix the implementation.
 
