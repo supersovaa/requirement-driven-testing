@@ -83,9 +83,13 @@ Return the ambiguity to the workflow that owns the requirement.
 
 ## Prioritize review-discovered test gaps
 
-When implementation review finds that an established requirement or design contract lacks sufficient test evidence, close that test gap before ordinary cleanup or refactoring, except for prerequisites needed to build or run the tests.
+When implementation review finds that an established requirement or design contract lacks sufficient executable test evidence, close that executable-evidence gap before ordinary cleanup or refactoring, except for prerequisites needed to build or run the tests.
 
-When the implementation is incorrect, first add or strengthen a test that demonstrates the missing guarantee, then fix the implementation.
+For plan-governed work, first distinguish an executable-evidence gap from a missing completion case.
+When the linked required-test set already contains the completion case, add or strengthen executable evidence here.
+When the completion case itself is absent from the linked required-test set, return it to the planning workflow before adding it as a plan completion obligation.
+
+When the implementation is incorrect and the applicable completion case is already established, first add or strengthen a test that demonstrates the missing guarantee, then fix the implementation.
 
 When the implementation is already correct and only the evidence is missing, a newly added review-remediation test may pass on its first run.
 
