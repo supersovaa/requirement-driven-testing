@@ -1,6 +1,6 @@
 ---
 name: requirement-driven-testing
-description: Derive and preserve executable test evidence from settled requirements and design, establish missing test evidence before target implementation when meaningfully testable, distinguish requirement behavior from design contracts, and prioritize closing test gaps found in implementation review.
+description: Derive and preserve executable test evidence from settled requirements and design, shaped by applicable plan-level testing decisions, establish missing test evidence before target implementation when meaningfully testable, distinguish requirement behavior from design contracts, and prioritize closing test gaps found in implementation review.
 ---
 
 # Requirement-driven testing
@@ -8,6 +8,13 @@ description: Derive and preserve executable test evidence from settled requireme
 Use this skill when implementing or changing behavior governed by settled requirements or design, when behavior-preserving refactoring changes tests that carry established evidence, and when implementation review finds missing or insufficient tests.
 
 Treat tests as executable evidence of established requirements and design rather than as a source for inventing them.
+
+## Consume plan-level testing decisions
+
+When an implementation plan records settled testing decisions, use them with requirements and design as inputs to executable test derivation.
+Requirements and design establish the guarantees and expected behavior; plan-level testing decisions shape how those guarantees are evidenced within the current implementation boundary.
+Apply plan-level validation scope, boundary coverage, combinations, regression scope, validation methods, and test-support constraints when constructing concrete cases.
+Derive the concrete executable cases during testing so the test suite realizes both canonical behavior and the implementation boundary's settled validation intent.
 
 ## Keep requirement and design tests distinct
 
@@ -83,5 +90,5 @@ After closing the gap, use the resulting tests as regression protection for the 
 Use the repository's established test framework, fixture structure, naming, placement, and traceability conventions.
 Do not introduce a new documentation or mapping format when the repository already has one that can express the required relationship.
 
-This skill owns deriving, preserving, and restoring executable test evidence from settled requirements and design.
+This skill owns deriving, preserving, and restoring executable test evidence from settled requirements and design, shaped by applicable plan-level testing decisions.
 Requirement definition, design definition, implementation planning, implementation execution, and implementation review remain with their owning workflows.
