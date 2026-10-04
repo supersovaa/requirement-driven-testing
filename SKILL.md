@@ -11,7 +11,8 @@ Treat tests as executable evidence of established requirements and design rather
 
 ## Consume plan testing inputs
 
-When an implementation plan links required test definitions, treat them as the complete set of test cases required to determine completion of that plan and implement executable tests that establish those cases.
+When work is governed by an implementation plan, treat its linked required test definitions as the complete set of test cases required to determine completion of that plan and implement executable tests that establish those cases.
+If the governing plan does not link required test definitions, return that issue to the planning workflow.
 Requirements and design remain authoritative for expected behavior.
 When the plan records settled testing decisions, apply its validation scope, boundary coverage, combinations, regression scope, validation methods, and test-support constraints when implementing the executable tests.
 If testing reveals that a test case required to determine plan completion is missing, or that its expected outcome is not determined, return that issue to the planning workflow rather than inventing a new completion requirement.
@@ -19,7 +20,7 @@ If testing reveals that a test case required to determine plan completion is mis
 ## Keep requirement and design tests distinct
 
 For plan-governed work, implement requirement-backed and design-backed cases from the plan-linked required test definitions.
-When no plan-linked required test definitions govern the work, derive requirement tests from settled requirements and design tests from settled design.
+When no implementation plan governs the work, derive requirement tests from settled requirements and design tests from settled design.
 
 Use requirement tests to verify externally meaningful behavior, outcomes, constraints, and other requirement-level guarantees.
 Use design tests when APIs, invariants, type guarantees, responsibility boundaries, or other design contracts need executable verification.
