@@ -15,7 +15,7 @@ When work is governed by an implementation plan, treat its linked required test 
 If the governing plan does not link required test definitions, return that issue to the planning workflow.
 Use the expected outcomes recorded in the linked definitions. Resolve requirement/design conflicts under the rules below first; otherwise, when a linked definition conflicts with applicable settled requirements or design, return it to the planning workflow.
 When the plan records settled testing decisions, apply its validation scope, boundary coverage, combinations, regression scope, validation methods, and test-support constraints when implementing the executable tests.
-If testing reveals that a test case required to determine plan completion is missing, or that its expected outcome is not determined, return that issue to the planning workflow rather than inventing a new completion requirement.
+If testing reveals that a test case required to determine plan completion is missing, or that a linked definition omits its expected outcome, return that issue to the planning workflow rather than inventing a new completion requirement. When applicable requirements or design do not determine the expected outcome, return that ambiguity to its owning workflow under the rules below.
 
 ## Keep requirement and design tests distinct
 
