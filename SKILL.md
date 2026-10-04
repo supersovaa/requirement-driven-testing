@@ -1,6 +1,6 @@
 ---
 name: requirement-driven-testing
-description: Derive and preserve executable test evidence from settled requirements and design, consuming applicable plan-linked test definitions, establish missing test evidence before target implementation when meaningfully testable, distinguish requirement behavior from design contracts, and prioritize closing test gaps found in implementation review.
+description: Derive and preserve executable test evidence from settled requirements and design, implementing plan-linked required test definitions and applying applicable plan-level testing decisions, establish missing test evidence before target implementation when meaningfully testable, distinguish requirement behavior from design contracts, and prioritize closing test gaps found in implementation review.
 ---
 
 # Requirement-driven testing
@@ -9,11 +9,12 @@ Use this skill when implementing or changing behavior governed by settled requir
 
 Treat tests as executable evidence of established requirements and design rather than as a source for inventing them.
 
-## Consume plan-linked test definitions
+## Consume plan testing inputs
 
-When an implementation plan links required test definitions, use them with requirements and design as planned validation cases for executable test implementation.
-The linked definitions are not executable tests and do not limit additional executable cases that are needed to establish settled requirements or design.
-When the surrounding implementation workflow records validation in `result.md`, include material additional validation there.
+When an implementation plan links required test definitions, treat them as the complete set of test cases required to determine completion of that plan and implement executable tests that establish those cases.
+Requirements and design remain authoritative for expected behavior.
+When the plan records settled testing decisions, apply its validation scope, boundary coverage, combinations, regression scope, validation methods, and test-support constraints when implementing the executable tests.
+If testing reveals that a test case required to determine plan completion is missing, or that its expected outcome is not determined, return that issue to the planning workflow rather than inventing a new completion requirement.
 
 ## Keep requirement and design tests distinct
 
@@ -52,7 +53,7 @@ Defer test creation only when a required production dependency prevents the scen
 
 For a new or changed requirement-level behavior:
 
-1. Use an applicable plan-linked case when one exists; otherwise identify the smallest observable scenario that demonstrates the requirement.
+1. When plan-linked required test definitions govern the work, use the applicable linked case; otherwise identify the smallest observable scenario that demonstrates the requirement.
 2. Add or select the executable test that establishes that case.
 3. Run it before the target implementation.
 4. If the required behavior is not already satisfied, confirm that the test fails because that behavior is missing.
@@ -89,5 +90,5 @@ After closing the gap, use the resulting tests as regression protection for the 
 Use the repository's established test framework, fixture structure, naming, placement, and traceability conventions.
 Do not introduce a new documentation or mapping format when the repository already has one that can express the required relationship.
 
-This skill owns deriving, preserving, and restoring executable test evidence from settled requirements and design, consuming applicable plan-linked test definitions.
+This skill owns deriving, preserving, and restoring executable test evidence from settled requirements and design, implementing plan-linked required test definitions and applying applicable plan-level testing decisions.
 Requirement definition, design definition, implementation planning, implementation execution, and implementation review remain with their owning workflows.
