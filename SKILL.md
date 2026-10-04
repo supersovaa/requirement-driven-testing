@@ -18,11 +18,11 @@ If testing reveals that a test case required to determine plan completion is mis
 
 ## Keep requirement and design tests distinct
 
-Derive requirement tests from settled requirements.
-Use them to verify externally meaningful behavior, outcomes, constraints, and other requirement-level guarantees.
+For plan-governed work, implement requirement-backed and design-backed cases from the plan-linked required test definitions.
+When no plan-linked required test definitions govern the work, derive requirement tests from settled requirements and design tests from settled design.
 
-Derive design tests from settled design.
-Use them when APIs, invariants, type guarantees, responsibility boundaries, or other design contracts need executable verification.
+Use requirement tests to verify externally meaningful behavior, outcomes, constraints, and other requirement-level guarantees.
+Use design tests when APIs, invariants, type guarantees, responsibility boundaries, or other design contracts need executable verification.
 
 Requirements take precedence over design, tests, and implementation.
 When settled design conflicts with a settled requirement, do not preserve or test the conflicting design.
