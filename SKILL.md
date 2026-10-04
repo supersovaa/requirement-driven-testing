@@ -11,10 +11,9 @@ Treat tests as executable evidence of established requirements and design rather
 
 ## Consume plan-linked test definitions
 
-When an implementation plan links required test definitions, use them with requirements and design as inputs to executable test implementation.
-Treat the linked definitions as the completion cases for that plan; they are not executable tests themselves.
-Do not add a new plan completion case that is absent from the linked definitions; return such a gap or an ambiguous definition to the planning workflow.
-When no linked test definitions govern the work, derive executable cases directly from settled requirements and design as usual.
+When an implementation plan links required test definitions, use them with requirements and design as planned validation cases for executable test implementation.
+The linked definitions are not executable tests and do not limit additional executable cases that are needed to establish settled requirements or design.
+When additional material validation is established during implementation, record it in the surrounding workflow's result when that workflow records validation outcomes.
 
 ## Keep requirement and design tests distinct
 
@@ -53,7 +52,7 @@ Defer test creation only when a required production dependency prevents the scen
 
 For a new or changed requirement-level behavior:
 
-1. When plan-linked test definitions govern the work, use the applicable linked case; otherwise identify the smallest observable scenario that demonstrates the requirement.
+1. Use an applicable plan-linked case when one exists; otherwise identify the smallest observable scenario that demonstrates the requirement.
 2. Add or select the executable test that establishes that case.
 3. Run it before the target implementation.
 4. If the required behavior is not already satisfied, confirm that the test fails because that behavior is missing.
