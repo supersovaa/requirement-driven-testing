@@ -13,7 +13,7 @@ Treat tests as executable evidence of established requirements and design rather
 
 When work is governed by an implementation plan, treat its linked required test definitions as the complete set of test cases required to determine completion of that plan and implement executable tests that establish those cases.
 If the governing plan does not link required test definitions, return that issue to the planning workflow.
-Use the expected outcomes recorded in the linked definitions; settled requirements and design remain authoritative if they conflict.
+Use the expected outcomes recorded in the linked definitions. When a linked definition conflicts with applicable settled requirements or design, return it to the planning workflow; resolve requirement/design conflicts under the rules below.
 When the plan records settled testing decisions, apply its validation scope, boundary coverage, combinations, regression scope, validation methods, and test-support constraints when implementing the executable tests.
 If testing reveals that a test case required to determine plan completion is missing, or that its expected outcome is not determined, return that issue to the planning workflow rather than inventing a new completion requirement.
 
