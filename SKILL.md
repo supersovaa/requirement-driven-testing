@@ -53,7 +53,7 @@ Defer test creation only when a required production dependency prevents the scen
 
 For a new or changed requirement-level behavior:
 
-1. Identify the smallest observable scenario that demonstrates the requirement.
+1. When plan-linked test definitions govern the work, use the applicable linked case; otherwise identify the smallest observable scenario that demonstrates the requirement.
 2. Add or select the test that establishes that scenario.
 3. Run it before the target implementation.
 4. If the required behavior is not already satisfied, confirm that the test fails because that behavior is missing.
