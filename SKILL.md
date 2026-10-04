@@ -57,10 +57,10 @@ An established guarantee may be weakened or removed only when its authoritative 
 Establish missing executable tests before the target implementation when the guarantee can be meaningfully tested.
 Defer test creation only when a required production dependency prevents the scenario from executing meaningfully, or when the guarantee is not reasonably executable as a test.
 
-For a new or changed requirement-level behavior governed by a plan-linked required test:
+For a new or changed requirement-level behavior:
 
-1. Select the linked required test and its canonical requirement source.
-2. Add or select the executable test that realizes that required test.
+1. When a plan-linked required-test set governs the work, select the applicable linked required test and its canonical requirement source. Otherwise, identify the smallest observable scenario that demonstrates the requirement.
+2. Add or select the executable test that realizes that case.
 3. Run it before the target implementation.
 4. If the required behavior is not already satisfied, confirm that the test fails because that behavior is missing.
 5. If the test already passes, verify that the existing behavior genuinely satisfies the requirement instead of manufacturing a failure.
