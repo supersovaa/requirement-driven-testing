@@ -1,6 +1,6 @@
 ---
 name: requirement-driven-testing
-description: Derive and preserve executable test evidence from settled requirements, design, and plan-level testing decisions, establish missing test evidence before target implementation when meaningfully testable, distinguish requirement behavior from design contracts, and prioritize closing test gaps found in implementation review.
+description: Derive and preserve executable test evidence from settled requirements and design, shaped by applicable plan-level testing decisions, establish missing test evidence before target implementation when meaningfully testable, distinguish requirement behavior from design contracts, and prioritize closing test gaps found in implementation review.
 ---
 
 # Requirement-driven testing
