@@ -13,7 +13,7 @@ Treat tests as executable evidence of established requirements and design rather
 
 When work is governed by an implementation plan, treat its linked required test definitions as the complete set of test cases required to determine completion of that plan and implement executable tests that establish those cases.
 If the governing plan does not link required test definitions, return that issue to the planning workflow.
-Requirements and design remain authoritative for expected behavior.
+Use the expected outcomes recorded in the linked definitions; settled requirements and design remain authoritative if they conflict.
 When the plan records settled testing decisions, apply its validation scope, boundary coverage, combinations, regression scope, validation methods, and test-support constraints when implementing the executable tests.
 If testing reveals that a test case required to determine plan completion is missing, or that its expected outcome is not determined, return that issue to the planning workflow rather than inventing a new completion requirement.
 
@@ -54,7 +54,7 @@ Defer test creation only when a required production dependency prevents the scen
 
 For a new or changed requirement-level behavior:
 
-1. When plan-linked required test definitions govern the work, use the applicable linked case; otherwise identify the smallest observable scenario that demonstrates the requirement.
+1. When work is plan-governed, use the applicable linked case; otherwise identify the smallest observable scenario that demonstrates the requirement.
 2. Add or select the executable test that establishes that case.
 3. Run it before the target implementation.
 4. If the required behavior is not already satisfied, confirm that the test fails because that behavior is missing.
@@ -81,7 +81,7 @@ Return the ambiguity to the workflow that owns the requirement.
 When implementation review finds that an established requirement or design contract lacks sufficient test evidence, close that test gap before ordinary cleanup or refactoring, except for prerequisites needed to build or run the tests.
 For plan-governed work, close the gap here when it is executable evidence for an already-linked required case; when the gap is a completion-required case missing from the plan-linked definitions, return it to planning.
 
-When the implementation is incorrect and the applicable completion case is already established, first add or strengthen a test that demonstrates the missing guarantee, then fix the implementation.
+When the implementation is incorrect, first add or strengthen a test that demonstrates the missing guarantee, then fix the implementation; for plan-governed work, do this only when the applicable completion case is already established in the plan-linked definitions.
 
 When the implementation is already correct and only the evidence is missing, a newly added review-remediation test may pass on its first run.
 
