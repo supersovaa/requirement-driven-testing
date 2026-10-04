@@ -13,7 +13,7 @@ Treat tests as executable evidence of established requirements and design rather
 
 When an implementation plan links required test definitions, use them with requirements and design as planned validation cases for executable test implementation.
 The linked definitions are not executable tests and do not limit additional executable cases that are needed to establish settled requirements or design.
-When additional material validation is established during implementation, record it in the surrounding workflow's result when that workflow records validation outcomes.
+When the surrounding implementation workflow records validation in `result.md`, include material additional validation there.
 
 ## Keep requirement and design tests distinct
 
