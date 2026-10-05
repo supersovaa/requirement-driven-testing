@@ -5,7 +5,7 @@ description: Establish executable test evidence from settled requirements and de
 
 # Requirement-Driven Testing
 
-Use this skill when implementing or changing behavior governed by settled requirements or design.
+Use this skill when establishing executable test evidence during implementation for behavior governed by settled requirements or design, including evidence-only additions for behavior that is already correct.
 
 Treat tests as executable evidence of established requirements and design rather than as a source for inventing them.
 
