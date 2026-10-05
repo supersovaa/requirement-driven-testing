@@ -11,14 +11,13 @@ The workflow separates ordinary test establishment, preservation during behavior
 
 ## Skills
 
-- `requirement-driven-testing` — establish or reuse executable test evidence during implementation, treating plan-linked durable required tests as completion-required while allowing provisional validation to remain non-durable.
+- `requirement-driven-testing` — establish or reuse executable test evidence during implementation, including plan-linked required test cases and pre-implementation test execution.
 - `test-evidence-preservation` — preserve still-applicable requirement and design guarantees when behavior-preserving refactoring changes tests.
 - `test-gap-remediation` — close missing or insufficient executable evidence reported by implementation review.
 
 ## Responsibility boundaries
 
-For plan-governed work, implementation planning owns the complete set of test cases and expected outcomes required for durable guarantees.
-Provisional or intermediate results may use temporary tests or other sufficient validation without automatically becoming completion-required regression guarantees.
+For plan-governed work, implementation planning owns the complete set of test cases and expected outcomes required for plan completion.
 Requirement and design workflows own the authoritative behavior and contracts.
 Implementation review owns identifying review findings.
 These testing skills establish, preserve, or restore executable evidence without taking ownership of those upstream decisions.
