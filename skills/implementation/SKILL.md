@@ -69,5 +69,6 @@ Use an existing documentation or mapping format when it can express the required
 
 This skill owns executable test establishment during implementation.
 Behavior-preserving evidence retention belongs to `test-evidence-preservation`.
+Use `test-evidence-review` when a focused review of test-evidence sufficiency is needed.
 Review-discovered evidence repair belongs to `test-gap-remediation`.
-Requirement definition, design definition, implementation planning, implementation execution, and implementation review remain with their owning workflows.
+Requirement definition, design definition, implementation planning, implementation execution, and general implementation review remain with their owning workflows.

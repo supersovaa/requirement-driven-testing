@@ -39,4 +39,5 @@ Use the repository's established test framework, fixture structure, naming, plac
 
 This skill owns preserving executable test evidence during behavior-preserving refactoring.
 Establishing new executable evidence during implementation belongs to `requirement-driven-testing`.
+Use `test-evidence-review` when a focused review of test-evidence sufficiency is needed.
 Review-discovered evidence repair belongs to `test-gap-remediation`.
