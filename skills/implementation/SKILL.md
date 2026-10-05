@@ -1,6 +1,6 @@
 ---
 name: requirement-driven-testing
-description: Establish executable test evidence from settled requirements and design during implementation, treating plan-linked durable required tests as completion-required while allowing provisional results to use non-durable validation, reusing sufficient existing coverage, and creating meaningful tests before target implementation.
+description: Establish executable test evidence from settled requirements and design during implementation, consuming plan-linked required test definitions when present, reusing sufficient existing coverage, and creating meaningful tests before target implementation.
 ---
 
 # Requirement-Driven Testing
@@ -11,17 +11,12 @@ Treat tests as executable evidence of established requirements and design rather
 
 ## Consume settled testing inputs
 
-When work is governed by an implementation plan, distinguish durable required test definitions from validation used only for provisional or intermediate results.
-Use the plan's linked durable required test definitions as the completion-required test cases.
-Implement executable tests for those durable cases and use the expected outcomes recorded by the linked definitions.
-
-Do not infer that every behavior owned by a completable plan requires retained executable evidence.
-For provisional or intermediate responsibilities, tests may be used when useful for current validation, but they are not completion-required regression evidence unless the plan establishes the corresponding behavior or contract as a durable guarantee.
+When work is governed by an implementation plan, use its linked required test definitions as the completion-required test cases.
+Implement executable tests for those cases and use the expected outcomes recorded by the linked definitions.
 
 Apply applicable plan-level decisions for validation scope, boundary coverage, combinations, regression scope, validation methods, and test-support constraints.
 
-Return missing durable required definitions, missing completion-required durable cases, or missing expected outcomes to the planning workflow.
-Do not return a provisional validation gap to planning solely because no durable required test definition exists.
+Return missing linked definitions, missing completion-required cases, or missing expected outcomes to the planning workflow.
 When a linked definition conflicts with applicable settled requirements or design, apply the authority rules below and return any remaining definition mismatch to the planning workflow.
 When settled requirements or design do not determine an expected outcome, return that ambiguity to its owning workflow.
 
@@ -60,13 +55,6 @@ For each required case:
 Apply the same ordering to design tests when an established design contract needs direct executable evidence.
 
 A pre-implementation failure is useful only when the missing target behavior or contract causes it.
-
-## Validate provisional work without manufacturing durability
-
-When this skill is used to help validate a provisional or intermediate result, a temporary or non-retained test may be appropriate.
-Using such a test does not make the tested behavior a durable guarantee.
-Retain or promote it to completion-required regression evidence only when the plan establishes the corresponding guarantee as durable or an applicable repository policy independently requires retained coverage.
-Do not block plan completion solely because provisional validation was not converted into retained regression coverage.
 
 ## Distinguish test support from production dependencies
 
