@@ -15,7 +15,8 @@ Before changing an existing test, identify the requirement or design guarantee i
 Distinguish authoritative guarantees from incidental assertions or implementation details.
 
 Requirements remain authoritative over design, tests, and implementation.
-When an existing test disagrees with a settled requirement, preserve the requirement-level guarantee rather than the test's previous expectation.
+When an existing test disagrees with a settled requirement, treat the conflicting expectation as non-authoritative.
+If aligning the test with the requirement exposes an implementation defect, return that defect to the workflow that owns implementation execution rather than treating the change as behavior-preserving refactoring.
 When settled design disagrees with a settled requirement, return the design issue to the workflow that owns design.
 
 ## Preserve equivalent evidence
