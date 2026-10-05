@@ -24,7 +24,7 @@ Prioritize the test gap before ordinary cleanup or refactoring, except for prere
 
 Apply `requirement-driven-testing` when implementing or strengthening the executable test.
 
-When the implementation is incorrect, first add or strengthen a test that demonstrates the missing guarantee, then fix the implementation.
+When the implementation is incorrect, first add or strengthen a test that demonstrates the missing guarantee, then return the demonstrated defect to the workflow that owns implementation execution.
 When the implementation is already correct and only evidence is missing, the remediation test may pass on its first run.
 
 After the gap is closed, use the resulting test as regression protection for the remaining review fixes.
