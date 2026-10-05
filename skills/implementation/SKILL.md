@@ -17,6 +17,7 @@ Implement executable tests for those cases and use the expected outcomes recorde
 Apply applicable plan-level decisions for validation scope, boundary coverage, combinations, regression scope, validation methods, and test-support constraints.
 
 Return missing linked definitions, missing completion-required cases, or missing expected outcomes to the planning workflow.
+When a linked definition conflicts with applicable settled requirements or design, apply the authority rules below and return any remaining definition mismatch to the planning workflow.
 When settled requirements or design do not determine an expected outcome, return that ambiguity to its owning workflow.
 
 When no implementation plan governs the work, derive requirement tests from settled requirements and design tests from settled design.
@@ -48,8 +49,8 @@ For each required case:
 3. Run it before target implementation.
 4. When the required behavior is missing, confirm that the test fails because of that missing behavior.
 5. When the test already passes, verify that existing behavior genuinely satisfies the requirement instead of manufacturing a failure.
-6. Implement any remaining required behavior.
-7. Run the focused test and relevant regression tests until they pass.
+6. Return any remaining target behavior to the workflow that owns implementation execution.
+7. After the target implementation is updated, run the focused test and relevant regression tests until they pass.
 
 Apply the same ordering to design tests when an established design contract needs direct executable evidence.
 
