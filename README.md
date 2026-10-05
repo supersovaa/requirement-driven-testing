@@ -17,7 +17,7 @@ The workflow separates ordinary test establishment, preservation during behavior
 
 ## Responsibility boundaries
 
-Implementation planning owns the complete set of test cases and expected outcomes required for plan completion.
+For plan-governed work, implementation planning owns the complete set of test cases and expected outcomes required for plan completion.
 Requirement and design workflows own the authoritative behavior and contracts.
 Implementation review owns identifying review findings.
 These testing skills establish, preserve, or restore executable evidence without taking ownership of those upstream decisions.
