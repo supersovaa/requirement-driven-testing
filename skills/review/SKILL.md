@@ -1,11 +1,12 @@
 ---
 name: test-evidence-review
-description: Review whether settled requirements and design contracts have sufficient executable test evidence, identifying evidence gaps without inventing new behavior or repairing the tests.
+description: Provide focused review criteria for whether settled requirements and design contracts have sufficient executable test evidence, identifying evidence gaps without inventing new behavior or repairing the tests.
 ---
 
 # Test Evidence Review
 
-Use this skill when reviewing whether behavior governed by settled requirements or design has sufficient executable test evidence.
+Use this skill when a review needs to judge whether behavior governed by settled requirements or design has sufficient executable test evidence.
+Apply it within the surrounding review workflow's existing scope when another review workflow already governs the work.
 
 Treat requirements and design contracts as authority and tests as evidence of that authority.
 
@@ -43,5 +44,6 @@ Report each test-evidence gap with the established guarantee it concerns and why
 Route an established test-evidence gap to `test-gap-remediation`.
 When sufficient evidence instead exposes incorrect implementation behavior, return that defect to the workflow that owns implementation review or execution.
 
-This skill owns review of executable test-evidence sufficiency.
-It does not define requirements or design, repair tests, implement production behavior, or replace general implementation review.
+This skill provides dedicated criteria for review of executable test-evidence sufficiency.
+The surrounding review workflow retains ownership of its review scope, acceptance decisions, and other findings.
+This skill does not define requirements or design, repair tests, implement production behavior, or replace general implementation review.
