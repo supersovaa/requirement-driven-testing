@@ -12,9 +12,9 @@ Treat requirements and design contracts as authority and tests as evidence of th
 
 ## Establish the review authority
 
-When work is governed by an implementation plan, use its linked required test definitions and expected outcomes as the completion-required review set.
+When work is governed by an implementation plan, use the linked required test definitions and expected outcomes that fall within the current review scope as the applicable review set.
 
-Return missing linked definitions, missing completion-required cases, or missing expected outcomes to the planning workflow.
+Within that scope, return missing linked definitions, missing completion-required cases, or missing expected outcomes to the planning workflow.
 When a linked definition conflicts with applicable settled requirements or design, apply the authority rules below and return any remaining definition mismatch to the planning workflow.
 
 When no implementation plan governs the work, derive the review set from settled requirements and design within the current review scope.
