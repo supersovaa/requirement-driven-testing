@@ -1,11 +1,11 @@
 ---
 name: test-gap-remediation
-description: Close missing or insufficient executable test evidence identified by test-evidence review, strengthening tests before implementation fixes when the missing guarantee is already established.
+description: Close missing or insufficient executable test evidence identified during review, strengthening tests before implementation fixes when the missing guarantee is already established.
 ---
 
 # Test Gap Remediation
 
-Use this skill when test-evidence review finds that an established requirement or design contract lacks sufficient executable test evidence.
+Use this skill when review finds that an established requirement or design contract lacks sufficient executable test evidence.
 
 Treat the review finding as a request to restore established evidence, not as authority to invent a new requirement or design contract.
 
@@ -34,6 +34,6 @@ After the gap is closed, use the resulting test as regression protection for the
 Use the repository's established test framework, fixture structure, naming, placement, and traceability conventions.
 
 This skill owns remediation of review-discovered test-evidence gaps.
-Test-evidence gap identification belongs to `test-evidence-review`.
+Use `test-evidence-review` when a focused review of test-evidence sufficiency is needed.
 General implementation review remains with its reviewing workflow.
 Behavior-preserving evidence retention belongs to `test-evidence-preservation`.
