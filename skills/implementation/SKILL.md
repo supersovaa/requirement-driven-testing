@@ -63,9 +63,9 @@ When the current implementation boundary owns only part of a settled case ground
 Preserve every precondition, interaction, and expected outcome material to the guarantee under test.
 Do not add properties, behaviors, or interactions absent from the real source element when they affect the guarantee under test.
 
-Treat the reduced fixture as executable evidence only for the current implementation boundary.
-It does not satisfy the full source element's settled case.
-When that full case enters completion scope, establish its evidence through the real source element.
+Treat the reduced fixture as executable evidence only for guarantees whose material conditions remain after the reduction.
+Do not use it as evidence for a guarantee that depends on a removed part.
+When such a guarantee enters completion scope, establish its evidence through the real source element.
 
 ## Distinguish test support from production dependencies
 
