@@ -56,11 +56,22 @@ Apply the same ordering to design tests when an established design contract need
 
 A pre-implementation failure is useful only when the missing target behavior or contract causes it.
 
+## Use subtractive fixtures for staged implementation
+
+When the current implementation boundary owns only part of a settled case grounded in a concrete source element and the complete source element is not yet executable, prefer a temporary fixture formed by removing only properties, behaviors, or components that are immaterial to the guarantee under test.
+
+Preserve every precondition, interaction, and expected outcome material to the guarantee under test.
+Do not add properties, behaviors, or interactions absent from the real source element when they affect the guarantee under test.
+
+Treat the reduced fixture as executable evidence only for guarantees whose material conditions remain after the reduction.
+Do not use it as evidence for a guarantee that depends on a removed part.
+When such a guarantee enters completion scope, establish its evidence through the real source element.
+
 ## Distinguish test support from production dependencies
 
 When fixtures, builders, deterministic inputs, or other test-support boundaries prevent a required test from being expressed, establish the minimum test support needed first.
 
-When required production behavior is missing and the scenario cannot execute meaningfully, treat that as an implementation dependency and return it to the workflow that owns planning or execution readiness.
+When the current implementation boundary still cannot execute meaningfully with the allowed test support, treat the missing production behavior as an implementation dependency and return it to the workflow that owns planning or execution readiness.
 
 ## Preserve repository conventions
 
