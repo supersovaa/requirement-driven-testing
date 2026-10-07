@@ -58,13 +58,14 @@ A pre-implementation failure is useful only when the missing target behavior or 
 
 ## Use subtractive fixtures for staged implementation
 
-When the current implementation boundary owns only part of a settled case and the complete source element is not yet executable, prefer a temporary fixture that reduces the real source element to the properties, effects, or components needed by that boundary.
+When the current implementation boundary owns only part of a settled case grounded in a concrete source element and the complete source element is not yet executable, prefer a temporary fixture formed by removing only properties, behaviors, or components that are immaterial to the guarantee under test.
 
 Preserve every precondition, interaction, and expected outcome material to the guarantee under test.
-Do not add properties, effects, interactions, or other behavior absent from the real source element to make the case executable.
+Do not add requirement-relevant properties, behaviors, or interactions absent from the real source element to make the case executable.
 
-Treat the reduced fixture as executable evidence for the current implementation boundary rather than as complete evidence for the source element's full requirement case.
-When the complete source element becomes executable, establish the completion-required evidence through that real element when the governing plan or requirement requires it.
+Treat the reduced fixture as executable evidence only for the current implementation boundary.
+It does not satisfy the full source element's requirement case.
+When that full case enters completion scope, establish its evidence through the real source element.
 
 ## Distinguish test support from production dependencies
 
