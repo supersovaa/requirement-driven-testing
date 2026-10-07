@@ -69,7 +69,7 @@ When such a guarantee enters completion scope, establish its evidence through th
 
 ## Distinguish test support from production dependencies
 
-When fixtures, builders, deterministic inputs, or other test-support boundaries prevent a required test from being expressed, establish the minimum test support permitted by the settled test definitions.
+When fixtures, builders, deterministic inputs, or other test-support boundaries prevent a required test from being expressed, establish the minimum test support needed within any settled test-support constraints.
 
 When the current implementation boundary still cannot execute meaningfully with the allowed test support, treat the missing production behavior as an implementation dependency and return it to the workflow that owns planning or execution readiness.
 
