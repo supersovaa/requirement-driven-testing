@@ -17,7 +17,8 @@ Use the required test cases and expected outcomes settled by `test-evidence-plan
 When an implementation plan governs the work, implement the required test definitions linked to the current plan boundary.
 Apply the settled validation scope, boundary coverage, combinations, regression scope, validation methods, and test-support constraints that govern those definitions.
 
-Return missing required cases, missing expected outcomes, or missing material testing decisions to `test-evidence-planning`.
+Return absent or incomplete settled test definitions to `test-evidence-planning`.
+Treat identification of additional required cases, expected outcomes, or material testing decisions as `test-evidence-planning` work.
 When a settled test definition conflicts with applicable settled requirements or design, apply the authority rules below and return the definition mismatch to `test-evidence-planning`.
 When settled requirements or design do not determine an expected outcome, return that ambiguity to its owning workflow.
 
