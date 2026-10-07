@@ -1,32 +1,41 @@
-# Requirement-Driven Testing Skills
+# Test Evidence Skills
 
-A lightweight four-skill set for treating tests as executable evidence of already-settled requirements and design.
+A lightweight five-skill set for planning, implementing, preserving, reviewing, and repairing executable evidence of already-settled requirements and design.
 
 ## Core idea
 
-Tests establish evidence for requirements and design contracts.
-They do not define those requirements or contracts.
+Requirements and design define the guarantees.
+Test planning defines the executable evidence required to establish those guarantees.
+Executable tests implement that settled evidence contract.
 
-The workflow separates ordinary test establishment, preservation during behavior-preserving refactoring, focused review of evidence sufficiency, and repair of identified evidence gaps.
+The workflow separates test-evidence planning, executable test implementation, preservation during behavior-preserving refactoring, focused review of evidence sufficiency, and repair of identified evidence gaps.
 
 ## Skills
 
-- `requirement-driven-testing` — establish or reuse executable test evidence during implementation, including plan-linked required test cases and pre-implementation test execution.
+- `test-evidence-planning` — define required test cases, expected outcomes, coverage decisions, regression scope, validation methods, and test-support constraints from settled requirements and design.
+- `test-evidence-implementation` — establish or reuse executable test evidence for settled required test definitions, including pre-implementation test execution.
 - `test-evidence-preservation` — preserve still-applicable requirement and design guarantees when behavior-preserving refactoring changes tests.
-- `test-evidence-review` — provide focused review criteria for whether settled requirements and design contracts have sufficient executable test evidence.
+- `test-evidence-review` — judge whether settled required test definitions have sufficient executable test evidence.
 - `test-gap-remediation` — close missing or insufficient executable evidence identified during review.
 
 ## Responsibility boundaries
 
-For plan-governed work, implementation planning owns the complete set of test cases and expected outcomes required for plan completion.
+`test-evidence-planning` owns deciding what test evidence is required.
+`test-evidence-implementation` owns turning those settled definitions into executable tests or reusing existing evidence that already satisfies them.
+
+Implementation planning owns the implementation boundary and completion contract.
+For plan-governed work, required test definitions are bounded by that contract and linked from the implementation plan before execution readiness.
 Requirement and design workflows own the authoritative behavior and contracts.
+
 `test-evidence-review` provides dedicated criteria for judging executable test-evidence sufficiency and may be applied within another review workflow's existing scope.
 The surrounding review workflow continues to own its review scope, acceptance decisions, and findings outside this focused concern.
-These testing skills establish, preserve, review, or restore executable evidence without taking ownership of upstream requirement, design, planning, or general review responsibilities.
+
+These testing skills plan, establish, preserve, review, or restore executable evidence without taking ownership of requirement definition, design definition, implementation execution, or general implementation review.
 
 ## Files
 
-- `skills/implementation/SKILL.md` — `requirement-driven-testing`.
+- `skills/planning/SKILL.md` — `test-evidence-planning`.
+- `skills/implementation/SKILL.md` — `test-evidence-implementation`.
 - `skills/preservation/SKILL.md` — `test-evidence-preservation`.
 - `skills/review/SKILL.md` — `test-evidence-review`.
 - `skills/remediation/SKILL.md` — `test-gap-remediation`.
