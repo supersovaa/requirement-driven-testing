@@ -57,7 +57,7 @@ Keep each definition traceable to the requirement or design guarantee it establi
 Hand the settled required test definitions to `test-evidence-implementation` for executable test establishment.
 
 Use `test-evidence-review` to judge whether the implemented evidence sufficiently establishes the settled definitions.
-Route review-discovered implementation gaps to `test-gap-remediation`.
+Route review-discovered test-evidence gaps to `test-gap-remediation`.
 
 This skill owns test-evidence planning.
 Executable test creation and reuse belong to `test-evidence-implementation`.
