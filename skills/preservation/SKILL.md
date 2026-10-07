@@ -38,6 +38,7 @@ When the authoritative source is ambiguous, return that ambiguity to its owning 
 Use the repository's established test framework, fixture structure, naming, placement, and traceability conventions.
 
 This skill owns preserving executable test evidence during behavior-preserving refactoring.
-Establishing new executable evidence during implementation belongs to `requirement-driven-testing`.
+Establishing new executable evidence during implementation belongs to `test-evidence-implementation`.
 Use `test-evidence-review` when a focused review of test-evidence sufficiency is needed.
 Review-discovered evidence repair belongs to `test-gap-remediation`.
+Test-evidence planning belongs to `test-evidence-planning`.
