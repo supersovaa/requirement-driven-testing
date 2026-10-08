@@ -34,6 +34,9 @@ Use design cases for APIs, invariants, type guarantees, responsibility boundarie
 Keep the definitions about what must be established.
 Leave test framework mechanics, fixture implementation, test decomposition, and assertion structure to test implementation unless a settled constraint requires them.
 
+When planning a temporary test, reference the corresponding complete test definition and derive the temporary test from it.
+Keep the complete test definition as the target evidence rather than defining the temporary test independently.
+
 ## Keep definitions grounded
 
 Derive every required case and expected outcome from settled requirements or design.
