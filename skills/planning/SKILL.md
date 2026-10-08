@@ -34,8 +34,15 @@ Use design cases for APIs, invariants, type guarantees, responsibility boundarie
 Keep the definitions about what must be established.
 Leave test framework mechanics, fixture implementation, test decomposition, and assertion structure to test implementation unless a settled constraint requires them.
 
-When planning a temporary test, reference the corresponding complete test definition and derive the temporary test from it.
-Keep the complete test definition as the target evidence rather than defining the temporary test independently.
+When planning a temporary test, first define the corresponding complete test case and expected outcome, then derive the temporary test from that definition.
+Keep the complete test definition as the target for eventual executable evidence.
+
+For a temporary guarantee, a reduced source element may be used when the removed parts are immaterial to that guarantee.
+For the source element's own completion, plan evidence using its complete form.
+
+When full verification of a complete source element depends on another unfinished element, prefer waiting for that dependency to be completed before treating the source element as complete.
+When waiting is not feasible, plan completion with temporary test evidence using the complete source element and retain the complete test as a pending verification obligation after the dependency is completed.
+Keep temporary evidence distinct from evidence for the complete test.
 
 ## Keep definitions grounded
 
