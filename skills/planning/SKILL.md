@@ -25,7 +25,9 @@ Return design that conflicts with a settled requirement to the workflow that own
 
 For each applicable requirement or design guarantee, define the executable evidence required to establish it.
 
-Specify the required test cases and expected outcomes.
+Specify the required test cases and expected outcomes at the granularity guaranteed by the governing requirements and design for the defined test conditions.
+Fix exact values, counts, positions, sequences, and complete collections when those properties are established by the guarantee and test conditions. Otherwise, constrain expectations to the relevant properties and relationships.
+Consider whether a valid extension preserving the tested guarantee could change an expected outcome. If so, refine the expectation to remain valid under that extension without weakening the guarantee being tested.
 Define validation scope, boundary coverage, combinations, regression scope, validation methods, and test-support constraints when they materially affect whether the evidence is sufficient.
 
 Use requirement cases for externally meaningful behavior, outcomes, constraints, and other requirement-level guarantees.
@@ -51,7 +53,8 @@ Refer to the complete test definition from its owner rather than duplicating it.
 
 ## Keep definitions grounded
 
-Derive every required case and expected outcome from settled requirements or design.
+Derive every required case and expected outcome from settled requirements or design and the specified test conditions.
+Distinguish guaranteed properties from incidental details of the current implementation or test scenario.
 When those sources do not determine an expected outcome or another material testing decision, return the ambiguity to its owning workflow.
 
 Do not use current implementation behavior as authority for an expected outcome.
