@@ -73,9 +73,16 @@ When fixtures, builders, deterministic inputs, or other test-support boundaries 
 
 When the current implementation boundary still cannot execute meaningfully with the allowed test support, treat the missing production behavior as an implementation dependency and return it to the workflow that owns planning or execution readiness.
 
+## Organize test files from the outset
+
+When establishing new tests, organize distinct testing responsibilities or behavior groups into separate files from the start rather than waiting for files to grow.
+Keep cases belonging to one coherent group together. A single file is sufficient for one coherent group; a file per test case is unnecessary.
+Extract shared fixtures and helpers when multiple test files actually need them, within settled test-support constraints.
+
 ## Preserve repository conventions
 
 Use the repository's established test framework, fixture structure, naming, placement, and traceability conventions.
+Follow explicit repository conventions governing test-file grouping; otherwise apply the responsibility-based initial grouping above.
 Use an existing documentation or mapping format when it can express the required relationship.
 
 This skill owns executable test establishment from settled test definitions.
