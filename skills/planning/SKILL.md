@@ -63,7 +63,7 @@ Use the repository's established format for required test definitions when one e
 
 For plan-governed work, record the complete required test definitions in repository-persistent documentation and link them from the implementation plan's completion criteria before execution readiness.
 
-When linking test definitions from implementation plans or editing their planning indexes, use the existing authoritative plan-state and wave-assignment records for current progress information.
+When linking test definitions in implementation plans or editing their planning indexes, use the existing authoritative plan-state and wave-assignment records for current progress information.
 Represent progress counts, completed-plan lists, and wave status by references to or derived views of those records rather than maintaining independent copies in test-planning documents.
 
 For work without an implementation plan, make the settled test definitions explicit in the current work context and persist them when the surrounding workflow requires durable planning state.
