@@ -38,6 +38,14 @@ Inspect existing tests before adding a new test.
 Use an existing test when it already establishes the required case and expected outcome.
 Treat incidental path execution as insufficient when the test does not actually establish that guarantee.
 
+## Apply evidence retention decisions
+
+Use the retention decision from `test-evidence-planning` when choosing which test evidence to keep beyond the current work.
+Maintain sufficient executable evidence for continuing guarantees, reusing or consolidating tests where equivalent evidence already exists.
+Use temporary checks for their defined verification purpose, then retire their artifacts at the planned condition after accounting for any continuing full-evidence or pending-verification obligation.
+A test's success or usefulness in diagnosing a defect does not alone establish a need to retain it.
+Return missing retention or retirement decisions to `test-evidence-planning`.
+
 ## Establish tests before target implementation
 
 When a required case lacks sufficient executable evidence, establish that evidence before implementing the target behavior when the case can be meaningfully exercised.
