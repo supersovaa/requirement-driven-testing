@@ -1,6 +1,6 @@
 ---
 name: test-evidence-planning
-description: Define the test cases, expected outcomes, coverage boundaries, combinations, regression scope, validation methods, and test-support constraints required to establish executable evidence for settled requirements and design.
+description: Define the test cases, expected outcomes, coverage boundaries, combinations, regression scope, evidence retention, validation methods, and test-support constraints required to establish executable evidence for settled requirements and design.
 ---
 
 # Test Evidence Planning
@@ -24,6 +24,8 @@ Return design that conflicts with a settled requirement to the workflow that own
 ## Define required test evidence
 
 For each applicable requirement or design guarantee, define the executable evidence required to establish it.
+Decide separately whether verification is needed for the current work and whether the guarantee requires ongoing executable evidence afterward.
+Base continued evidence on the guarantee's applicability and sufficient equivalent coverage, rather than on whether a test helped diagnose a defect.
 
 Specify the required test cases and expected outcomes at the granularity guaranteed by the governing requirements and design for the defined test conditions.
 Fix exact values, counts, positions, sequences, and complete collections when those properties are established by the guarantee and test conditions. Otherwise, constrain expectations to the relevant properties and relationships.
@@ -36,15 +38,17 @@ Use design cases for APIs, invariants, type guarantees, responsibility boundarie
 Keep the definitions about what must be established.
 Leave test framework mechanics, fixture implementation, test decomposition, and assertion structure to test implementation unless a settled constraint requires them.
 
-When planning a temporary test, first define the corresponding complete test case and expected outcome, then derive the temporary test from that definition.
+When a provisional test stands in for a complete test during staged implementation, first define the corresponding complete test case and expected outcome, then derive the provisional test from that definition.
 Keep the complete test definition as the target for eventual executable evidence.
+Treat temporary diagnostic checks that establish no settled guarantee as bounded verification for the current work, rather than permanent required test cases.
 
-For a temporary guarantee, a reduced source element may be used when the removed parts are immaterial to that guarantee.
+For a guarantee that applies only during an intermediate stage, a reduced source element may be used when the removed parts are immaterial to that guarantee.
 For the source element's own completion, plan evidence using its complete form.
 
 When full verification of a complete source element depends on another unfinished element, prefer waiting for that dependency to be completed before treating the source element as complete.
-When waiting is not feasible, plan completion with temporary test evidence using the complete source element and retain its complete test as a pending verification obligation after the dependency is completed.
-Keep temporary evidence distinct from evidence for the complete test.
+When waiting is not feasible, plan completion with provisional test evidence using the complete source element and retain its complete test as a pending verification obligation after the dependency is completed.
+Keep provisional evidence distinct from evidence for the complete test.
+Define when temporary diagnostic checks end and when provisional tests can be replaced, retaining pending full-verification obligations until sufficient evidence is established.
 
 Keep the complete test definition with the source element and hand the pending verification obligation to implementation planning.
 When the unfinished dependency's completion scope includes the required integration verification, have implementation planning link to that definition from the dependency's completion criteria.
@@ -70,6 +74,7 @@ When linking test definitions in implementation plans or editing their planning 
 
 For work without an implementation plan, make the settled test definitions explicit in the current work context and persist them when the surrounding workflow requires durable planning state.
 
+Record whether planned required evidence is ongoing or provisional and the replacement condition for provisional evidence.
 Keep each definition traceable to the requirement or design guarantee it establishes.
 
 ## Hand off executable work
