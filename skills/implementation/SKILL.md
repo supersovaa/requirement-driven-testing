@@ -12,12 +12,12 @@ Test planning belongs to `test-evidence-planning`.
 
 ## Consume settled test definitions
 
-Use the required test cases, expected outcomes, and evidence retention decisions settled by `test-evidence-planning`.
+When establishing required evidence, use the test cases, expected outcomes, and evidence retention decisions settled by `test-evidence-planning`.
 
 When an implementation plan governs the work, implement the required test definitions linked to the current plan boundary.
 Apply the settled validation scope, boundary coverage, combinations, regression scope, validation methods, and test-support constraints that govern those definitions.
 
-Return absent or incomplete settled test definitions to `test-evidence-planning`.
+Return absent or incomplete settled definitions for required evidence to `test-evidence-planning`.
 Treat identification of additional required cases, expected outcomes, or material testing decisions as `test-evidence-planning` work.
 When a settled test definition conflicts with applicable settled requirements or design, apply the authority rules below and return the definition mismatch to `test-evidence-planning`.
 When settled requirements or design do not determine an expected outcome, return that ambiguity to its owning workflow.
@@ -38,9 +38,9 @@ Inspect existing tests before adding a new test.
 Use an existing test when it already establishes the required case and expected outcome.
 Treat incidental path execution as insufficient when the test does not actually establish that guarantee.
 
-Keep sufficient executable evidence for each continuing guarantee, reusing or consolidating tests when equivalent coverage exists.
-Use diagnostic-only checks for the current investigation and retire them once their purpose ends if they provide no required continuing evidence.
-Retire temporary substitutes for continuing guarantees when sufficient complete evidence is established and the pending verification obligation is discharged.
+Keep sufficient executable evidence for each continuing guarantee; consolidate redundant tests only when equivalent coverage remains.
+Retire diagnostic-only checks after their investigation and other temporary tests at their defined end condition.
+For temporary substitutes for continuing guarantees, first establish sufficient complete evidence and discharge any pending verification obligation.
 A test's role in reproducing a defect does not alone make that test permanent.
 Return missing retention or retirement decisions for required evidence to `test-evidence-planning`.
 
