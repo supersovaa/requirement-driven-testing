@@ -1,11 +1,11 @@
 ---
 name: test-evidence-implementation
-description: Establish executable test evidence from settled required definitions, reuse sufficient coverage, and retire temporary or redundant test artifacts when their purpose ends.
+description: Establish or reuse required executable test evidence, retire temporary diagnostic checks, replace provisional tests, and consolidate redundant coverage.
 ---
 
 # Test Evidence Implementation
 
-Use this skill when implementing executable test evidence for settled required test definitions, including evidence-only additions for correct behavior, or retiring temporary and redundant test artifacts.
+Use this skill when establishing required executable test evidence, including evidence-only additions for correct behavior, retiring temporary diagnostic checks, replacing provisional tests, or consolidating redundant tests.
 
 Treat required test definitions as implementation inputs.
 Test planning belongs to `test-evidence-planning`.
@@ -14,7 +14,7 @@ Test planning belongs to `test-evidence-planning`.
 
 When establishing required evidence, use the test cases, expected outcomes, and evidence retention decisions settled by `test-evidence-planning`.
 
-When an implementation plan governs the work, implement the required test definitions linked to the current plan boundary.
+When establishing required evidence under an implementation plan, implement the required test definitions linked to the current plan boundary.
 Apply the settled validation scope, boundary coverage, combinations, regression scope, validation methods, and test-support constraints that govern those definitions.
 
 Return absent or incomplete settled definitions for required evidence to `test-evidence-planning`.
@@ -39,8 +39,8 @@ Use an existing test when it already establishes the required case and expected 
 Treat incidental path execution as insufficient when the test does not actually establish that guarantee.
 
 Keep sufficient executable evidence for each continuing guarantee; consolidate redundant tests only when equivalent coverage remains.
-Retire diagnostic-only checks after their investigation and other temporary tests at their defined end condition.
-For temporary substitutes for continuing guarantees, first establish sufficient complete evidence and discharge any pending verification obligation.
+Retire temporary diagnostic checks after their investigation when they provide no required continuing evidence.
+Replace provisional tests only after sufficient complete evidence is established and any pending verification obligation is discharged.
 A test's role in reproducing a defect does not alone make that test permanent.
 Return missing retention or retirement decisions for required evidence to `test-evidence-planning`.
 
@@ -64,7 +64,7 @@ A pre-implementation failure is useful only when the missing target behavior or 
 
 ## Use subtractive fixtures for staged implementation
 
-When the current implementation boundary owns only part of a settled case grounded in a concrete source element and the complete source element is not yet executable, prefer a temporary fixture formed by removing only properties, behaviors, or components that are immaterial to the guarantee under test.
+When the current implementation boundary owns only part of a settled case grounded in a concrete source element and the complete source element is not yet executable, prefer a reduced fixture formed by removing only properties, behaviors, or components that are immaterial to the guarantee under test.
 
 Preserve every precondition, interaction, and expected outcome material to the guarantee under test.
 Do not add properties, behaviors, or interactions absent from the real source element when they affect the guarantee under test.
