@@ -1,6 +1,6 @@
 ---
 name: test-evidence-planning
-description: Define the test cases, expected outcomes, coverage boundaries, combinations, regression scope, validation methods, and test-support constraints required to establish executable evidence for settled requirements and design.
+description: Define the test cases, expected outcomes, coverage boundaries, combinations, regression scope, evidence retention, validation methods, and test-support constraints required to establish executable evidence for settled requirements and design.
 ---
 
 # Test Evidence Planning
@@ -50,6 +50,19 @@ Keep the complete test definition with the source element and hand the pending v
 When the unfinished dependency's completion scope includes the required integration verification, have implementation planning link to that definition from the dependency's completion criteria.
 Otherwise, have implementation planning assign the verification to follow-up work after the dependency's completion.
 Refer to the complete test definition from its owner rather than duplicating it.
+
+## Decide whether evidence must persist
+
+For each planned test, decide separately whether it is needed for the current verification and whether executable evidence must remain available afterward.
+Base the continuing need on the lifetime of the settled requirement or design guarantee and the sufficiency of equivalent existing evidence, not on whether the test found a bug or helped during debugging.
+
+For a continuing guarantee, plan sufficient ongoing evidence and relevant regression scope without requiring a particular test file or assertion to survive when equivalent evidence exists.
+For a diagnostic check, an intermediate implementation state, or another temporary verification, state its bounded purpose and the condition at which its test artifact can be retired.
+Do not treat temporary verification as authority for a new permanent guarantee.
+
+When temporary evidence stands in for a continuing guarantee, retain the complete required test definition and any pending verification obligation until sufficient full evidence is established.
+Record the ongoing or temporary evidence decision and any retirement or replacement condition with the test definition.
+Return ambiguity about the guarantee's continued applicability to the workflow that owns the requirement or design.
 
 ## Keep definitions grounded
 
