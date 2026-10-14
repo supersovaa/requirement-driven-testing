@@ -38,17 +38,17 @@ Use design cases for APIs, invariants, type guarantees, responsibility boundarie
 Keep the definitions about what must be established.
 Leave test framework mechanics, fixture implementation, test decomposition, and assertion structure to test implementation unless a settled constraint requires them.
 
-When a temporary test stands in for a complete test during staged implementation, first define the corresponding complete test case and expected outcome, then derive the temporary test from that definition.
+When a provisional test stands in for a complete test during staged implementation, first define the corresponding complete test case and expected outcome, then derive the provisional test from that definition.
 Keep the complete test definition as the target for eventual executable evidence.
-Treat diagnostic checks that establish no settled guarantee as bounded verification for the current work, rather than permanent required test cases.
+Treat temporary diagnostic checks that establish no settled guarantee as bounded verification for the current work, rather than permanent required test cases.
 
-For a temporary guarantee, a reduced source element may be used when the removed parts are immaterial to that guarantee.
+For a guarantee that applies only during an intermediate stage, a reduced source element may be used when the removed parts are immaterial to that guarantee.
 For the source element's own completion, plan evidence using its complete form.
 
 When full verification of a complete source element depends on another unfinished element, prefer waiting for that dependency to be completed before treating the source element as complete.
-When waiting is not feasible, plan completion with temporary test evidence using the complete source element and retain its complete test as a pending verification obligation after the dependency is completed.
-Keep temporary evidence distinct from evidence for the complete test.
-For temporary checks and staged substitutes, establish when their test artifacts can be retired; preserve any pending full-verification obligation until sufficient evidence is established.
+When waiting is not feasible, plan completion with provisional test evidence using the complete source element and retain its complete test as a pending verification obligation after the dependency is completed.
+Keep provisional evidence distinct from evidence for the complete test.
+End temporary diagnostic checks after their investigation. Replace provisional tests only when sufficient complete evidence is established, preserving pending verification obligations until then.
 
 Keep the complete test definition with the source element and hand the pending verification obligation to implementation planning.
 When the unfinished dependency's completion scope includes the required integration verification, have implementation planning link to that definition from the dependency's completion criteria.
@@ -74,7 +74,7 @@ When linking test definitions in implementation plans or editing their planning 
 
 For work without an implementation plan, make the settled test definitions explicit in the current work context and persist them when the surrounding workflow requires durable planning state.
 
-Record whether planned required evidence is ongoing or temporary and the retirement or replacement condition for temporary evidence.
+Record whether planned required evidence is ongoing or provisional and the replacement condition for provisional evidence.
 Keep each definition traceable to the requirement or design guarantee it establishes.
 
 ## Hand off executable work
