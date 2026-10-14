@@ -12,15 +12,15 @@ The workflow separates test-evidence planning, executable test implementation, p
 
 ## Skills
 
-- `test-evidence-planning` — define required test cases, expected outcomes, coverage decisions, regression scope, validation methods, and test-support constraints from settled requirements and design.
-- `test-evidence-implementation` — establish or reuse executable test evidence for settled required test definitions, including pre-implementation test execution.
+- `test-evidence-planning` — define required test cases, expected outcomes, coverage decisions, regression scope, evidence retention, validation methods, and test-support constraints from settled requirements and design.
+- `test-evidence-implementation` — establish or reuse executable test evidence for settled required test definitions, including pre-implementation execution and retirement of temporary checks.
 - `test-evidence-preservation` — preserve still-applicable requirement and design guarantees when behavior-preserving refactoring changes tests.
 - `test-evidence-review` — judge whether settled required test definitions have sufficient executable test evidence.
 - `test-gap-remediation` — close missing or insufficient executable evidence identified during review.
 
 ## Responsibility boundaries
 
-`test-evidence-planning` owns deciding what test evidence is required.
+`test-evidence-planning` owns deciding what test evidence is required and whether its retention is ongoing or temporary.
 `test-evidence-implementation` owns turning those settled definitions into executable tests or reusing existing evidence that already satisfies them.
 
 Implementation planning owns the implementation boundary and completion contract.
