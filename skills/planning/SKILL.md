@@ -48,7 +48,7 @@ For the source element's own completion, plan evidence using its complete form.
 When full verification of a complete source element depends on another unfinished element, prefer waiting for that dependency to be completed before treating the source element as complete.
 When waiting is not feasible, plan completion with provisional test evidence using the complete source element and retain its complete test as a pending verification obligation after the dependency is completed.
 Keep provisional evidence distinct from evidence for the complete test.
-End temporary diagnostic checks after their investigation. Replace provisional tests only when sufficient complete evidence is established, preserving pending verification obligations until then.
+Define when temporary diagnostic checks end and when provisional tests can be replaced, retaining pending full-verification obligations until sufficient evidence is established.
 
 Keep the complete test definition with the source element and hand the pending verification obligation to implementation planning.
 When the unfinished dependency's completion scope includes the required integration verification, have implementation planning link to that definition from the dependency's completion criteria.
