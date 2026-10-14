@@ -1,18 +1,18 @@
 ---
 name: test-evidence-implementation
-description: Establish executable test evidence from settled required test definitions during implementation, reusing sufficient existing coverage and creating meaningful tests before target implementation.
+description: Establish executable test evidence from settled required definitions, reuse sufficient coverage, and retire temporary or redundant test artifacts when their purpose ends.
 ---
 
 # Test Evidence Implementation
 
-Use this skill when implementing executable test evidence for settled required test definitions, including evidence-only additions for behavior that is already correct.
+Use this skill when implementing executable test evidence for settled required test definitions, including evidence-only additions for correct behavior, or retiring temporary and redundant test artifacts.
 
 Treat required test definitions as implementation inputs.
 Test planning belongs to `test-evidence-planning`.
 
 ## Consume settled test definitions
 
-Use the required test cases and expected outcomes settled by `test-evidence-planning`.
+Use the required test cases, expected outcomes, and evidence retention decisions settled by `test-evidence-planning`.
 
 When an implementation plan governs the work, implement the required test definitions linked to the current plan boundary.
 Apply the settled validation scope, boundary coverage, combinations, regression scope, validation methods, and test-support constraints that govern those definitions.
@@ -32,19 +32,17 @@ Return design that conflicts with a settled requirement to the workflow that own
 
 Test internal structures directly only when the settled test definition establishes a design guarantee that requires direct evidence.
 
-## Reuse sufficient evidence
+## Reuse and retain sufficient evidence
 
 Inspect existing tests before adding a new test.
 Use an existing test when it already establishes the required case and expected outcome.
 Treat incidental path execution as insufficient when the test does not actually establish that guarantee.
 
-## Apply evidence retention decisions
-
-Use the retention decision from `test-evidence-planning` when choosing which test evidence to keep beyond the current work.
-Maintain sufficient executable evidence for continuing guarantees, reusing or consolidating tests where equivalent evidence already exists.
-Use temporary checks for their defined verification purpose, then retire their artifacts at the planned condition after accounting for any continuing full-evidence or pending-verification obligation.
-A test's success or usefulness in diagnosing a defect does not alone establish a need to retain it.
-Return missing retention or retirement decisions to `test-evidence-planning`.
+Keep sufficient executable evidence for each continuing guarantee, reusing or consolidating tests when equivalent coverage exists.
+Use diagnostic-only checks for the current investigation and retire them once their purpose ends if they provide no required continuing evidence.
+Retire temporary substitutes for continuing guarantees when sufficient complete evidence is established and the pending verification obligation is discharged.
+A test's role in reproducing a defect does not alone make that test permanent.
+Return missing retention or retirement decisions for required evidence to `test-evidence-planning`.
 
 ## Establish tests before target implementation
 
