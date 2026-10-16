@@ -12,7 +12,7 @@ The workflow separates test-evidence planning, executable test implementation, p
 
 ## Skills
 
-- `test-evidence-planning` — plan required test evidence, distinguishing ongoing guarantees, provisional substitutes, and temporary diagnostic checks.
+- `test-evidence-planning` — plan sufficient required evidence, reuse established coverage, and distinguish ongoing guarantees, provisional substitutes, and temporary diagnostic checks.
 - `test-evidence-implementation` — establish or reuse executable evidence, retire temporary diagnostic checks, replace provisional tests, and consolidate redundant coverage.
 - `test-evidence-preservation` — preserve still-applicable requirement and design guarantees when behavior-preserving refactoring changes tests.
 - `test-evidence-review` — judge whether settled required test definitions have sufficient executable test evidence.
