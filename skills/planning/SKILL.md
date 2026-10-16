@@ -23,14 +23,21 @@ Return design that conflicts with a settled requirement to the workflow that own
 
 ## Define required test evidence
 
-For each applicable requirement or design guarantee, define the executable evidence required to establish it.
+For each applicable requirement or design guarantee, inspect relevant settled test definitions and existing executable tests, including evidence owned by other plans or components.
+Reuse sufficient definitions by reference and executable evidence when it establishes the guarantee; add required cases only for uncovered guarantees or distinct behavior at the current responsibility or integration boundary.
+A settled but unimplemented test definition remains a pending evidence obligation, and incidental code-path execution is insufficient evidence.
+One test may establish multiple guarantees, and multiple tests may together establish one.
 Decide separately whether verification is needed for the current work and whether the guarantee requires ongoing executable evidence afterward.
 Base continued evidence on the guarantee's applicability and sufficient equivalent coverage, rather than on whether a test helped diagnose a defect.
+Keeping ongoing evidence does not require executing every test for every change; CI execution selection belongs to `ci-execution-efficiency`.
 
 Specify the required test cases and expected outcomes at the granularity guaranteed by the governing requirements and design for the defined test conditions.
 Fix exact values, counts, positions, sequences, and complete collections when those properties are established by the guarantee and test conditions. Otherwise, constrain expectations to the relevant properties and relationships.
 Consider whether a valid extension preserving the tested guarantee could change an expected outcome. If so, refine the expectation to remain valid under that extension without weakening the guarantee being tested.
-Define validation scope, boundary coverage, combinations, regression scope, validation methods, and test-support constraints when they materially affect whether the evidence is sufficient.
+Select the narrowest validation scope sufficient to detect a violation, including integration or end-to-end validation when the guarantee depends on components working together.
+Define boundary coverage, combinations, regression scope, validation methods, and test-support constraints when they materially affect whether the evidence is sufficient.
+Combine conditions for material interactions and boundary differences rather than multiplying independent dimensions by default.
+Preserve broad verification explicitly required by settled completion criteria.
 
 Use requirement cases for externally meaningful behavior, outcomes, constraints, and other requirement-level guarantees.
 Use design cases for APIs, invariants, type guarantees, responsibility boundaries, and other established design contracts.
