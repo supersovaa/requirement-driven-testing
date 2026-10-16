@@ -55,6 +55,23 @@ When the unfinished dependency's completion scope includes the required integrat
 Otherwise, have implementation planning assign the verification to follow-up work after the dependency's completion.
 Refer to the complete test definition from its owner rather than duplicating it.
 
+## Reuse sufficient evidence and bound verification cost
+
+Before adding required cases, compare the guarantees in the current scope with relevant settled test definitions and existing executable tests, including evidence owned by other plans or components.
+Reuse a definition or existing executable evidence when it establishes the same guarantee under the applicable conditions; reference its owner instead of duplicating it.
+A planned but unimplemented definition does not yet provide executable evidence, and incidental execution of a code path does not establish an unchecked guarantee.
+One test may establish multiple guarantees, and several tests may jointly establish one.
+Keep distinct new guarantees at the current responsibility or integration boundary explicit even when reusing lower-level evidence.
+
+For uncovered guarantees, select the narrowest practical validation scope that can detect a violation.
+Prefer focused, deterministic verification for independently observable behavior, contracts, and state boundaries; require broader integration or end-to-end execution when the guarantee depends on those parts working together.
+Select combinations for material interactions and boundary differences instead of multiplying independent dimensions by default.
+Where earlier evidence establishes component behavior, verify the new connection without repeating that behavior's full validation unless the integrated guarantee requires it.
+
+Distinguish maintaining ongoing executable evidence from rerunning every test for each change.
+Define regression obligations from affected guarantees, dependencies, and integration paths, retaining broad runs when settled completion criteria require them or the impact cannot be bounded reliably.
+CI job selection and execution frequency belong to `ci-execution-efficiency`; executable test construction and consolidation belong to `test-evidence-implementation`.
+
 ## Keep definitions grounded
 
 Derive every required case and expected outcome from settled requirements or design and the specified test conditions.
