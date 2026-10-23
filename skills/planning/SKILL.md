@@ -26,7 +26,7 @@ Return design that conflicts with a settled requirement to the workflow that own
 For each applicable requirement or design guarantee, inspect relevant settled test definitions and existing executable tests, including evidence owned by other plans or components.
 Compare each guarantee and any specified verification example with what existing tests actually establish through their conditions and assertions.
 Settle during planning whether to reuse sufficient existing evidence or require new or expanded tests for uncovered guarantees or distinct behavior at the current responsibility or integration boundary.
-A settled but unimplemented test definition remains a pending evidence obligation, and incidental code-path execution is insufficient evidence.
+A settled test definition without sufficient executable coverage remains a pending evidence obligation; sufficient equivalent existing tests can discharge it, while incidental code-path execution is insufficient evidence.
 One test may establish multiple guarantees, and multiple tests may together establish one.
 Decide separately whether verification is needed for the current work and whether the guarantee requires ongoing executable evidence afterward.
 Base continued evidence on the guarantee's applicability and sufficient equivalent coverage, rather than on whether a test helped diagnose a defect.
