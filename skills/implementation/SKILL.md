@@ -12,7 +12,7 @@ Test planning belongs to `test-evidence-planning`.
 
 ## Consume settled test definitions
 
-When establishing required evidence, use the test cases, expected outcomes, and evidence retention decisions settled by `test-evidence-planning`.
+When establishing required evidence, use the test cases, expected outcomes, evidence retention decisions, and reuse-or-addition decisions settled by `test-evidence-planning`.
 
 When establishing required evidence under an implementation plan, implement the required test definitions linked to the current plan boundary.
 Apply the settled validation scope, boundary coverage, combinations, regression scope, validation methods, and test-support constraints that govern those definitions.
@@ -34,8 +34,8 @@ Test internal structures directly only when the settled test definition establis
 
 ## Reuse and retain sufficient evidence
 
-Inspect existing tests before adding a new test.
-Use an existing test when it already establishes the required case and expected outcome.
+Follow the planning-time decision to reuse existing tests or create or expand tests for a specified gap.
+Confirm that the existing tests selected for reuse still establish the required case and expected outcome; return changed coverage or a missing decision to `test-evidence-planning` for revision.
 Treat incidental path execution as insufficient when the test does not actually establish that guarantee.
 
 Keep sufficient executable evidence for each continuing guarantee; consolidate redundant tests only when equivalent coverage remains.
@@ -51,7 +51,7 @@ When a required case lacks sufficient executable evidence, establish that eviden
 For each required case:
 
 1. Select the settled required case.
-2. Add or select the executable test that establishes the case.
+2. Reuse the executable test identified during planning or establish the specified new or expanded test.
 3. Run it before target implementation.
 4. When the required behavior is missing, confirm that the test fails because of that missing behavior.
 5. When the test already passes, verify that existing behavior genuinely satisfies the required case instead of manufacturing a failure.
