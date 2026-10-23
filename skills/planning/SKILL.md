@@ -24,7 +24,8 @@ Return design that conflicts with a settled requirement to the workflow that own
 ## Define required test evidence
 
 For each applicable requirement or design guarantee, inspect relevant settled test definitions and existing executable tests, including evidence owned by other plans or components.
-Reuse sufficient definitions by reference and executable evidence when it establishes the guarantee; add required cases only for uncovered guarantees or distinct behavior at the current responsibility or integration boundary.
+Compare each guarantee and any specified verification example with what existing tests actually establish through their conditions and assertions.
+Settle during planning whether to reuse sufficient existing evidence or require new or expanded tests for uncovered guarantees or distinct behavior at the current responsibility or integration boundary.
 A settled but unimplemented test definition remains a pending evidence obligation, and incidental code-path execution is insufficient evidence.
 One test may establish multiple guarantees, and multiple tests may together establish one.
 Decide separately whether verification is needed for the current work and whether the guarantee requires ongoing executable evidence afterward.
@@ -81,6 +82,8 @@ When linking test definitions in implementation plans or editing their planning 
 
 For work without an implementation plan, make the settled test definitions explicit in the current work context and persist them when the surrounding workflow requires durable planning state.
 
+Record each guarantee's reuse or addition decision: identify the existing executable tests and the coverage that makes them sufficient, or identify the remaining gap and the required new or expanded test cases with their expected outcomes.
+When existing tests sufficiently establish every applicable guarantee, explicitly record that no new or expanded tests are required for the current work.
 Record whether planned required evidence is ongoing or provisional and the replacement condition for provisional evidence.
 Keep each definition traceable to the requirement or design guarantee it establishes.
 
