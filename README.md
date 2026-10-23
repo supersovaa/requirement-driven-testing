@@ -12,11 +12,15 @@ The workflow separates test-evidence planning, executable test implementation, p
 
 ## Skills
 
-- `test-evidence-planning` — plan sufficient required evidence, reuse established coverage, and distinguish ongoing guarantees, provisional substitutes, and temporary diagnostic checks.
+- `test-evidence-planning` — decide whether existing tests already establish each guarantee, plan additions only for uncovered guarantees, and distinguish ongoing, provisional, and temporary evidence.
 - `test-evidence-implementation` — establish or reuse executable evidence, retire temporary diagnostic checks, replace provisional tests, and consolidate redundant coverage.
 - `test-evidence-preservation` — preserve still-applicable requirement and design guarantees when behavior-preserving refactoring changes tests.
 - `test-evidence-review` — judge whether settled required test definitions have sufficient executable test evidence.
 - `test-gap-remediation` — close missing or insufficient executable evidence identified during review.
+
+## Installation
+
+Install the skill directories needed for your workflow from `skills/` into the skill location used by your agent or skill loader. For loaders using one skill per directory, install `skills/planning`, `skills/implementation`, `skills/preservation`, `skills/review`, and `skills/remediation` as separate skills.
 
 ## Responsibility boundaries
 
