@@ -23,9 +23,9 @@ Return design that conflicts with a settled requirement to the workflow that own
 
 ## Define required test evidence
 
-For each applicable requirement or design guarantee, inspect relevant settled test definitions and existing executable tests, including evidence owned by other plans or components.
+For each applicable requirement or design guarantee, including any required verification examples, inspect relevant settled test definitions and existing executable tests, including evidence owned by other plans or components.
 Reuse sufficient definitions by reference and executable evidence when it establishes the guarantee; add required cases only for uncovered guarantees or distinct behavior at the current responsibility or integration boundary.
-A settled but unimplemented test definition remains a pending evidence obligation, and incidental code-path execution is insufficient evidence.
+A settled required test definition remains a pending evidence obligation until sufficient executable tests establish its specified case and expected outcome; incidental code-path execution is insufficient evidence.
 One test may establish multiple guarantees, and multiple tests may together establish one.
 Decide separately whether verification is needed for the current work and whether the guarantee requires ongoing executable evidence afterward.
 Base continued evidence on the guarantee's applicability and sufficient equivalent coverage, rather than on whether a test helped diagnose a defect.
@@ -81,6 +81,8 @@ When linking test definitions in implementation plans or editing their planning 
 
 For work without an implementation plan, make the settled test definitions explicit in the current work context and persist them when the surrounding workflow requires durable planning state.
 
+Record for each applicable guarantee and required verification example the sufficient existing tests and supporting coverage, or the uncovered cases, expected outcomes, and required new or expanded tests.
+When existing evidence establishes all of them, explicitly record that no new or expanded tests are required.
 Record whether planned required evidence is ongoing or provisional and the replacement condition for provisional evidence.
 Keep each definition traceable to the requirement or design guarantee it establishes.
 
