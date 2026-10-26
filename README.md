@@ -12,11 +12,11 @@ The workflow separates test-evidence planning, executable test implementation, p
 
 ## Skills
 
-- `test-evidence-planning` — plan or reassess sufficient required evidence, reuse established coverage, decide retention and retirement, and distinguish ongoing guarantees, provisional substitutes, and temporary diagnostic checks.
-- `test-evidence-implementation` — establish or reuse executable evidence, retire temporary diagnostic checks and incidental assertions, replace provisional tests, and consolidate redundant coverage.
-- `test-evidence-preservation` — preserve still-applicable requirement and design guarantees when behavior-preserving refactoring changes tests.
-- `test-evidence-review` — judge whether settled required test definitions have sufficient executable test evidence.
-- `test-gap-remediation` — close missing or insufficient executable evidence identified during review.
+- [`test-evidence-planning`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/planning/SKILL.md) — plan or reassess sufficient required evidence, reuse established coverage, decide retention and retirement, and distinguish ongoing guarantees, provisional substitutes, and temporary diagnostic checks.
+- [`test-evidence-implementation`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/implementation/SKILL.md) — establish or reuse executable evidence, retire temporary diagnostic checks and incidental assertions, replace provisional tests, and consolidate redundant coverage.
+- [`test-evidence-preservation`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/preservation/SKILL.md) — preserve still-applicable requirement and design guarantees when behavior-preserving refactoring changes tests.
+- [`test-evidence-review`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/review/SKILL.md) — judge whether settled required test definitions have sufficient executable test evidence.
+- [`test-gap-remediation`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/remediation/SKILL.md) — close missing or insufficient executable evidence identified during review.
 
 ## Responsibility boundaries
 
@@ -32,11 +32,11 @@ The surrounding review workflow continues to own its review scope, acceptance de
 
 These testing skills plan, establish, preserve, review, or restore executable evidence without taking ownership of requirement definition, design definition, implementation execution, or general implementation review.
 
-## Installation
+## Setup
 
-Copy the directories under `skills/`, each containing its `SKILL.md`, into the skill directory configured for your agent.
-Identify each installed skill by its frontmatter `name` and select it using the responsibilities above.
-The linked public skill definitions remain the authority for shared criteria.
+For each work type, link the needed public `SKILL.md` definitions above directly from its existing guidance entry point, such as `AGENTS.md` or a task-specific `SKILL.md`.
+Read and apply the linked skills when that work begins.
+Keep local guidance focused on activation and responsibility; the public skill definitions in this repository remain the authority for the detailed rules.
 
 ## Files
 
