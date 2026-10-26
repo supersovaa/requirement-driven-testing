@@ -1,29 +1,29 @@
 ---
 name: test-execution-budget
-description: Decide whether real end-to-end simulations or trials are needed for verification, then bound necessary runs, including indirect and automated test execution.
+description: Choose verification for work that may exercise games, simulators, episodes, or costly end-to-end trials, assess whether real trials are necessary, and bound justified executions.
 ---
 
 # Test Execution Budget
 
-Use this skill before running or rerunning a real complete game, simulation, episode, or similarly costly end-to-end trial for verification. Apply it to direct commands and test runners that launch such work indirectly, including a single trial.
+Use this skill when selecting or running verification for a game, simulator, episode, or other workflow that may launch costly complete end-to-end trials. Inspect broad test commands and indirect test runners before choosing an execution command, including when a single trial is proposed.
 
 ## Establish whether real trials are necessary
 
-Identify the specific settled guarantee or diagnostic question, the failure to detect, and relevant existing evidence. Compare real trials with source or contract inspection, compilation, deterministic unit or component tests, controlled fixtures, injected results, and reusable verified evidence.
+Identify the specific settled guarantee or diagnostic question, the failure to detect, and relevant existing evidence. Compare complete trials with source or contract inspection, compilation, deterministic unit or component tests, focused state-transition tests, controlled fixtures, injected results, and reusable verified evidence.
 
 **Choose zero complete trials** when a lighter method establishes the same guarantee. For example, verify large trial-count inputs, dispatch counts, progress reporting, aggregation, and stop handling using controlled results or a counting substitute when these establish the contract.
 
-Select real trials when the outstanding guarantee depends on actual game-state transitions, full-path interactions, or statistical behavior that requires real sampling. For every selected real trial, identify the evidence that a zero-trial method leaves uncovered. Existing loops, a broad test command, and a large number in an example are prompts to examine the assertions and the owning guarantee, rather than sufficient evidence of the need to run games.
+Select complete real trials when the outstanding guarantee specifically depends on the complete game or episode lifecycle, an actual end-to-end integration path, or statistical observations requiring real sampling. Verify individual game-state transitions through focused tests when those establish the guarantee. For every selected complete trial, identify the evidence that a zero-trial method leaves uncovered. Existing loops, a broad test command, and a large number in an example prompt examination of the assertions and owning guarantee.
 
 Treat settled required test definitions as obligations. When a required definition prescribes real trials but an equivalent lighter method appears sufficient, return the proposed change to `test-evidence-planning` for reassessment; preserve the original requirement as pending until revised or verified. Keep requirement or design changes with their owning workflow.
 
 ## Bound the necessary execution
 
-Inspect selected commands, test definitions, runners, and configuration to determine the maximum number of complete trials. Include loops inside tests, multiple targets, parameterized cases, parallel workers, retries, and trials already performed for the current work unit.
+Inspect candidate commands, test definitions, runners, and configuration to determine the maximum number of complete trial attempts they could start. Include loops inside tests, multiple targets, parameterized cases, parallel workers, automatic retries, and attempts already started for the same requested task or PR verification, including by other workers or agents.
 
-Use **10 complete end-to-end trials per work unit** as the default cumulative autonomous execution ceiling, applied only after the need for real trials is established. Choose the smallest number sufficient for the identified guarantee, starting with a single targeted trial when appropriate. Count each complete game or equivalent end-to-end trial once, regardless of how many test processes launch it.
+Use **10 started end-to-end trial attempts per requested task or PR verification** as the default cumulative autonomous execution ceiling, applied only after the need for real trials is established. Choose the smallest number sufficient for the identified guarantee, starting with a single targeted trial when appropriate. Count each started attempt, including failed, interrupted, and timed-out runs, once.
 
-Choose commands that stay within the remaining authorized trial budget. Resolve uncertain counts by inspecting source or configuration, listing tests, or using a dry run before execution. Use trial caps and timeouts supported by the runner.
+Choose commands that stay within the remaining authorized trial budget across all selected runners and workers. Resolve uncertain attempt counts by inspecting source or configuration, listing tests, or using a dry run before execution. Use trial caps and timeouts supported by the runner.
 
 Reuse previously successful evidence when its inputs and guarantees remain applicable. Count diagnostic reruns and retries against the same budget.
 
