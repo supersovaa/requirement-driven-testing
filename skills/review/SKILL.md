@@ -1,6 +1,6 @@
 ---
 name: test-evidence-review
-description: Provide focused review criteria for whether settled required test definitions have sufficient executable evidence, identifying evidence gaps without planning new test cases or repairing the tests.
+description: Review executable test evidence against settled definitions for both sufficient coverage and unsupported pass/fail restrictions.
 ---
 
 # Test Evidence Review
@@ -54,7 +54,7 @@ Report each test-evidence gap with the settled required case, the concrete guara
 Route an established test-evidence gap to `test-gap-remediation`.
 When sufficient evidence instead exposes incorrect implementation behavior, return that defect to the workflow that owns implementation review or execution.
 
-This skill provides dedicated criteria for review of executable test-evidence sufficiency.
+This skill provides focused criteria for reviewing executable evidence sufficiency and assertion scope.
 Test-evidence planning belongs to `test-evidence-planning`.
 The surrounding review workflow retains ownership of its review scope, acceptance decisions, and other findings.
 This skill does not define requirements or design, plan required test cases, repair tests, implement production behavior, or replace general implementation review.
