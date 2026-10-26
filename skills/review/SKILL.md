@@ -9,7 +9,7 @@ Use this skill when a review needs to judge whether settled required test defini
 Apply it within the surrounding review workflow's existing scope when another review workflow already governs the work.
 
 Treat settled requirements and design contracts as authority, required test definitions as the review contract, and executable tests as evidence.
-When independently executing or rerunning any real complete game, simulation, episode, or similarly costly end-to-end trial as verification, apply [`test-execution-budget`](../execution/SKILL.md) to determine whether that trial is necessary and to bound justified execution.
+When independently selecting or executing verification that may launch real complete games, simulations, episodes, or similarly costly end-to-end trials, apply [`test-execution-budget`](../execution/SKILL.md) before selecting commands to determine whether those trials are necessary and to bound justified execution.
 
 ## Establish the review authority
 
