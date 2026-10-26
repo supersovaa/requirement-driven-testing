@@ -39,6 +39,14 @@ Apply the settled validation scope, boundary coverage, combinations, regression 
 
 Identify evidence as missing or insufficient when a settled required case lacks executable coverage strong enough to detect a violation.
 
+## Review assertion scope as well as sufficiency
+
+For tests added or changed within the review scope, inspect whether their pass/fail assertions also reject behavior permitted by the settled requirement, design, and required test case. A passing test can still contain an unjustified stronger expectation.
+
+Check complete equality of separate data formats, metadata, shared tables, ordering, and internal identifiers against the actual guarantee. When only a common meaning or source relationship is required, validate the respective forms against those facts and their individual contracts. Treat unsupported restrictions as test correctness findings and request their removal or narrowing in the current change before accepting its tests as evidence.
+
+When the required test definition itself contains the unsupported restriction, refer that definition to `test-evidence-planning`. Keep the surrounding review workflow responsible for acceptance and the applicable blocking threshold.
+
 ## Keep findings in their owning workflow
 
 Report each test-evidence gap with the settled required case, the concrete guarantee violation the current evidence would miss, and why that evidence is insufficient.
