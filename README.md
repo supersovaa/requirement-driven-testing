@@ -6,18 +6,18 @@ A lightweight six-skill set for planning, implementing, preserving, reviewing, a
 
 Requirements and design define the guarantees.
 Test planning selects sufficient executable evidence and reassesses its retention as coverage changes.
-Executable tests establish those guarantees while leaving incidental implementation choices free to change.
+Executable tests establish those guarantees while leaving incidental implementation choices free to change. Their pass/fail assertions must also accept outcomes permitted by the settled contracts.
 Verification that may launch real end-to-end trials first receives an evidence-based necessity decision; justified runs use a cumulative execution budget.
 
-The workflow separates test-evidence planning, executable test implementation, preservation during behavior-preserving refactoring, focused review of evidence sufficiency, and repair of identified evidence gaps.
+The workflow separates test-evidence planning, executable test implementation, preservation during behavior-preserving refactoring, focused review of evidence sufficiency and assertion scope, and repair of identified evidence gaps.
 
 ## Skills
 
 - [`test-evidence-planning`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/planning/SKILL.md) — plan or reassess sufficient required evidence, reuse established coverage, decide retention and retirement, and distinguish ongoing guarantees, provisional substitutes, and temporary diagnostic checks.
-- [`test-evidence-implementation`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/implementation/SKILL.md) — establish or reuse executable evidence, retire temporary diagnostic checks and incidental assertions, replace provisional tests, and consolidate redundant coverage.
+- [`test-evidence-implementation`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/implementation/SKILL.md) — establish executable evidence with assertions bounded by settled guarantees, retire incidental checks, and consolidate redundant coverage.
 - [`test-execution-budget`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/execution/SKILL.md) — before selecting verification commands that may launch real game or simulation trials, prefer zero-trial evidence when sufficient and bound justified executions.
 - [`test-evidence-preservation`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/preservation/SKILL.md) — preserve still-applicable requirement and design guarantees when behavior-preserving refactoring changes tests.
-- [`test-evidence-review`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/review/SKILL.md) — judge whether settled required test definitions have sufficient executable test evidence.
+- [`test-evidence-review`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/review/SKILL.md) — judge both evidence sufficiency and whether executable assertions impose requirements beyond settled test definitions.
 - [`test-gap-remediation`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/remediation/SKILL.md) — close missing or insufficient executable evidence identified during review.
 
 ## Responsibility boundaries
@@ -30,7 +30,7 @@ Implementation planning owns the implementation boundary and completion contract
 For plan-governed work, required test definitions are bounded by that contract and linked from the implementation plan before execution readiness.
 Requirement and design workflows own the authoritative behavior and contracts.
 
-`test-evidence-review` provides dedicated criteria for judging executable test-evidence sufficiency and may be applied within another review workflow's existing scope.
+`test-evidence-review` checks coverage sufficiency and unsupported assertion restrictions within another review workflow's existing scope.
 The surrounding review workflow continues to own its review scope, acceptance decisions, and findings outside this focused concern.
 
 These testing skills plan, establish, preserve, review, or restore executable evidence without taking ownership of requirement definition, design definition, implementation execution, or general implementation review.
