@@ -1,6 +1,6 @@
 ---
 name: test-execution-budget
-description: Bound repeated full-system simulations and other costly trial-based verification before running or rerunning tests, including local runs and CI configuration.
+description: Bound repeated full-system simulations and other costly trial-based verification before running or rerunning tests, including local and automated runs.
 ---
 
 # Test Execution Budget
