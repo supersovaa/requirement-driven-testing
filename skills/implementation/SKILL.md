@@ -1,11 +1,11 @@
 ---
 name: test-evidence-implementation
-description: Establish or reuse required executable test evidence, retire temporary diagnostic checks, replace provisional tests, and consolidate redundant coverage.
+description: Establish or reuse required executable test evidence, retire temporary diagnostic checks and incidental assertions, replace provisional tests, and consolidate redundant coverage.
 ---
 
 # Test Evidence Implementation
 
-Use this skill when establishing required executable test evidence, including evidence-only additions for correct behavior, retiring temporary diagnostic checks, replacing provisional tests, or consolidating redundant tests.
+Use this skill when establishing required executable test evidence, including evidence-only additions for correct behavior, retiring temporary diagnostic checks and incidental assertions, replacing provisional tests, or consolidating redundant tests.
 
 Treat required test definitions as implementation inputs.
 Test planning belongs to `test-evidence-planning`.
@@ -30,7 +30,7 @@ Use design tests for cases that establish APIs, invariants, type guarantees, res
 Requirements take precedence over design, tests, and implementation.
 Return design that conflicts with a settled requirement to the workflow that owns design before relying on it as test authority.
 
-Test internal structures directly only when the settled test definition establishes a design guarantee that requires direct evidence.
+Choose assertions using the [selection and retention criteria](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/planning/SKILL.md#select-and-retain-sufficient-evidence) settled by `test-evidence-planning`.
 
 ## Reuse and retain sufficient evidence
 
@@ -38,11 +38,11 @@ Inspect existing tests before adding a new test.
 Use an existing test when it already establishes the required case and expected outcome.
 Treat incidental path execution as insufficient when the test does not actually establish that guarantee.
 
-Keep sufficient executable evidence for each continuing guarantee; consolidate redundant tests only when equivalent coverage remains.
+Keep sufficient executable evidence for each continuing guarantee; retire incidental assertions and consolidate redundant tests according to the settled retention decisions.
 Retire temporary diagnostic checks after their investigation when they provide no required continuing evidence.
 Replace provisional tests only after sufficient complete evidence is established and any pending verification obligation is discharged.
 A test's role in reproducing a defect does not alone make that test permanent.
-Return missing retention or retirement decisions for required evidence to `test-evidence-planning`.
+Return missing retention or retirement decisions and over-specified required definitions to `test-evidence-planning` before changing their obligations.
 
 ## Establish tests before target implementation
 
@@ -91,7 +91,7 @@ Use the repository's established test framework, fixture structure, naming, plac
 Follow explicit repository conventions governing test-file grouping; otherwise apply the responsibility-based initial grouping above.
 Use an existing documentation or mapping format when it can express the required relationship.
 
-This skill owns executable test establishment from settled test definitions.
+This skill owns executable test establishment and retirement from settled test definitions and retention decisions.
 Test-evidence planning belongs to `test-evidence-planning`.
 Behavior-preserving evidence retention belongs to `test-evidence-preservation`.
 Use `test-evidence-review` when a focused review of test-evidence sufficiency is needed.
