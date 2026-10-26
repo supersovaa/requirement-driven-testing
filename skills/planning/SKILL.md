@@ -32,7 +32,7 @@ Prefer assertions on required behavior and results through the real input and lo
 Use those assertions as evidence for the loading and data-interpretation guarantees they actually establish; incidental code-path execution remains insufficient.
 Treat a handwritten copy of a loaded internal structure as redundant when behavioral evidence already establishes the same guarantee.
 Require separate representation or loading checks only for a distinct settled contract and a concrete violation outside that behavioral evidence.
-For tests, fixtures, helpers, and CI machinery, prefer consumer tests, review, and bounded change-time checks; add or retain dedicated tests only for a distinct continuing guarantee and a concrete failure those checks would miss.
+For tests, fixtures, helpers, and CI machinery, prefer consumer tests, review, and bounded change-time checks; add or retain dedicated tests only for a distinct continuing guarantee and a concrete violation those checks would miss.
 Complete test expansion when the scoped guarantees have sufficient executable evidence.
 
 Decide separately whether verification is needed for the current work and whether the guarantee requires ongoing executable evidence afterward.
@@ -50,8 +50,8 @@ Fix exact values, counts, positions, sequences, complete collections, names, wor
 Consider whether a valid refactoring, extension, or rewording preserving the tested guarantee could change an expected outcome. If so, refine the expectation to remain valid under that change without weakening the guarantee being tested.
 Select the narrowest validation scope sufficient to detect a violation, including integration or end-to-end validation when the guarantee depends on components working together.
 Define boundary coverage, combinations, regression scope, validation methods, and test-support constraints when they materially affect whether the evidence is sufficient.
-For each varied condition, tie its variation to a guarantee or concrete failure the evidence must distinguish.
-Combine conditions when their interaction or boundary creates a distinct failure that representative cases for the individual conditions would miss; use representative cases for independent conditions whose combinations establish the same guarantee.
+For each varied condition, tie its variation to a guarantee or concrete violation the evidence must distinguish.
+Combine conditions when their interaction or boundary creates a distinct violation that representative cases for the individual conditions would miss; use representative cases for independent conditions whose combinations establish the same guarantee.
 Preserve broad verification explicitly required by settled completion criteria.
 
 Use requirement cases for externally meaningful behavior, outcomes, constraints, and other requirement-level guarantees.
@@ -95,7 +95,7 @@ When linking test definitions in implementation plans or editing their planning 
 
 For work without an implementation plan, make the settled test definitions explicit in the current work context and persist them when the surrounding workflow requires durable planning state.
 
-Record for each applicable guarantee and required verification example the sufficient existing tests and supporting coverage, or the uncovered cases, expected outcomes, and required new or expanded tests. For combined conditions, record the distinct interaction or boundary failure that requires the combination.
+Record for each applicable guarantee and required verification example the sufficient existing tests and supporting coverage, or the uncovered cases, expected outcomes, and required new or expanded tests. For combined conditions, record the distinct interaction or boundary violation that requires the combination.
 When existing evidence establishes all of them, record its sufficiency and complete test selection with that evidence.
 Record whether planned required evidence is ongoing or provisional and the replacement condition for provisional evidence.
 For consolidation or retirement, identify the incidental assertions or redundant tests to remove and the sufficient evidence retained for continuing guarantees.
