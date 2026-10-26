@@ -23,7 +23,7 @@ Inspect candidate commands, test definitions, runners, and configuration to dete
 
 Use **10 started end-to-end trial attempts per requested task or PR verification** as the default cumulative autonomous execution ceiling, applied only after the need for real trials is established. Choose the smallest number sufficient for the identified guarantee, starting with a single targeted trial when appropriate. Count each started attempt, including failed, interrupted, and timed-out runs, once.
 
-Choose commands that stay within the remaining authorized trial budget across all selected runners and workers. Resolve uncertain attempt counts by inspecting source or configuration, listing tests, or using a dry run before execution. Use trial caps and timeouts supported by the runner.
+Allocate bounded trial quotas across workers or subagents before concurrent execution, keeping their combined maximum within the authorized budget. Choose commands that stay within the remaining budget across all selected runners and workers. Resolve uncertain attempt counts by inspecting source or configuration, listing tests, or using a dry run before execution. Use trial caps and timeouts supported by the runner.
 
 Reuse previously successful evidence when its inputs and guarantees remain applicable. Count diagnostic reruns and retries against the same budget.
 
