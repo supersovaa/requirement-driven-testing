@@ -8,7 +8,7 @@ description: Establish or reuse required executable test evidence, retire tempor
 Use this skill when establishing required executable test evidence, including evidence-only additions for correct behavior, retiring temporary diagnostic checks and incidental assertions, replacing provisional tests, or consolidating redundant tests.
 
 Treat required test definitions as implementation inputs.
-Before executing or rerunning any real complete game, simulation, episode, or similarly costly end-to-end trial as verification, apply [`test-execution-budget`](../execution/SKILL.md) to determine whether that trial is necessary and to bound justified execution.
+When selecting or executing verification that may launch real complete games, simulations, episodes, or similarly costly end-to-end trials, apply [`test-execution-budget`](../execution/SKILL.md) before selecting commands to determine whether those trials are necessary and to bound justified execution.
 Test planning belongs to `test-evidence-planning`.
 
 ## Consume settled test definitions
