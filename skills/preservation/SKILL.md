@@ -12,7 +12,7 @@ Treat the guarantee established by a test as the thing to preserve, not the test
 ## Identify established guarantees
 
 Before changing an existing test, identify the requirement or design guarantee it intentionally establishes.
-Distinguish authoritative guarantees from incidental assertions or implementation details.
+Distinguish authoritative guarantees from incidental assertions or implementation details using the [selection and retention criteria](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/planning/SKILL.md#select-and-retain-sufficient-evidence).
 
 Requirements remain authoritative over design, tests, and implementation.
 When an existing test disagrees with a settled requirement, treat the conflicting expectation as non-authoritative.
@@ -25,9 +25,10 @@ Keep executable evidence for every still-applicable established guarantee affect
 The test may change framework usage, fixture shape, placement, decomposition, or assertion structure when the resulting evidence remains sufficient.
 
 Reuse an existing replacement test when it already establishes the same guarantee.
-Avoid duplicate coverage whose only purpose is to preserve the old test's form.
+Retire incidental assertions and redundant tests while retaining sufficient evidence for the applicable guarantees.
+When a settled test definition itself fixes the incidental detail or requires redundant evidence, return that definition to `test-evidence-planning` for reassessment before changing its obligation.
 
-## Remove evidence only with changed authority
+## Keep guarantee changes with their owner
 
 Weaken or remove an established guarantee only when its authoritative settled requirement or design contract has changed so that the guarantee no longer applies.
 

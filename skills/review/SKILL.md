@@ -30,8 +30,9 @@ For each required case, identify the executable test evidence intended to establ
 Treat the evidence as sufficient only when the relevant test behavior and assertions actually establish the case and expected outcome.
 Incidental execution of a code path is not evidence for a guarantee the test does not verify.
 
-Consider multiple tests together when they collectively establish the required case.
-Do not require duplicate tests or a one-to-one mapping between required cases and test functions.
+Accept combined or shared tests when they collectively establish the required cases.
+Apply the [selection and retention criteria](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/planning/SKILL.md#select-and-retain-sufficient-evidence) before requesting additional or restored tests.
+Return over-specified or redundant required test definitions to `test-evidence-planning`, identifying the governing guarantee and the existing evidence that remains sufficient.
 
 Apply the settled validation scope, boundary coverage, combinations, regression scope, validation methods, and test-support constraints that govern the reviewed definitions.
 
@@ -39,7 +40,7 @@ Identify evidence as missing or insufficient when a settled required case lacks 
 
 ## Keep findings in their owning workflow
 
-Report each test-evidence gap with the settled required case it concerns and why the current evidence is insufficient.
+Report each test-evidence gap with the settled required case, the concrete guarantee violation the current evidence would miss, and why that evidence is insufficient.
 
 Route an established test-evidence gap to `test-gap-remediation`.
 When sufficient evidence instead exposes incorrect implementation behavior, return that defect to the workflow that owns implementation review or execution.
