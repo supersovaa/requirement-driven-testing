@@ -1,13 +1,13 @@
 # Test Evidence Skills
 
-A lightweight six-skill set for planning, implementing, preserving, reviewing, and repairing executable evidence of already-settled requirements and design, plus choosing and bounding necessary end-to-end trial execution.
+A lightweight six-skill set for planning, implementing, preserving, reviewing, and repairing executable evidence of already-settled requirements and design, plus selecting verification that may involve costly end-to-end trials.
 
 ## Core idea
 
 Requirements and design define the guarantees.
 Test planning selects sufficient executable evidence and reassesses its retention as coverage changes.
 Executable tests establish those guarantees while leaving incidental implementation choices free to change.
-Real end-to-end verification trials first require an evidence-based necessity decision; justified runs use a cumulative execution budget.
+Verification that may launch real end-to-end trials first receives an evidence-based necessity decision; justified runs use a cumulative execution budget.
 
 The workflow separates test-evidence planning, executable test implementation, preservation during behavior-preserving refactoring, focused review of evidence sufficiency, and repair of identified evidence gaps.
 
@@ -15,7 +15,7 @@ The workflow separates test-evidence planning, executable test implementation, p
 
 - [`test-evidence-planning`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/planning/SKILL.md) — plan or reassess sufficient required evidence, reuse established coverage, decide retention and retirement, and distinguish ongoing guarantees, provisional substitutes, and temporary diagnostic checks.
 - [`test-evidence-implementation`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/implementation/SKILL.md) — establish or reuse executable evidence, retire temporary diagnostic checks and incidental assertions, replace provisional tests, and consolidate redundant coverage.
-- [`test-execution-budget`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/execution/SKILL.md) — first determine whether real game or simulation trials are needed for the guarantee, prefer zero-trial evidence when sufficient, and bound justified runs.
+- [`test-execution-budget`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/execution/SKILL.md) — before selecting verification commands that may launch real game or simulation trials, prefer zero-trial evidence when sufficient and bound justified executions.
 - [`test-evidence-preservation`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/preservation/SKILL.md) — preserve still-applicable requirement and design guarantees when behavior-preserving refactoring changes tests.
 - [`test-evidence-review`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/review/SKILL.md) — judge whether settled required test definitions have sufficient executable test evidence.
 - [`test-gap-remediation`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/remediation/SKILL.md) — close missing or insufficient executable evidence identified during review.
@@ -24,7 +24,7 @@ The workflow separates test-evidence planning, executable test implementation, p
 
 `test-evidence-planning` owns deciding and reassessing what evidence is required long-term, what may provisionally stand in for it, and what is only a temporary diagnostic check.
 `test-evidence-implementation` owns establishing executable tests from settled definitions, replacing provisional tests, and retiring temporary, incidental, or redundant artifacts while retaining sufficient required evidence.
-`test-execution-budget` owns the necessity decision at the point of real-trial execution and its cumulative budget; the selection and reassessment of required evidence remain with test planning, and CI configuration with `ci-execution-efficiency`.
+`test-execution-budget` owns the necessity gate before selecting actual trial execution and its cumulative budget; the selection and reassessment of required test evidence remain with test planning, and CI configuration with `ci-execution-efficiency`.
 
 Implementation planning owns the implementation boundary and completion contract.
 For plan-governed work, required test definitions are bounded by that contract and linked from the implementation plan before execution readiness.
