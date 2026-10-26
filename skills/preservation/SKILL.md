@@ -8,6 +8,7 @@ description: Preserve the requirement and design guarantees intentionally establ
 Use this skill when behavior-preserving refactoring changes tests that already carry established requirement or design evidence.
 
 Treat the guarantee established by a test as the thing to preserve, not the test's current structure.
+Before executing or rerunning tests that launch repeated complete games, simulations, episodes, or other end-to-end trials, apply [`test-execution-budget`](../execution/SKILL.md).
 
 ## Identify established guarantees
 
