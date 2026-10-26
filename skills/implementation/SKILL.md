@@ -37,7 +37,7 @@ Choose assertions using the [selection and retention criteria](https://github.co
 
 For each new or modified assertion that determines whether the tested behavior passes, identify the settled test case and requirement or design guarantee it establishes. Check both that the assertion detects the intended violation and that contract-valid outcomes remain accepted.
 
-Use exact object equality, metadata collections, ordering, reference identifiers, or other complete comparisons only when the settled guarantee requires those properties. When separate representations describe the same event, compare their guaranteed common facts with the source and check each representation against its own contract. A convenient current representation is not authority for additional pass/fail conditions.
+Use exact object equality, metadata collections, ordering, reference identifiers, or other complete comparisons only when the settled guarantee requires those properties. When separate representations describe the same event, compare the common facts and source relationships required by the settled test case. Check representation-specific properties only when that case requires them under their respective settled contracts. A convenient current representation is not authority for additional pass/fail conditions.
 
 Narrow an incidental assertion within the settled test definition before marking the evidence complete. When a stronger guarantee appears necessary, return that decision to `test-evidence-planning` rather than silently expanding the required test.
 
