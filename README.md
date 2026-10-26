@@ -1,12 +1,13 @@
 # Test Evidence Skills
 
-A lightweight five-skill set for planning, implementing, preserving, reviewing, and repairing executable evidence of already-settled requirements and design.
+A lightweight six-skill set for planning, implementing, preserving, reviewing, and repairing executable evidence of already-settled requirements and design, plus bounding repeated verification execution.
 
 ## Core idea
 
 Requirements and design define the guarantees.
 Test planning selects sufficient executable evidence and reassesses its retention as coverage changes.
 Executable tests establish those guarantees while leaving incidental implementation choices free to change.
+Repeated end-to-end verification runs use an explicit cumulative execution budget.
 
 The workflow separates test-evidence planning, executable test implementation, preservation during behavior-preserving refactoring, focused review of evidence sufficiency, and repair of identified evidence gaps.
 
@@ -14,6 +15,7 @@ The workflow separates test-evidence planning, executable test implementation, p
 
 - [`test-evidence-planning`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/planning/SKILL.md) — plan or reassess sufficient required evidence, reuse established coverage, decide retention and retirement, and distinguish ongoing guarantees, provisional substitutes, and temporary diagnostic checks.
 - [`test-evidence-implementation`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/implementation/SKILL.md) — establish or reuse executable evidence, retire temporary diagnostic checks and incidental assertions, replace provisional tests, and consolidate redundant coverage.
+- [`test-execution-budget`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/execution/SKILL.md) — bound repeated full-system games, simulations, episodes, and trial-based verification before execution or retries; obtain explicit user authorization for work beyond the autonomous budget.
 - [`test-evidence-preservation`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/preservation/SKILL.md) — preserve still-applicable requirement and design guarantees when behavior-preserving refactoring changes tests.
 - [`test-evidence-review`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/review/SKILL.md) — judge whether settled required test definitions have sufficient executable test evidence.
 - [`test-gap-remediation`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/remediation/SKILL.md) — close missing or insufficient executable evidence identified during review.
@@ -22,6 +24,7 @@ The workflow separates test-evidence planning, executable test implementation, p
 
 `test-evidence-planning` owns deciding and reassessing what evidence is required long-term, what may provisionally stand in for it, and what is only a temporary diagnostic check.
 `test-evidence-implementation` owns establishing executable tests from settled definitions, replacing provisional tests, and retiring temporary, incidental, or redundant artifacts while retaining sufficient required evidence.
+`test-execution-budget` owns the cumulative run budget for repeated trial-based verification; test-evidence obligations remain with test planning and implementation, and CI configuration remains with `ci-execution-efficiency`.
 
 Implementation planning owns the implementation boundary and completion contract.
 For plan-governed work, required test definitions are bounded by that contract and linked from the implementation plan before execution readiness.
@@ -42,6 +45,7 @@ Keep local guidance focused on activation and responsibility; the public skill d
 
 - `skills/planning/SKILL.md` — `test-evidence-planning`.
 - `skills/implementation/SKILL.md` — `test-evidence-implementation`.
+- `skills/execution/SKILL.md` — `test-execution-budget`.
 - `skills/preservation/SKILL.md` — `test-evidence-preservation`.
 - `skills/review/SKILL.md` — `test-evidence-review`.
 - `skills/remediation/SKILL.md` — `test-gap-remediation`.
