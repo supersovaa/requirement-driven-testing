@@ -32,7 +32,7 @@ Prefer assertions on required behavior and results through the real input and lo
 Use those assertions as evidence for the loading and data-interpretation guarantees they actually establish; incidental code-path execution remains insufficient.
 Treat a handwritten copy of a loaded internal structure as redundant when behavioral evidence already establishes the same guarantee.
 Require separate representation or loading checks only for a distinct settled contract and a concrete violation outside that behavioral evidence.
-For tests, fixtures, helpers, and CI machinery, prefer consumer tests, review, and bounded change-time checks; add or retain dedicated tests only for a distinct continuing guarantee and a concrete violation those checks would miss.
+For tests, fixtures, helpers, and CI machinery, prefer consumer tests, review, and bounded change-time checks; add or retain dedicated tests only for a distinct continuing guarantee and a concrete failure those checks would miss.
 Complete test expansion when the scoped guarantees have sufficient executable evidence.
 
 Decide separately whether verification is needed for the current work and whether the guarantee requires ongoing executable evidence afterward.
