@@ -9,7 +9,7 @@ Test planning selects sufficient executable evidence and reassesses its retentio
 Executable tests establish those guarantees while leaving incidental implementation choices free to change. Their pass/fail assertions must also accept outcomes permitted by the settled contracts.
 Verification that may launch real end-to-end trials first receives an evidence-based necessity decision; justified runs use a cumulative execution budget.
 
-The workflow separates test-evidence planning, executable test implementation, preservation during behavior-preserving refactoring, focused review of evidence sufficiency, and repair of identified evidence gaps.
+The workflow separates test-evidence planning, executable test implementation, preservation during behavior-preserving refactoring, focused review of evidence sufficiency and assertion scope, and repair of identified evidence gaps.
 
 ## Skills
 
@@ -30,7 +30,7 @@ Implementation planning owns the implementation boundary and completion contract
 For plan-governed work, required test definitions are bounded by that contract and linked from the implementation plan before execution readiness.
 Requirement and design workflows own the authoritative behavior and contracts.
 
-`test-evidence-review` provides dedicated criteria for judging executable test-evidence sufficiency and may be applied within another review workflow's existing scope.
+`test-evidence-review` checks coverage sufficiency and unsupported assertion restrictions within another review workflow's existing scope.
 The surrounding review workflow continues to own its review scope, acceptance decisions, and findings outside this focused concern.
 
 These testing skills plan, establish, preserve, review, or restore executable evidence without taking ownership of requirement definition, design definition, implementation execution, or general implementation review.
