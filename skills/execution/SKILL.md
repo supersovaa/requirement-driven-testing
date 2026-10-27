@@ -13,25 +13,27 @@ Identify the specific settled guarantee or diagnostic question, the failure to d
 
 **Choose zero complete trials** when a lighter method establishes the same guarantee. For example, verify large trial-count inputs, dispatch counts, progress reporting, aggregation, and stop handling using controlled results or a counting substitute when these establish the contract.
 
-Select complete real trials when the outstanding guarantee specifically depends on the complete game or episode lifecycle, an actual end-to-end integration path, or statistical observations requiring real sampling. Verify individual game-state transitions through focused tests when those establish the guarantee. For every selected complete trial, identify the evidence that a zero-trial method leaves uncovered. Existing loops, a broad test command, and a large number in an example prompt examination of the assertions and owning guarantee.
+Select complete real trials when the outstanding guarantee specifically depends on the complete game or episode lifecycle, an actual end-to-end integration path, or statistical observations requiring real sampling. Verify individual game-state transitions through focused tests when those establish the guarantee. For every selected complete trial, identify the evidence that a zero-trial method leaves uncovered. Existing loops, a broad test command, or a large number in an example prompt require examining the assertions and their owning guarantee.
 
 Treat settled required test definitions as obligations. When a required definition prescribes real trials but an equivalent lighter method appears sufficient, return the proposed change to `test-evidence-planning` for reassessment; preserve the original requirement as pending until revised or verified. Keep requirement or design changes with their owning workflow.
 
 ## Bound the necessary execution
 
-Inspect candidate commands, test definitions, runners, and configuration to determine the maximum number of complete trial attempts they could start. Include loops inside tests, multiple targets, parameterized cases, parallel workers, automatic retries, and attempts already started for the same requested task or PR verification, including by other workers or agents.
+Inspect candidate commands, test definitions, runners, and configuration to determine the maximum number of complete trial attempts they could start. Include loops inside tests, multiple targets, parameterized cases, parallel workers, automatic retries, and attempts already started when assessing remaining evidence, including attempts by other workers or agents.
 
-Use **10 started end-to-end trial attempts per requested task or PR verification** as the default cumulative autonomous execution ceiling, applied only after the need for real trials is established. Choose the smallest number sufficient for the identified guarantee, starting with a single targeted trial when appropriate. Count each started attempt, including failed, interrupted, and timed-out runs, once.
+For each outstanding guarantee, choose a bounded run sized to the evidence still needed and its expected resource cost. Set an explicit maximum of started attempts, concurrency, and supported timeouts before execution; estimate runtime and compute cost from available evidence when possible. Start with the smallest number sufficient for the guarantee, often one targeted trial. A distinct remaining integration guarantee may warrant its own bounded run even after previous trials for the same task or PR.
 
-Allocate bounded trial quotas across workers or subagents before concurrent execution, keeping their combined maximum within the authorized budget. Choose commands that stay within the remaining budget across all selected runners and workers. Resolve uncertain attempt counts by inspecting source or configuration, listing tests, or using a dry run before execution. Use trial caps and timeouts supported by the runner.
+Count each started attempt, including failed, interrupted, and timed-out runs, against the selected run's bound. Allocate attempt quotas across workers or subagents so their combined maximum stays within that bound. Resolve uncertain counts by inspecting source or configuration, listing tests, or using a dry run. Apply supported trial caps and timeouts in the runner.
 
-Reuse previously successful evidence when its inputs and guarantees remain applicable. Count diagnostic reruns and retries against the same budget.
+Reuse previously successful evidence when its inputs and guarantees remain applicable. Diagnose failed runs with focused checks, then choose any further bounded run from the remaining evidence need and diagnosis. Account for attempts, elapsed time, and compute cost already spent on the task or PR when judging whether further work remains proportionate. Keep each additional run tied to a distinct outstanding guarantee or diagnosed failure.
 
-## Escalate justified large runs
+## Escalate material resource use
 
-For verification requiring more than the remaining autonomous budget, identify the governing guarantee, explain the additional evidence supplied by actual trials beyond lighter checks, and state the proposed total trial count and estimated resource or time cost when available. Obtain explicit user authorization for the bounded run.
+Execute necessary bounded runs autonomously when they fit the requested verification scope, available approved resources, and proportionate execution cost. Obtain explicit user authorization for materially increased paid compute, prolonged occupation of scarce or shared resources, or a substantial expansion beyond an explicit user limit or the justified resource scope.
 
-A requirement, design example, implementation plan, or generated test specifying a large count establishes a potential verification obligation; explicit authorization governs autonomous spending beyond the default ceiling. Reuse existing user authorization when its scope and bound cover the proposed run.
+When requesting authorization, identify the outstanding guarantee, the evidence real trials add beyond lighter checks, and the proposed maximum attempts, concurrency, timeout, and estimated resource or time cost when available. Reuse existing user authorization when its scope and bound cover the run.
+
+A requirement, design example, implementation plan, or generated test specifying many trials establishes a potential verification obligation. Use `test-evidence-planning` for reassessment when equivalent lighter evidence would suffice; keep any settled real-trial obligation pending until sufficient evidence is established.
 
 When authorization or reassessment is pending, report completed lighter evidence and the outstanding verification separately. Treat a required real-trial verification as complete when sufficient executable evidence has been established.
 
