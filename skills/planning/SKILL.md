@@ -1,11 +1,11 @@
 ---
 name: test-evidence-planning
-description: Plan or reassess test cases, expected outcomes, coverage, regression scope, retention and retirement, validation methods, and test-support constraints for sufficient executable evidence of settled requirements and design.
+description: Plan or reassess executable verification for settled requirements and design or current diagnostic work, including evidence lifetime, required cases, expected outcomes, coverage, regression scope, validation methods, and test-support constraints.
 ---
 
 # Test Evidence Planning
 
-Use this skill when deciding or reassessing what executable test evidence is required for settled requirements or design, including test addition, retention, consolidation, and retirement.
+Use this skill when deciding or reassessing executable verification for settled requirements and design or current diagnostic work, including evidence lifetime, addition, consolidation, replacement, and retirement.
 
 Treat requirements and design as authority, and test definitions as a planning output that makes the required evidence explicit.
 
@@ -21,10 +21,21 @@ When no implementation plan governs the work, use the explicit requested change 
 Requirements take precedence over design.
 Return design that conflicts with a settled requirement to the workflow that owns design before planning dependent test evidence.
 
-## Select and retain sufficient evidence
+## Classify evidence by lifetime
+
+Classify planned verification by whether it establishes a continuing settled guarantee and, when it does, whether complete evidence is currently executable:
+
+- **Ongoing evidence** establishes a settled requirement or design guarantee that continues to apply after the current work. Keep sufficient executable evidence for that guarantee in the repository.
+- **Temporary diagnostic verification** serves the current reproduction, isolation, or repair confirmation only. Keep it outside required test definitions, bound it to the current work, and define when its purpose is complete.
+- **Provisional evidence** temporarily establishes part or a substitute of a continuing guarantee because complete evidence cannot yet be executed. Keep the complete test definition as the target and define the condition that replaces the provisional evidence.
+
+Base the classification on the continuing guarantee and current executability rather than on how a check was discovered or how useful it was during debugging.
+Classify a defect reproduction as ongoing evidence when it establishes a continuing settled guarantee that lacks sufficient equivalent coverage.
+
+## Select sufficient ongoing evidence
 
 For each applicable requirement or design guarantee, including any required verification examples, inspect relevant settled test definitions and existing executable tests, including evidence owned by other plans or components.
-For each test considered for addition or retention in the current scope, identify the settled guarantee and the concrete violation its assertions can detect.
+For each ongoing test considered for addition or retention in the current scope, identify the settled guarantee and the concrete violation its assertions can detect.
 Reuse sufficient definitions by reference and executable evidence when it establishes the guarantee; add or retain separate tests only for uncovered guarantees or distinct behavior at the current responsibility or integration boundary.
 One test may establish multiple guarantees, and multiple tests may together establish one.
 
@@ -33,10 +44,8 @@ Use those assertions as evidence for the loading and data-interpretation guarant
 Treat a handwritten copy of a loaded internal structure as redundant when behavioral evidence already establishes the same guarantee.
 Require separate representation or loading checks only for a distinct settled contract and a concrete violation outside that behavioral evidence.
 For tests, fixtures, helpers, and CI machinery, prefer consumer tests, review, and bounded change-time checks; add or retain dedicated tests only for a distinct continuing guarantee and a concrete failure those checks would miss.
-Complete test expansion when the scoped guarantees have sufficient executable evidence.
+Complete test expansion when the scoped continuing guarantees have sufficient executable evidence.
 
-Decide separately whether verification is needed for the current work and whether the guarantee requires ongoing executable evidence afterward.
-Base continued evidence on the guarantee's applicability and sufficient equivalent coverage, rather than on whether a test helped diagnose a defect.
 Keeping ongoing evidence does not require executing every test for every change; CI execution selection belongs to `ci-execution-efficiency`.
 
 When a settled test definition fixes incidental details or duplicates sufficient evidence, revise it here against the governing guarantee and update its planning references.
@@ -60,17 +69,17 @@ Use design cases for APIs, invariants, type guarantees, responsibility boundarie
 Keep the definitions about what must be established.
 Leave test framework mechanics, fixture implementation, test decomposition, and assertion structure to test implementation unless a settled constraint requires them.
 
-When a provisional test stands in for a complete test during staged implementation, first define the corresponding complete test case and expected outcome, then derive the provisional test from that definition.
+## Plan provisional evidence for staged implementation
+
+When a provisional test stands in for complete evidence during staged implementation, first define the corresponding complete test case and expected outcome, then derive the provisional test from that definition.
 Keep the complete test definition as the target for eventual executable evidence.
-Treat temporary diagnostic checks that establish no settled guarantee as bounded verification for the current work, rather than permanent required test cases.
 
 For a guarantee that applies only during an intermediate stage, a reduced source element may be used when the removed parts are immaterial to that guarantee.
 For the source element's own completion, plan evidence using its complete form.
 
 When full verification of a complete source element depends on another unfinished element, prefer waiting for that dependency to be completed before treating the source element as complete.
-When waiting is not feasible, plan completion with provisional test evidence using the complete source element and retain its complete test as a pending verification obligation after the dependency is completed.
-Keep provisional evidence distinct from evidence for the complete test.
-Define when temporary diagnostic checks end and when provisional tests can be replaced, retaining pending full-verification obligations until sufficient evidence is established.
+When waiting is not feasible, plan completion with provisional evidence using the complete source element and retain its complete test as a pending verification obligation after the dependency is completed.
+Keep provisional evidence distinct from evidence for the complete test and define its replacement condition.
 
 Keep the complete test definition with the source element and hand the pending verification obligation to implementation planning.
 When the unfinished dependency's completion scope includes the required integration verification, have implementation planning link to that definition from the dependency's completion criteria.
@@ -97,8 +106,8 @@ For work without an implementation plan, make the settled test definitions expli
 
 Record for each applicable guarantee and required verification example the sufficient existing tests and supporting coverage, or the uncovered cases, expected outcomes, and required new or expanded tests. For combined conditions, record the distinct interaction or boundary violation that requires the combination.
 When existing evidence establishes all of them, record its sufficiency and complete test selection with that evidence.
-Record whether planned required evidence is ongoing or provisional and the replacement condition for provisional evidence.
-For consolidation or retirement, identify the incidental assertions or redundant tests to remove and the sufficient evidence retained for continuing guarantees.
+Record ongoing evidence with the continuing guarantee it establishes, and provisional evidence with its complete target and replacement condition. Keep temporary diagnostic verification in the current work context with its completion boundary.
+For consolidation or retirement, identify the incidental assertions or redundant tests to remove and the sufficient ongoing evidence retained for continuing guarantees.
 Keep each definition traceable to the requirement or design guarantee it establishes.
 
 ## Hand off executable work
@@ -108,6 +117,6 @@ Hand the settled required test definitions to `test-evidence-implementation` for
 Use `test-evidence-review` to judge whether the implemented evidence sufficiently establishes the settled definitions.
 Route review-discovered test-evidence gaps to `test-gap-remediation`.
 
-This skill owns test-evidence planning and reassessment of test definitions and retention.
+This skill owns test-evidence planning, evidence-lifetime classification, and reassessment of test definitions.
 Executable test creation, reuse, and retirement belong to `test-evidence-implementation`.
 Requirement definition, design definition, implementation planning, implementation execution, and general implementation review remain with their owning workflows.

@@ -32,7 +32,7 @@ Treat the evidence as sufficient only when the relevant test behavior and assert
 Incidental execution of a code path is not evidence for a guarantee the test does not verify.
 
 Accept combined or shared tests when they collectively establish the required cases.
-Apply the [selection and retention criteria](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/planning/SKILL.md#select-and-retain-sufficient-evidence) before requesting additional or restored tests.
+Apply the [selection and retention criteria](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/planning/SKILL.md#select-sufficient-ongoing-evidence) before requesting additional or restored tests.
 Return over-specified or redundant required test definitions to `test-evidence-planning`, identifying the governing guarantee and the existing evidence that remains sufficient.
 
 Apply the settled validation scope, boundary coverage, combinations, regression scope, validation methods, and test-support constraints that govern the reviewed definitions.

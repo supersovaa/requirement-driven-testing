@@ -1,19 +1,19 @@
 ---
 name: test-evidence-implementation
-description: Establish or reuse required executable test evidence, retire temporary diagnostic checks and incidental assertions, replace provisional tests, and consolidate redundant coverage.
+description: Apply settled evidence-lifetime decisions by establishing or reusing ongoing executable evidence, keeping temporary diagnostic verification bounded, replacing provisional evidence, and consolidating incidental or redundant coverage.
 ---
 
 # Test Evidence Implementation
 
-Use this skill when establishing required executable test evidence, including evidence-only additions for correct behavior, retiring temporary diagnostic checks and incidental assertions, replacing provisional tests, or consolidating redundant tests.
+Use this skill when implementing settled test-evidence decisions, including establishing ongoing evidence, carrying out bounded temporary diagnostic verification, replacing provisional evidence, narrowing incidental assertions, or consolidating redundant tests.
 
-Treat required test definitions as implementation inputs.
+Treat required test definitions as implementation inputs for ongoing and provisional evidence. For temporary diagnostic verification, use its scope and completion boundary from the current work context.
 When selecting or executing verification that may launch real complete games, simulations, episodes, or similarly costly end-to-end trials, apply [`test-execution-budget`](../execution/SKILL.md) before selecting commands to determine whether those trials are necessary and to bound justified execution.
 Test planning belongs to `test-evidence-planning`.
 
 ## Consume settled test definitions
 
-When establishing required evidence, use the test cases, expected outcomes, and evidence retention decisions settled by `test-evidence-planning`.
+When establishing required evidence, use the test cases, expected outcomes, and evidence-lifetime decisions settled by `test-evidence-planning`.
 
 When establishing required evidence under an implementation plan, implement the required test definitions linked to the current plan boundary.
 Apply the settled validation scope, boundary coverage, combinations, regression scope, validation methods, and test-support constraints that govern those definitions.
@@ -31,7 +31,7 @@ Use design tests for cases that establish APIs, invariants, type guarantees, res
 Requirements take precedence over design, tests, and implementation.
 Return design that conflicts with a settled requirement to the workflow that owns design before relying on it as test authority.
 
-Choose assertions using the [selection and retention criteria](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/planning/SKILL.md#select-and-retain-sufficient-evidence) settled by `test-evidence-planning`.
+Choose assertions using the [ongoing-evidence selection criteria](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/planning/SKILL.md#select-sufficient-ongoing-evidence) settled by `test-evidence-planning`.
 
 ## Keep pass/fail assertions within the settled guarantee
 
@@ -41,17 +41,19 @@ Use exact object equality, metadata collections, ordering, reference identifiers
 
 Narrow an incidental assertion within the settled test definition before marking the evidence complete. When a stronger guarantee appears necessary, return that decision to `test-evidence-planning` rather than silently expanding the required test.
 
-## Reuse and retain sufficient evidence
+## Implement according to evidence lifetime
 
-Inspect existing tests before adding a new test.
+Inspect existing tests before adding ongoing evidence.
 Use an existing test when it already establishes the required case and expected outcome.
 Treat incidental path execution as insufficient when the test does not actually establish that guarantee.
 
-Keep sufficient executable evidence for each continuing guarantee; retire incidental assertions and consolidate redundant tests according to the settled retention decisions.
-Retire temporary diagnostic checks after their investigation when they provide no required continuing evidence.
-Replace provisional tests only after sufficient complete evidence is established and any pending verification obligation is discharged.
-A test's role in reproducing a defect does not alone make that test permanent.
-Return missing retention or retirement decisions and over-specified required definitions to `test-evidence-planning` before changing their obligations.
+For ongoing evidence, keep sufficient executable coverage for each continuing guarantee and consolidate redundant tests according to the settled planning decision.
+For temporary diagnostic verification, prefer transient commands or scratch artifacts that stay outside the persistent test suite. When the verification needs a repository artifact, keep that artifact scoped to the current work and clear it at the settled completion boundary.
+For provisional evidence, keep the substitute only while its settled replacement condition applies, then establish the complete evidence and discharge the pending verification obligation.
+
+Treat defect reproduction as evidence-lifetime neutral: its lifetime comes from the settled guarantee it establishes.
+Retire incidental assertions as directed by the settled planning decision.
+Return missing lifetime decisions and over-specified required definitions to `test-evidence-planning` before changing their obligations.
 
 ## Establish tests before target implementation
 
@@ -100,7 +102,7 @@ Use the repository's established test framework, fixture structure, naming, plac
 Follow explicit repository conventions governing test-file grouping; otherwise apply the responsibility-based initial grouping above.
 Use an existing documentation or mapping format when it can express the required relationship.
 
-This skill owns executable test establishment and retirement from settled test definitions and retention decisions.
+This skill owns executable test establishment and lifecycle handling from settled test definitions and evidence-lifetime decisions.
 Test-evidence planning belongs to `test-evidence-planning`.
 Behavior-preserving evidence retention belongs to `test-evidence-preservation`.
 Use `test-evidence-review` when a focused review of test-evidence sufficiency is needed.
