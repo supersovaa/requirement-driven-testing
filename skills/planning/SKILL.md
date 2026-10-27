@@ -5,7 +5,7 @@ description: Plan or reassess sufficient executable test evidence for settled re
 
 # Test Evidence Planning
 
-Use this skill when deciding or reassessing what executable test evidence is required for settled requirements or design, including test addition, retention, consolidation, and retirement.
+Use this skill when deciding or reassessing executable test evidence for settled requirements or design, including evidence lifetime, addition, consolidation, replacement, and retirement.
 
 Treat requirements and design as authority, and test definitions as a planning output that makes the required evidence explicit.
 
@@ -117,6 +117,6 @@ Hand the settled required test definitions to `test-evidence-implementation` for
 Use `test-evidence-review` to judge whether the implemented evidence sufficiently establishes the settled definitions.
 Route review-discovered test-evidence gaps to `test-gap-remediation`.
 
-This skill owns test-evidence planning and reassessment of test definitions and retention.
+This skill owns test-evidence planning, evidence-lifetime classification, and reassessment of test definitions.
 Executable test creation, reuse, and retirement belong to `test-evidence-implementation`.
 Requirement definition, design definition, implementation planning, implementation execution, and general implementation review remain with their owning workflows.
