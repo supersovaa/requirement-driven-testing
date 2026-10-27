@@ -7,7 +7,7 @@ description: Apply settled evidence-lifetime decisions by establishing or reusin
 
 Use this skill when implementing settled test-evidence decisions, including establishing ongoing evidence, carrying out bounded temporary diagnostic verification, replacing provisional evidence, narrowing incidental assertions, or consolidating redundant tests.
 
-Treat required test definitions as implementation inputs.
+Treat required test definitions as implementation inputs for ongoing and provisional evidence. For temporary diagnostic verification, use its scope and completion boundary from the current work context.
 When selecting or executing verification that may launch real complete games, simulations, episodes, or similarly costly end-to-end trials, apply [`test-execution-budget`](../execution/SKILL.md) before selecting commands to determine whether those trials are necessary and to bound justified execution.
 Test planning belongs to `test-evidence-planning`.
 
