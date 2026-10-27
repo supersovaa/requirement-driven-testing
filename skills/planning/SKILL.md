@@ -23,13 +23,13 @@ Return design that conflicts with a settled requirement to the workflow that own
 
 ## Classify evidence by lifetime
 
-Classify planned verification by the guarantee it serves:
+Classify planned verification by whether it establishes a continuing settled guarantee and, when it does, whether complete evidence is currently executable:
 
 - **Ongoing evidence** establishes a settled requirement or design guarantee that continues to apply after the current work. Keep sufficient executable evidence for that guarantee in the repository.
 - **Temporary diagnostic verification** serves the current reproduction, isolation, or repair confirmation only. Keep it outside required test definitions, bound it to the current work, and define when its purpose is complete.
 - **Provisional evidence** temporarily establishes part or a substitute of a continuing guarantee because complete evidence cannot yet be executed. Keep the complete test definition as the target and define the condition that replaces the provisional evidence.
 
-Base the classification on the continuing guarantee rather than on how a check was discovered or how useful it was during debugging.
+Base the classification on the continuing guarantee and current executability rather than on how a check was discovered or how useful it was during debugging.
 Classify a defect reproduction as ongoing evidence when it establishes a continuing settled guarantee that lacks sufficient equivalent coverage.
 
 ## Select sufficient ongoing evidence
