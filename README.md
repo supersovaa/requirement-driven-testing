@@ -5,15 +5,17 @@ A lightweight six-skill set for planning, implementing, preserving, reviewing, a
 ## Core idea
 
 Requirements and design define the guarantees.
-Test planning selects sufficient executable evidence and reassesses its retention as coverage changes.
+Test planning classifies verification by lifetime and selects sufficient executable evidence for continuing guarantees.
 Executable tests establish those guarantees while leaving incidental implementation choices free to change. Their pass/fail assertions must also accept outcomes permitted by the settled contracts.
 Verification that may launch real end-to-end trials first receives an evidence-based necessity decision; justified runs use explicit bounds sized to the remaining guarantee and available resources.
+
+Ongoing evidence remains with continuing requirements and design guarantees. Temporary diagnostic verification ends with the current investigation or repair. Provisional evidence stands in until complete evidence becomes executable.
 
 The workflow separates test-evidence planning, executable test implementation, preservation during behavior-preserving refactoring, focused review of evidence sufficiency and assertion scope, and repair of identified evidence gaps.
 
 ## Skills
 
-- [`test-evidence-planning`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/planning/SKILL.md) — plan or reassess sufficient required evidence, reuse established coverage, decide retention and retirement, and distinguish ongoing guarantees, provisional substitutes, and temporary diagnostic checks.
+- [`test-evidence-planning`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/planning/SKILL.md) — plan or reassess sufficient evidence and classify verification as ongoing, temporary diagnostic, or provisional according to the guarantee it serves.
 - [`test-evidence-implementation`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/implementation/SKILL.md) — establish executable evidence with assertions bounded by settled guarantees, retire incidental checks, and consolidate redundant coverage.
 - [`test-execution-budget`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/execution/SKILL.md) — before selecting verification commands that may launch real game or simulation trials, prefer zero-trial evidence when sufficient and bound necessary runs by evidence need and resource cost.
 - [`test-evidence-preservation`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/preservation/SKILL.md) — preserve still-applicable requirement and design guarantees when behavior-preserving refactoring changes tests.
@@ -22,8 +24,8 @@ The workflow separates test-evidence planning, executable test implementation, p
 
 ## Responsibility boundaries
 
-`test-evidence-planning` owns deciding and reassessing what evidence is required long-term, what may provisionally stand in for it, and what is only a temporary diagnostic check.
-`test-evidence-implementation` owns establishing executable tests from settled definitions, replacing provisional tests, and retiring temporary, incidental, or redundant artifacts while retaining sufficient required evidence.
+`test-evidence-planning` owns the lifetime classification of verification and the sufficient evidence required for continuing guarantees.
+`test-evidence-implementation` owns applying that classification: establishing ongoing evidence, completing temporary diagnostic verification at its boundary, replacing provisional evidence, and consolidating incidental or redundant artifacts.
 `test-execution-budget` owns the necessity gate and bounded execution of justified real trials; the selection and reassessment of required test evidence remain with test planning, and CI selection and configuration with `ci-execution-efficiency`.
 
 Implementation planning owns the implementation boundary and completion contract.
