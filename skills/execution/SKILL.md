@@ -13,7 +13,7 @@ Identify the specific settled guarantee or diagnostic question, the failure to d
 
 **Choose zero complete trials** when a lighter method establishes the same guarantee. For example, verify large trial-count inputs, dispatch counts, progress reporting, aggregation, and stop handling using controlled results or a counting substitute when these establish the contract.
 
-Select complete real trials when the outstanding guarantee specifically depends on the complete game or episode lifecycle, an actual end-to-end integration path, or statistical observations requiring real sampling. Verify individual game-state transitions through focused tests when those establish the guarantee. For every selected complete trial, identify the evidence that a zero-trial method leaves uncovered. Existing loops, a broad test command, and a large number in an example prompt examination of the assertions and owning guarantee.
+Select complete real trials when the outstanding guarantee specifically depends on the complete game or episode lifecycle, an actual end-to-end integration path, or statistical observations requiring real sampling. Verify individual game-state transitions through focused tests when those establish the guarantee. For every selected complete trial, identify the evidence that a zero-trial method leaves uncovered. Existing loops, a broad test command, or a large number in an example prompt require examining the assertions and their owning guarantee.
 
 Treat settled required test definitions as obligations. When a required definition prescribes real trials but an equivalent lighter method appears sufficient, return the proposed change to `test-evidence-planning` for reassessment; preserve the original requirement as pending until revised or verified. Keep requirement or design changes with their owning workflow.
 
@@ -25,7 +25,7 @@ For each outstanding guarantee, choose a bounded run sized to the evidence still
 
 Count each started attempt, including failed, interrupted, and timed-out runs, against the selected run's bound. Allocate attempt quotas across workers or subagents so their combined maximum stays within that bound. Resolve uncertain counts by inspecting source or configuration, listing tests, or using a dry run. Apply supported trial caps and timeouts in the runner.
 
-Reuse previously successful evidence when its inputs and guarantees remain applicable. Diagnose failed runs with focused checks, then choose any further bounded run from the remaining evidence need and diagnosis. Keep each additional run tied to a distinct outstanding guarantee or diagnosed failure.
+Reuse previously successful evidence when its inputs and guarantees remain applicable. Diagnose failed runs with focused checks, then choose any further bounded run from the remaining evidence need and diagnosis. Account for attempts, elapsed time, and compute cost already spent on the task or PR when judging whether further work remains proportionate. Keep each additional run tied to a distinct outstanding guarantee or diagnosed failure.
 
 ## Escalate material resource use
 
