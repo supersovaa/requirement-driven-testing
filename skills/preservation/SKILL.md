@@ -13,7 +13,7 @@ When selecting or executing verification that may launch real complete games, si
 ## Identify established guarantees
 
 Before changing an existing test, identify the requirement or design guarantee it intentionally establishes.
-Distinguish authoritative guarantees from incidental assertions or implementation details using the [selection and retention criteria](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/planning/SKILL.md#select-and-retain-sufficient-evidence).
+Distinguish authoritative guarantees from incidental assertions or implementation details using the [ongoing-evidence selection criteria](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/planning/SKILL.md#select-sufficient-ongoing-evidence).
 
 Requirements remain authoritative over design, tests, and implementation.
 When an existing test disagrees with a settled requirement, treat the conflicting expectation as non-authoritative.
