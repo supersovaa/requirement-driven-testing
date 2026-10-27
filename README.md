@@ -16,7 +16,7 @@ The workflow separates test-evidence planning, executable test implementation, p
 ## Skills
 
 - [`test-evidence-planning`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/planning/SKILL.md) — plan or reassess sufficient evidence and classify verification as ongoing, temporary diagnostic, or provisional according to the guarantee it serves.
-- [`test-evidence-implementation`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/implementation/SKILL.md) — establish executable evidence with assertions bounded by settled guarantees, retire incidental checks, and consolidate redundant coverage.
+- [`test-evidence-implementation`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/implementation/SKILL.md) — apply settled evidence lifetimes by establishing ongoing evidence, carrying out bounded temporary verification, replacing provisional evidence, and consolidating incidental or redundant coverage.
 - [`test-execution-budget`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/execution/SKILL.md) — before selecting verification commands that may launch real game or simulation trials, prefer zero-trial evidence when sufficient and bound necessary runs by evidence need and resource cost.
 - [`test-evidence-preservation`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/preservation/SKILL.md) — preserve still-applicable requirement and design guarantees when behavior-preserving refactoring changes tests.
 - [`test-evidence-review`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/review/SKILL.md) — judge both evidence sufficiency and whether executable assertions impose requirements beyond settled test definitions.
