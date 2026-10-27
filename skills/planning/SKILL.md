@@ -1,11 +1,11 @@
 ---
 name: test-evidence-planning
-description: Plan or reassess sufficient executable test evidence for settled requirements and design, including cases, expected outcomes, coverage, evidence lifetime, regression scope, validation methods, and test-support constraints.
+description: Plan or reassess executable verification for settled requirements and design or current diagnostic work, including evidence lifetime, required cases, expected outcomes, coverage, regression scope, validation methods, and test-support constraints.
 ---
 
 # Test Evidence Planning
 
-Use this skill when deciding or reassessing executable test evidence for settled requirements or design, including evidence lifetime, addition, consolidation, replacement, and retirement.
+Use this skill when deciding or reassessing executable verification for settled requirements and design or current diagnostic work, including evidence lifetime, addition, consolidation, replacement, and retirement.
 
 Treat requirements and design as authority, and test definitions as a planning output that makes the required evidence explicit.
 
