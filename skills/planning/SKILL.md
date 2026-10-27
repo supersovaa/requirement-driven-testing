@@ -106,7 +106,7 @@ For work without an implementation plan, make the settled test definitions expli
 
 Record for each applicable guarantee and required verification example the sufficient existing tests and supporting coverage, or the uncovered cases, expected outcomes, and required new or expanded tests. For combined conditions, record the distinct interaction or boundary violation that requires the combination.
 When existing evidence establishes all of them, record its sufficiency and complete test selection with that evidence.
-Record the lifetime classification of planned verification. For ongoing evidence, record the continuing guarantee it establishes. For temporary diagnostic verification, record its completion boundary. For provisional evidence, record the complete target and replacement condition.
+Record ongoing evidence with the continuing guarantee it establishes, and provisional evidence with its complete target and replacement condition. Keep temporary diagnostic verification in the current work context with its completion boundary.
 For consolidation or retirement, identify the incidental assertions or redundant tests to remove and the sufficient ongoing evidence retained for continuing guarantees.
 Keep each definition traceable to the requirement or design guarantee it establishes.
 
