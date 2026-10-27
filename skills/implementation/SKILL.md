@@ -1,11 +1,11 @@
 ---
 name: test-evidence-implementation
-description: Establish or reuse required executable test evidence, retire temporary diagnostic checks and incidental assertions, replace provisional tests, and consolidate redundant coverage.
+description: Apply settled evidence-lifetime decisions by establishing or reusing ongoing executable evidence, keeping temporary diagnostic verification bounded, replacing provisional evidence, and consolidating incidental or redundant coverage.
 ---
 
 # Test Evidence Implementation
 
-Use this skill when establishing required executable test evidence, including evidence-only additions for correct behavior, retiring temporary diagnostic checks and incidental assertions, replacing provisional tests, or consolidating redundant tests.
+Use this skill when implementing settled test-evidence decisions, including establishing ongoing evidence, carrying out bounded temporary diagnostic verification, replacing provisional evidence, narrowing incidental assertions, or consolidating redundant tests.
 
 Treat required test definitions as implementation inputs.
 When selecting or executing verification that may launch real complete games, simulations, episodes, or similarly costly end-to-end trials, apply [`test-execution-budget`](../execution/SKILL.md) before selecting commands to determine whether those trials are necessary and to bound justified execution.
@@ -102,7 +102,7 @@ Use the repository's established test framework, fixture structure, naming, plac
 Follow explicit repository conventions governing test-file grouping; otherwise apply the responsibility-based initial grouping above.
 Use an existing documentation or mapping format when it can express the required relationship.
 
-This skill owns executable test establishment and retirement from settled test definitions and retention decisions.
+This skill owns executable test establishment and lifecycle handling from settled test definitions and evidence-lifetime decisions.
 Test-evidence planning belongs to `test-evidence-planning`.
 Behavior-preserving evidence retention belongs to `test-evidence-preservation`.
 Use `test-evidence-review` when a focused review of test-evidence sufficiency is needed.
