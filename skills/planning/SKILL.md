@@ -26,11 +26,11 @@ Return design that conflicts with a settled requirement to the workflow that own
 Classify planned verification by the guarantee it serves:
 
 - **Ongoing evidence** establishes a settled requirement or design guarantee that continues to apply after the current work. Keep sufficient executable evidence for that guarantee in the repository.
-- **Temporary diagnostic verification** reproduces, isolates, or confirms the current problem without establishing a continuing settled guarantee. Bound it to the current work and define when its purpose is complete.
+- **Temporary diagnostic verification** serves the current reproduction, isolation, or repair confirmation only. Keep it outside required test definitions, bound it to the current work, and define when its purpose is complete.
 - **Provisional evidence** temporarily establishes part or a substitute of a continuing guarantee because complete evidence cannot yet be executed. Keep the complete test definition as the target and define the condition that replaces the provisional evidence.
 
 Base the classification on the continuing guarantee rather than on how a check was discovered or how useful it was during debugging.
-A defect reproduction becomes ongoing evidence only when it is needed to establish a continuing settled guarantee that lacks sufficient equivalent coverage.
+Classify a defect reproduction as ongoing evidence when it establishes a continuing settled guarantee that lacks sufficient equivalent coverage.
 
 ## Select sufficient ongoing evidence
 
