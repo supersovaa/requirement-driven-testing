@@ -24,7 +24,7 @@ The workflow separates test-evidence planning, executable test implementation, p
 
 `test-evidence-planning` owns deciding and reassessing what evidence is required long-term, what may provisionally stand in for it, and what is only a temporary diagnostic check.
 `test-evidence-implementation` owns establishing executable tests from settled definitions, replacing provisional tests, and retiring temporary, incidental, or redundant artifacts while retaining sufficient required evidence.
-`test-execution-budget` owns the necessity gate and bounded execution of justified real trials; the selection and reassessment of required test evidence remain with test planning, and recurring CI execution with `ci-execution-efficiency`.
+`test-execution-budget` owns the necessity gate and bounded execution of justified real trials; the selection and reassessment of required test evidence remain with test planning, and CI selection and configuration with `ci-execution-efficiency`.
 
 Implementation planning owns the implementation boundary and completion contract.
 For plan-governed work, required test definitions are bounded by that contract and linked from the implementation plan before execution readiness.
