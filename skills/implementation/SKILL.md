@@ -13,7 +13,7 @@ Test planning belongs to `test-evidence-planning`.
 
 ## Consume settled test definitions
 
-When establishing required evidence, use the test cases, expected outcomes, and evidence retention decisions settled by `test-evidence-planning`.
+When establishing required evidence, use the test cases, expected outcomes, and evidence-lifetime decisions settled by `test-evidence-planning`.
 
 When establishing required evidence under an implementation plan, implement the required test definitions linked to the current plan boundary.
 Apply the settled validation scope, boundary coverage, combinations, regression scope, validation methods, and test-support constraints that govern those definitions.
@@ -31,7 +31,7 @@ Use design tests for cases that establish APIs, invariants, type guarantees, res
 Requirements take precedence over design, tests, and implementation.
 Return design that conflicts with a settled requirement to the workflow that owns design before relying on it as test authority.
 
-Choose assertions using the [selection and retention criteria](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/planning/SKILL.md#select-and-retain-sufficient-evidence) settled by `test-evidence-planning`.
+Choose assertions using the [ongoing-evidence selection criteria](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/planning/SKILL.md#select-sufficient-ongoing-evidence) settled by `test-evidence-planning`.
 
 ## Keep pass/fail assertions within the settled guarantee
 
@@ -41,17 +41,19 @@ Use exact object equality, metadata collections, ordering, reference identifiers
 
 Narrow an incidental assertion within the settled test definition before marking the evidence complete. When a stronger guarantee appears necessary, return that decision to `test-evidence-planning` rather than silently expanding the required test.
 
-## Reuse and retain sufficient evidence
+## Implement according to evidence lifetime
 
-Inspect existing tests before adding a new test.
+Inspect existing tests before adding ongoing evidence.
 Use an existing test when it already establishes the required case and expected outcome.
 Treat incidental path execution as insufficient when the test does not actually establish that guarantee.
 
-Keep sufficient executable evidence for each continuing guarantee; retire incidental assertions and consolidate redundant tests according to the settled retention decisions.
-Retire temporary diagnostic checks after their investigation when they provide no required continuing evidence.
-Replace provisional tests only after sufficient complete evidence is established and any pending verification obligation is discharged.
-A test's role in reproducing a defect does not alone make that test permanent.
-Return missing retention or retirement decisions and over-specified required definitions to `test-evidence-planning` before changing their obligations.
+For ongoing evidence, keep sufficient executable coverage for each continuing guarantee and consolidate redundant tests according to the settled planning decision.
+For temporary diagnostic verification, use the bounded check needed for the current investigation or repair and complete it at the settled completion boundary.
+For provisional evidence, keep the substitute only while its settled replacement condition applies, then establish the complete evidence and discharge the pending verification obligation.
+
+Treat defect reproduction as evidence-lifetime neutral: its lifetime comes from the settled guarantee it establishes.
+Retire incidental assertions as directed by the settled planning decision.
+Return missing lifetime decisions and over-specified required definitions to `test-evidence-planning` before changing their obligations.
 
 ## Establish tests before target implementation
 
