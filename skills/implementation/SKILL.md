@@ -48,7 +48,7 @@ Use an existing test when it already establishes the required case and expected 
 Treat incidental path execution as insufficient when the test does not actually establish that guarantee.
 
 For ongoing evidence, keep sufficient executable coverage for each continuing guarantee and consolidate redundant tests according to the settled planning decision.
-For temporary diagnostic verification, use the bounded check needed for the current investigation or repair and complete it at the settled completion boundary.
+For temporary diagnostic verification, prefer transient commands or scratch artifacts that stay outside the persistent test suite. When the verification needs a repository artifact, keep that artifact scoped to the current work and clear it at the settled completion boundary.
 For provisional evidence, keep the substitute only while its settled replacement condition applies, then establish the complete evidence and discharge the pending verification obligation.
 
 Treat defect reproduction as evidence-lifetime neutral: its lifetime comes from the settled guarantee it establishes.
