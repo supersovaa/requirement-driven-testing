@@ -61,7 +61,7 @@ Select the narrowest validation scope sufficient to detect a violation. Before s
 Define boundary coverage, combinations, regression scope, validation methods, and test-support constraints when they materially affect whether the evidence is sufficient.
 For each varied condition, tie its variation to a guarantee or concrete violation the evidence must distinguish.
 Combine conditions when their interaction or boundary creates a distinct violation that representative cases for the individual conditions would miss; use representative cases for independent conditions whose combinations establish the same guarantee.
-Preserve broad verification explicitly required by settled completion criteria.
+For broad verification or exact properties named by a settled completion criterion, require traceability to the governing requirements or design. Return a criterion that lacks that traceability to [`plan-driven-planning`](https://github.com/supersovaa/plan-driven-implementation/blob/main/skills/plan-driven-planning/SKILL.md) for correction before deriving or revising dependent required test definitions.
 
 Use requirement cases for externally meaningful behavior, outcomes, constraints, and other requirement-level guarantees.
 Use design cases for APIs, invariants, type guarantees, responsibility boundaries, and other established design contracts.
