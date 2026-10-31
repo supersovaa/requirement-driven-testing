@@ -23,6 +23,7 @@ When settled design disagrees with a settled requirement, return the design issu
 ## Preserve equivalent evidence
 
 Keep executable evidence for every still-applicable established guarantee affected by the refactoring.
+Keep the repository documentation's identification of that evidence current when tests move, merge, split, or are replaced; retain shared guarantee-level explanations when they remain accurate.
 The test may change framework usage, fixture shape, placement, decomposition, or assertion structure when the resulting evidence remains sufficient.
 
 Reuse an existing replacement test when it already establishes the same guarantee.
