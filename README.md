@@ -6,7 +6,7 @@ A lightweight six-skill set for planning, implementing, preserving, reviewing, a
 
 Requirements and design define the guarantees.
 Test planning classifies verification by lifetime and selects sufficient executable evidence for continuing guarantees.
-Executable tests establish those guarantees while leaving incidental implementation choices free to change. Their pass/fail assertions must also accept outcomes permitted by the settled contracts.
+Executable tests establish those guarantees while leaving incidental implementation choices free to change. Their pass/fail assertions must also accept outcomes permitted by the settled contracts. Persistent test definitions document the guarantee, permissible variations, and the concrete problem or evidence gap motivating the evidence.
 Verification that may launch real end-to-end trials first receives an evidence-based necessity decision; justified runs use explicit bounds sized to the remaining guarantee and available resources.
 
 Ongoing evidence remains with continuing requirements and design guarantees. Temporary diagnostic verification ends with the current investigation or repair. Provisional evidence stands in until complete evidence becomes executable.
