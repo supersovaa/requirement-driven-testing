@@ -49,6 +49,7 @@ Complete test expansion when the scoped continuing guarantees have sufficient ex
 Keeping ongoing evidence does not require executing every test for every change; CI execution selection belongs to `ci-execution-efficiency`.
 
 When a settled test definition fixes incidental details or duplicates sufficient evidence, revise it here against the governing guarantee and update its planning references.
+Treat proposed additional persistent tests discovered during implementation or review as test-planning candidates. Select them only after establishing their governing guarantee, the distinct violation that existing evidence misses, and their fit within the current work boundary; return changes to an implementation plan's settled boundary to its owning planning workflow.
 Keep changes to authoritative requirements, design, or completion contracts with their owning workflows.
 A settled required test definition remains a pending evidence obligation until sufficient executable tests establish its specified case and expected outcome or its definition is revised through the owning workflow.
 
@@ -103,6 +104,8 @@ For plan-governed work, record the complete required test definitions in reposit
 When linking test definitions in implementation plans or editing their planning indexes, follow [`plan-driven-planning`](https://github.com/supersovaa/plan-driven-implementation/blob/main/skills/plan-driven-planning/SKILL.md) for current planning facts and their derived views in those documents.
 
 For work without an implementation plan, make the settled test definitions explicit in the current work context and persist them when the surrounding workflow requires durable planning state.
+
+Record a concise, human-readable intent for each required ongoing test case: the governing guarantee and concrete violation to detect; the contract-valid changes or variations its expectations must continue to accept; and the problem, risk, or evidence gap motivating this distinct test evidence. Reference a known defect or decision when applicable; for prospective coverage, identify the concrete risk or evidence gap. Keep the record with the settled test definitions in the repository's established format, so each executable test can be traced back to its purpose.
 
 Record for each applicable guarantee and required verification example the sufficient existing tests and supporting coverage, or the uncovered cases, expected outcomes, and required new or expanded tests. For combined conditions, record the distinct interaction or boundary violation that requires the combination.
 When existing evidence establishes all of them, record its sufficiency and complete test selection with that evidence.
