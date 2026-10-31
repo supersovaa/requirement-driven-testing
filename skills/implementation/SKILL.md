@@ -102,7 +102,7 @@ Extract shared fixtures and helpers when multiple test files actually need them,
 Use the repository's established test framework, fixture structure, naming, placement, and traceability conventions.
 Follow explicit repository conventions governing test-file grouping; otherwise apply the responsibility-based initial grouping above.
 Use an existing documentation or mapping format when it can express the required relationship.
-For each new or materially changed ongoing executable test, maintain a discoverable mapping to its settled test definition and human-readable intent: what guarantee and violation it checks, which contract-valid variations remain acceptable, and why the distinct evidence was introduced. Place the intent in the settled definition and link to it from the test using the repository's existing convention, or place a concise equivalent explanation alongside the test when that is the established format. When one test establishes several cases or several tests establish one case, make their respective roles clear without repeating the authoritative explanation.
+Keep the repository documentation's identification of ongoing executable evidence aligned with tests added, materially changed, consolidated, replaced, or retired. Use the existing test names, files, or coherent groups to identify evidence at the granularity needed to distinguish its guarantees. Preserve the single authoritative explanation in settled test documentation and use documentation-side references; test source needs only the code and naming required to express the test.
 
 This skill owns executable test establishment and lifecycle handling from settled test definitions and evidence-lifetime decisions.
 Test-evidence planning belongs to `test-evidence-planning`.
