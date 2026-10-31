@@ -16,6 +16,7 @@ Test planning belongs to `test-evidence-planning`.
 When establishing required evidence, use the test cases, expected outcomes, and evidence-lifetime decisions settled by `test-evidence-planning`.
 
 When establishing required evidence under an implementation plan, implement the required test definitions linked to the current plan boundary.
+Keep additions and expansions of persistent executable tests within the settled required definitions and current work boundary. Route any newly discovered need for distinct ongoing coverage to `test-evidence-planning` for selection and recording before implementing it.
 Apply the settled validation scope, boundary coverage, combinations, regression scope, validation methods, and test-support constraints that govern those definitions.
 
 Return absent or incomplete settled definitions for required evidence to `test-evidence-planning`.
@@ -101,6 +102,7 @@ Extract shared fixtures and helpers when multiple test files actually need them,
 Use the repository's established test framework, fixture structure, naming, placement, and traceability conventions.
 Follow explicit repository conventions governing test-file grouping; otherwise apply the responsibility-based initial grouping above.
 Use an existing documentation or mapping format when it can express the required relationship.
+Keep the repository documentation's identification of ongoing executable evidence aligned with tests added, materially changed, consolidated, replaced, or retired. Use the existing test names, files, or coherent groups to identify evidence at the granularity needed to distinguish its guarantees. Preserve the single authoritative explanation in settled test documentation and use documentation-side references; test source needs only the code and naming required to express the test.
 
 This skill owns executable test establishment and lifecycle handling from settled test definitions and evidence-lifetime decisions.
 Test-evidence planning belongs to `test-evidence-planning`.

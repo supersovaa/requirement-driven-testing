@@ -27,6 +27,7 @@ When settled requirements or design do not determine an expected outcome, return
 ## Review evidence sufficiency
 
 For each required case, identify the executable test evidence intended to establish it.
+For ongoing tests added or materially changed in the review scope, confirm that settled test planning selected the required evidence within the applicable work boundary. Confirm that repository documentation explains the guarantees, violations, acceptable variations, and motivating problem or evidence gap at a useful guarantee, group, or case level, and identifies the corresponding executable evidence from the documentation side. Accept shared descriptions where they cover the relevant guarantees and tests. Route missing planning decisions or intent to `test-evidence-planning`, and stale test identifications to `test-evidence-implementation`.
 
 Treat the evidence as sufficient only when the relevant test behavior and assertions actually establish the case and expected outcome.
 Incidental execution of a code path is not evidence for a guarantee the test does not verify.
@@ -41,7 +42,7 @@ Identify evidence as missing or insufficient when a settled required case lacks 
 
 ## Review assertion scope as well as sufficiency
 
-For tests added or changed within the review scope, inspect whether their pass/fail assertions also reject behavior permitted by the settled requirement, design, and required test case. A passing test can still contain an unjustified stronger expectation.
+For tests added or changed within the review scope, inspect whether their pass/fail assertions also reject behavior permitted by the settled requirement, design, and required test case. Compare them with the documented permissible variations and request narrower assertions when valid changes would be rejected. A passing test can still contain an unjustified stronger expectation.
 
 Check complete equality of separate data formats, metadata, shared tables, ordering, and internal identifiers against the actual guarantee. When the settled test case requires only common meaning or a source relationship, assess assertions against those facts. Require representation-specific checks only when that case also includes those guarantees under the corresponding settled contracts. Treat unsupported restrictions as test correctness findings and request their removal or narrowing in the current change before accepting its tests as evidence.
 
