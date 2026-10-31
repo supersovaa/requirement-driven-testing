@@ -27,7 +27,7 @@ When settled requirements or design do not determine an expected outcome, return
 ## Review evidence sufficiency
 
 For each required case, identify the executable test evidence intended to establish it.
-For each newly added or materially expanded persistent test in the review scope, confirm that settled test planning selected its distinct required coverage within the applicable work boundary. Confirm a discoverable human-readable intent linking it to the governing guarantee, the concrete violation or evidence gap that prompted it, and the contract-valid variation its assertions should accept. Route missing planning decisions or intent records to `test-evidence-planning`.
+For ongoing tests added or materially changed in the review scope, confirm that settled test planning selected the required evidence within the applicable work boundary. Confirm that repository documentation explains the guarantees, violations, acceptable variations, and motivating problem or evidence gap at a useful guarantee, group, or case level, and identifies the corresponding executable evidence from the documentation side. Accept shared descriptions where they cover the relevant guarantees and tests. Route missing planning decisions or intent to `test-evidence-planning`, and stale test identifications to `test-evidence-implementation`.
 
 Treat the evidence as sufficient only when the relevant test behavior and assertions actually establish the case and expected outcome.
 Incidental execution of a code path is not evidence for a guarantee the test does not verify.
