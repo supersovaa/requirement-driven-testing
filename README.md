@@ -9,7 +9,7 @@ Test planning classifies verification by lifetime and selects sufficient executa
 Executable tests establish those guarantees while leaving incidental implementation choices free to change. Their pass/fail assertions must also accept outcomes permitted by the settled contracts. Repository test documentation records the guarantee, permissible variations, and motivating problem or evidence gap at a useful guarantee, group, or case level, identifying relevant executable evidence from the documentation side.
 Verification that may launch real end-to-end trials first receives an evidence-based necessity decision; justified runs use explicit bounds sized to the remaining guarantee and available resources.
 
-Ongoing evidence remains with continuing requirements and design guarantees. Temporary diagnostic verification ends with the current investigation or repair. Provisional evidence stands in until complete evidence becomes executable.
+Ongoing evidence remains with continuing requirements and design guarantees. During refactoring, preservation checks actual test discovery after tests move or change registration, so retained guarantees remain executable. Temporary diagnostic verification ends with the current investigation or repair. Provisional evidence stands in until complete evidence becomes executable.
 
 The workflow separates test-evidence planning, executable test implementation, preservation during behavior-preserving refactoring, focused review of evidence sufficiency and assertion scope, and repair of identified evidence gaps.
 
@@ -18,7 +18,7 @@ The workflow separates test-evidence planning, executable test implementation, p
 - [`test-evidence-planning`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/planning/SKILL.md) — plan or reassess executable verification for settled guarantees or current diagnostic work, classifying it as ongoing, temporary diagnostic, or provisional.
 - [`test-evidence-implementation`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/implementation/SKILL.md) — apply settled evidence lifetimes by establishing ongoing evidence, carrying out bounded temporary verification, replacing provisional evidence, and consolidating incidental or redundant coverage.
 - [`test-execution-budget`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/execution/SKILL.md) — before selecting verification commands that may launch real game or simulation trials, prefer zero-trial evidence when sufficient and bound necessary runs by evidence need and resource cost.
-- [`test-evidence-preservation`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/preservation/SKILL.md) — preserve still-applicable requirement and design guarantees when behavior-preserving refactoring changes tests.
+- [`test-evidence-preservation`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/preservation/SKILL.md) — preserve still-applicable requirement and design guarantees and verify discovered executable tests when behavior-preserving refactoring restructures tests.
 - [`test-evidence-review`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/review/SKILL.md) — judge both evidence sufficiency and whether executable assertions impose requirements beyond settled test definitions.
 - [`test-gap-remediation`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/remediation/SKILL.md) — close missing or insufficient executable evidence identified during review.
 
@@ -32,6 +32,7 @@ Implementation planning owns the implementation boundary and completion contract
 For plan-governed work, required test definitions are bounded by that contract and linked from the implementation plan before execution readiness.
 Requirement and design workflows own the authoritative behavior and contracts.
 
+`test-evidence-preservation` owns retaining executable evidence and confirming that affected tests remain discoverable through refactoring. The implementation workflow owns restructuring and the resulting code changes.
 `test-evidence-review` checks coverage sufficiency and unsupported assertion restrictions within another review workflow's existing scope.
 The surrounding review workflow continues to own its review scope, acceptance decisions, and findings outside this focused concern.
 
