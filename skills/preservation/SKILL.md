@@ -30,6 +30,14 @@ Reuse an existing replacement test when it already establishes the same guarante
 Retire incidental assertions and redundant tests while retaining sufficient evidence for the applicable guarantees.
 When a settled test definition itself fixes the incidental detail or requires redundant evidence, return that definition to `test-evidence-planning` for reassessment before changing its obligation.
 
+## Verify discovered test evidence
+
+When refactoring moves, splits, merges, or re-registers test files and modules, compare the tests actually discovered by the project's test runner for the affected targets and configurations before and after the change. Use the runner's collection or list mode where available, and trace test module registration, imports, feature gates, and target inclusion.
+
+For each still-applicable established guarantee, identify the discovered executable test or tests that now establish it. Treat source-level test annotations, file counts, test names, and total counts as signals for investigation. Judge preservation by executable evidence for the guarantees, allowing equivalent renamed, combined, or replacement tests. When a previous discovered inventory is available, use it to identify evidence that may have become disconnected.
+
+Restore the required test registration or equivalent executable evidence where discovery reveals a gap, then re-check the affected test inventory. Use the repository's verification workflow to establish that the discovered tests still exercise their intended assertions. Apply `test-execution-budget` when this verification may launch costly complete trials.
+
 ## Keep guarantee changes with their owner
 
 Weaken or remove an established guarantee only when its authoritative settled requirement or design contract has changed so that the guarantee no longer applies.
