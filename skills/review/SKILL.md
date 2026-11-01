@@ -45,6 +45,7 @@ Identify evidence as missing or insufficient when a settled required case lacks 
 For tests added or changed within the review scope, inspect whether their pass/fail assertions also reject behavior permitted by the settled requirement, design, and required test case. Compare them with the documented permissible variations and request narrower assertions when valid changes would be rejected. A passing test can still contain an unjustified stronger expectation.
 
 Check complete equality of separate data formats, metadata, shared tables, ordering, and internal identifiers against the actual guarantee. When the settled test case requires only common meaning or a source relationship, assess assertions against those facts. Require representation-specific checks only when that case also includes those guarantees under the corresponding settled contracts. Treat unsupported restrictions as test correctness findings and request their removal or narrowing in the current change before accepting its tests as evidence.
+For numeric assertions, including floating-point calculations affected by parallel reductions, verify that exact comparisons, invariants, tolerances, and non-finite handling follow the [planned numeric expectations](../planning/SKILL.md#define-required-test-cases) and still detect meaningful numerical violations.
 
 When the required test definition itself contains the unsupported restriction, refer that definition to `test-evidence-planning`. Keep the surrounding review workflow responsible for acceptance and the applicable blocking threshold.
 
