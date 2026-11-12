@@ -57,23 +57,15 @@ Treat defect reproduction as evidence-lifetime neutral: its lifetime comes from 
 Retire incidental assertions as directed by the settled planning decision.
 Return missing lifetime decisions and over-specified required definitions to `test-evidence-planning` before changing their obligations.
 
-## Establish tests before target implementation
+## Establish executable evidence from the test plan
 
-When a required case lacks sufficient executable evidence, establish that evidence before implementing the target behavior when the case can be meaningfully exercised.
+Use the [required test definitions settled before target implementation](../planning/SKILL.md#record-the-planning-result).
+Follow the governing implementation plan and dependencies to sequence executable test establishment and target implementation. For work without an implementation plan, coordinate that order with the implementation workflow within the current work boundary.
 
-For each required case:
+For each required case, add or reuse executable evidence and assess its result against the settled expected outcome. When a test runs before the required behavior exists, confirm that its failure identifies the missing behavior or contract. When it passes on its first run, confirm that it genuinely establishes the required case.
+Return implementation defects or remaining target behavior to the workflow that owns implementation execution.
 
-1. Select the settled required case.
-2. Add or select the executable test that establishes the case.
-3. Run it before target implementation.
-4. When the required behavior is missing, confirm that the test fails because of that missing behavior.
-5. When the test already passes, verify that existing behavior genuinely satisfies the required case instead of manufacturing a failure.
-6. Return any remaining target behavior to the workflow that owns implementation execution.
-7. After the target implementation is updated, run the focused test and relevant regression tests until they pass.
-
-Apply the same ordering to design cases when a settled design contract needs direct executable evidence.
-
-A pre-implementation failure is useful only when the missing target behavior or contract causes it.
+Run the focused tests and relevant regression tests against the completed target implementation. Treat the evidence as complete when it satisfies the settled test definitions for the current work boundary, applying the planned provisional-evidence conditions for staged work.
 
 ## Use subtractive fixtures for staged implementation
 

@@ -98,6 +98,7 @@ Use settled requirements and design as expectation authority, and repository sta
 
 ## Record the planning result
 
+Settle the required test cases, expected outcomes, evidence lifetimes, and validation scope for the current work boundary before target implementation begins.
 Use the repository's established format for required test definitions when one exists.
 
 For plan-governed work, record the complete required test definitions in repository-persistent documentation and link them from the implementation plan's completion criteria before execution readiness.
