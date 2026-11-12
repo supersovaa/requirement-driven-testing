@@ -35,12 +35,12 @@ Classify a defect reproduction as ongoing evidence when it establishes a continu
 ## Select sufficient ongoing evidence
 
 For each applicable requirement or design guarantee, including any required verification examples, inspect relevant settled test definitions and existing executable tests, including evidence owned by other plans or components.
-For each ongoing test considered for addition or retention in the current scope, including existing tests reused as required or regression evidence, identify the settled guarantee and the concrete violation its assertions can detect on a path that the product or another real consumer executes.
+For each ongoing test considered for addition or retention in the current scope, including existing tests reused as required or regression evidence, identify the settled guarantee and the concrete violation its assertions can detect on a consumer path or mode required by the settled requirements or design.
 Reuse sufficient definitions by reference and executable evidence when it establishes the guarantee; add or retain separate tests only for uncovered guarantees or distinct behavior at the current responsibility or integration boundary.
 One test may establish multiple guarantees, and multiple tests may together establish one.
 
-Assert required behavior and results on the paths consumers execute, including the real input and loading path when that path belongs to the guarantee.
-Use those assertions as evidence for the guarantees they actually establish. Executing a path without asserting its guarantee establishes none, and neither does asserting on a mode or path no consumer invokes.
+Assert required behavior and results on the consumer paths and modes required by the settled requirements or design, including the real input and loading path when that path belongs to the guarantee.
+Use those assertions as evidence for the guarantees they actually establish. Executing a path without asserting its guarantee establishes none, and neither does asserting on a path or mode outside those settled consumer contracts.
 Treat a handwritten copy of a loaded internal structure as redundant when behavioral evidence already establishes the same guarantee.
 Require separate representation or loading checks only for a distinct settled contract and a concrete violation outside that behavioral evidence.
 For tests, fixtures, helpers, and CI machinery, prefer consumer tests, review, and bounded change-time checks; add or retain dedicated tests only for a distinct continuing guarantee and a concrete failure those checks would miss.
