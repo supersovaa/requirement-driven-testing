@@ -5,7 +5,7 @@ A lightweight six-skill set for planning, implementing, preserving, reviewing, a
 ## Core idea
 
 Requirements and design define the guarantees.
-Test planning classifies verification by lifetime and selects sufficient executable evidence for continuing guarantees.
+Test planning classifies verification by lifetime and selects sufficient executable evidence for continuing guarantees, settling the required cases, expected outcomes, and validation scope before target implementation begins.
 Executable tests establish those guarantees while leaving incidental implementation choices free to change. Their pass/fail assertions must also accept outcomes permitted by the settled contracts. Repository test documentation records the guarantee, permissible variations, and motivating problem or evidence gap at a useful guarantee, group, or case level, identifying relevant executable evidence from the documentation side.
 Verification that may launch real end-to-end trials first receives an evidence-based necessity decision; justified runs use explicit bounds sized to the remaining guarantee and available resources.
 
@@ -28,7 +28,7 @@ The workflow separates test-evidence planning, executable test implementation, p
 `test-evidence-implementation` owns applying that classification: establishing ongoing evidence, completing temporary diagnostic verification at its boundary, replacing provisional evidence, and consolidating incidental or redundant artifacts.
 `test-execution-budget` owns the necessity gate and bounded execution of justified real trials; the selection and reassessment of required test evidence remain with test planning, and CI selection and configuration with `ci-execution-efficiency`.
 
-Implementation planning owns the implementation boundary and completion contract.
+Implementation planning owns the implementation boundary, completion contract, and dependency-based ordering of implementation and executable test establishment.
 For plan-governed work, required test definitions are bounded by that contract and linked from the implementation plan before execution readiness.
 Requirement and design workflows own the authoritative behavior and contracts.
 

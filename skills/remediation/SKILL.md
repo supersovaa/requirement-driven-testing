@@ -1,6 +1,6 @@
 ---
 name: test-gap-remediation
-description: Close missing or insufficient executable test evidence identified during review, strengthening tests before implementation fixes when the required case is already settled.
+description: Close missing or insufficient executable test evidence identified during review, applying settled test definitions and coordinating evidence repair with implementation fixes.
 ---
 
 # Test Gap Remediation
@@ -21,9 +21,9 @@ When requirements or design do not determine the expected result, return the amb
 
 Prioritize the test gap before ordinary cleanup or refactoring, except for prerequisites needed to build or run the required test.
 
-Apply `test-evidence-implementation` when implementing or strengthening the executable test.
+Apply [`test-evidence-implementation`](../implementation/SKILL.md) when implementing or strengthening the executable test, including its [sequencing rules](../implementation/SKILL.md#establish-executable-evidence-from-the-test-plan).
 
-When the implementation is incorrect, first add or strengthen a test that demonstrates the missing guarantee, then return the demonstrated defect to the workflow that owns implementation execution.
+When the implementation is incorrect, return the defect and its settled required case to the workflow that owns implementation execution, and coordinate the fix with executable evidence establishment.
 When the implementation is already correct and only evidence is missing, the remediation test may pass on its first run.
 
 After the gap is closed, use the resulting test as regression protection for the remaining review fixes.
