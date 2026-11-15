@@ -44,7 +44,7 @@ Complete test selection when the scoped verification obligations have sufficient
 
 Keeping ongoing evidence does not require executing every test for every change; CI execution selection belongs to `ci-execution-efficiency`.
 
-When a settled test definition fixes incidental details or duplicates sufficient evidence, revise it here against the governing guarantee and update its planning references.
+When a settled test definition fixes incidental details or duplicates sufficient evidence, revise it here against the governing guarantee in the test plan before introduction or the current test design afterward. Keep remaining planning references aligned with that authority.
 Treat proposed additional persistent tests discovered during implementation or review as test-planning candidates. Select them only after establishing their governing guarantee, the distinct violation that existing evidence misses, and their fit within the current work boundary; return changes to an implementation plan's settled boundary to its owning planning workflow.
 Keep changes to authoritative requirements, design, or completion contracts with their owning workflows.
 A settled required test definition remains a pending evidence obligation until its selected verification establishes the specified case and expected outcome or its definition is revised through the owning workflow.
@@ -94,14 +94,15 @@ Use settled requirements and design as expectation authority, and repository sta
 
 ## Record the planning result
 
-Settle the required test cases, expected outcomes, evidence lifetimes, and validation scope for the current work boundary before target implementation begins.
+For new verification, settle the required test cases, expected outcomes, evidence lifetimes, and validation scope in the test plan before target implementation begins.
+For reassessment of introduced verification, record the revised cases and decisions in the current test design and update references from any affected implementation plan.
 Use the repository's established format for required test definitions when one exists.
 
-For plan-governed work, record the complete required test definitions in repository-persistent documentation and link them from the implementation plan's completion criteria before execution readiness.
+For plan-governed work, keep the authoritative definitions in repository-persistent documentation and link them from the implementation plan's completion criteria before execution readiness. Resolve those links to the test plan for pending verification and to current test design for introduced verification.
 
 When linking test definitions in implementation plans or editing their planning indexes, follow [`plan-driven-planning`](https://github.com/supersovaa/plan-driven-implementation/blob/main/skills/plan-driven-planning/SKILL.md) for current planning facts and their derived views in those documents.
 
-For work without an implementation plan, record a concise test plan in the established work context. Keep plans for continuing tests in repository documentation and use the current work context for bounded temporary verification.
+For new verification without an implementation plan, record a concise test plan in the established work context. Keep plans for continuing tests in repository documentation and use the current work context for bounded temporary verification.
 
 Apply the written-accountability rules in [`test-lifecycle`](https://github.com/supersovaa/test-lifecycle/blob/main/SKILL.md). Test planning owns the explanation before introduction; test implementation establishes the current test design when introducing tests or manual procedures. Keep the plan's remaining references aligned with that handoff.
 

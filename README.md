@@ -1,6 +1,6 @@
 # Test Evidence Skills
 
-A lightweight six-skill set for planning, implementing, preserving, reviewing, and repairing executable evidence of already-settled requirements and design, plus selecting verification that may involve costly end-to-end trials.
+A lightweight six-skill set for planning, implementing, preserving, reviewing, and repairing automated or manual evidence of already-settled requirements and design, plus selecting verification that may involve costly end-to-end trials.
 
 ## Core idea
 
@@ -20,7 +20,7 @@ The workflow separates test-evidence planning, executable test implementation, p
 - [`test-execution-budget`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/execution/SKILL.md) — before selecting verification commands that may launch real game or simulation trials, prefer zero-trial evidence when sufficient and bound necessary runs by evidence need and resource cost.
 - [`test-evidence-preservation`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/preservation/SKILL.md) — preserve still-applicable requirement and design guarantees and verify discovered executable tests when behavior-preserving refactoring restructures tests.
 - [`test-evidence-review`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/review/SKILL.md) — review automated or manual evidence against the test plan or current test design for sufficient coverage and unsupported pass/fail restrictions.
-- [`test-gap-remediation`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/remediation/SKILL.md) — close missing or insufficient executable evidence identified during review.
+- [`test-gap-remediation`](https://github.com/supersovaa/requirement-driven-testing/blob/main/skills/remediation/SKILL.md) — close missing or insufficient automated or manual evidence identified during review.
 
 ## Responsibility boundaries
 
@@ -37,7 +37,7 @@ Requirement and design workflows own the authoritative behavior and contracts.
 `test-evidence-review` checks coverage sufficiency and unsupported assertion restrictions within another review workflow's existing scope.
 The surrounding review workflow continues to own its review scope, acceptance decisions, and findings outside this focused concern.
 
-These testing skills plan, establish, preserve, review, or restore executable evidence without taking ownership of requirement definition, design definition, implementation execution, or general implementation review.
+These testing skills plan, establish, preserve, review, or restore selected automated or manual evidence without taking ownership of requirement definition, design definition, implementation execution, or general implementation review.
 
 ## Setup
 

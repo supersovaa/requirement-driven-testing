@@ -14,13 +14,13 @@ Test planning belongs to `test-evidence-planning`.
 
 ## Consume settled test definitions
 
-When establishing required evidence, use the test cases, expected outcomes, and evidence-lifetime decisions settled by `test-evidence-planning`.
+Use settled cases, expected outcomes, and lifecycle decisions from the test plan for pending verification or from current test design for introduced verification.
 
 When establishing required evidence under an implementation plan, implement the required test definitions linked to the current plan boundary.
-Keep additions and expansions of persistent executable tests within the settled required definitions and current work boundary. Route any newly discovered need for distinct ongoing coverage to `test-evidence-planning` for selection and recording before implementing it.
+Keep additions and expansions of persistent tests or manual procedures within the settled required definitions and current work boundary. Route any newly discovered need for distinct ongoing coverage to `test-evidence-planning` for selection and recording before implementing it.
 Apply the settled validation scope, boundary coverage, combinations, regression scope, validation methods, and test-support constraints that govern those definitions.
 
-Return absent or incomplete settled definitions for required evidence to `test-evidence-planning`.
+Return absent or incomplete planning decisions to `test-evidence-planning`. Restore missing current test design under `test-lifecycle` before maintaining introduced verification.
 Treat identification of additional required cases, expected outcomes, or material testing decisions as `test-evidence-planning` work.
 When a settled test definition conflicts with applicable settled requirements or design, apply the authority rules below and return the definition mismatch to `test-evidence-planning`.
 When settled requirements or design do not determine an expected outcome, return that ambiguity to its owning workflow.
@@ -55,10 +55,10 @@ Return missing material planning decisions to `test-evidence-planning`. Execute 
 
 ## Establish executable evidence from the test plan
 
-Use the [required test definitions settled before target implementation](../planning/SKILL.md#record-the-planning-result).
+For new verification, use the [required test definitions settled before target implementation](../planning/SKILL.md#record-the-planning-result). For introduced verification, use the current test design, including subsequent settled revisions.
 Follow the governing implementation plan and dependencies to sequence executable test establishment and target implementation. For work without an implementation plan, coordinate that order with the implementation workflow within the current work boundary.
 
-For each required case, add or reuse executable evidence and assess its result against the settled expected outcome. When a test runs before the required behavior exists, confirm that its failure identifies the missing behavior or contract. When it passes on its first run, confirm that it genuinely establishes the required case.
+For each required case, add or reuse the selected automated test or manual procedure and assess its result against the settled expected outcome. When a test runs before the required behavior exists, confirm that its failure identifies the missing behavior or contract. When it passes on its first run, confirm that it genuinely establishes the required case.
 Return implementation defects or remaining target behavior to the workflow that owns implementation execution.
 
 Run the selected automated verification against the completed target implementation and carry out or obtain the required manual verification. Treat the evidence as complete when it satisfies the settled test definitions for the current work boundary, applying the planned provisional-evidence conditions for staged work.
