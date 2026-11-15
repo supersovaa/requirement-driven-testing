@@ -1,13 +1,14 @@
 ---
 name: test-evidence-implementation
-description: Apply settled evidence-lifetime decisions by establishing or reusing ongoing executable evidence, keeping temporary diagnostic verification bounded, replacing provisional evidence, and consolidating incidental or redundant coverage.
+description: Implement settled automated or manual test verification and its test design, including temporary checks, provisional evidence, consolidation, and retirement under selected lifecycle decisions.
 ---
 
 # Test Evidence Implementation
 
-Use this skill when implementing settled test-evidence decisions, including establishing ongoing evidence, carrying out bounded temporary diagnostic verification, replacing provisional evidence, narrowing incidental assertions, or consolidating redundant tests.
+Use this skill when implementing settled automated or manual test verification and its test design, including temporary checks, provisional evidence, consolidation, and retirement under selected lifecycle decisions.
 
-Treat required test definitions as implementation inputs for ongoing and provisional evidence. For temporary diagnostic verification, use its scope and completion boundary from the current work context.
+Apply [`test-lifecycle`](https://github.com/supersovaa/test-lifecycle/blob/main/SKILL.md) when introducing, changing, or retiring tests and their test design.
+Use the test plan for new verification and the current test design for introduced tests. Consume their selected role and completion or replacement condition.
 When selecting or executing verification that may launch real complete games, simulations, episodes, or similarly costly end-to-end trials, apply [`test-execution-budget`](../execution/SKILL.md) before selecting commands to determine whether those trials are necessary and to bound justified execution.
 Test planning belongs to `test-evidence-planning`.
 
@@ -43,19 +44,14 @@ For numeric pass/fail assertions, follow the [planned numeric expectations](../p
 
 Narrow an incidental assertion within the settled test definition before marking the evidence complete. When a stronger guarantee appears necessary, return that decision to `test-evidence-planning` rather than silently expanding the required test.
 
-## Implement according to evidence lifetime
+## Implement the selected verification role
 
-Inspect existing tests before adding ongoing evidence.
-Use an existing test when it already establishes the required case and expected outcome.
-Treat incidental path execution as insufficient when the test does not actually establish that guarantee.
-
-For ongoing evidence, keep sufficient executable coverage for each continuing guarantee and consolidate redundant tests according to the settled planning decision.
-For temporary diagnostic verification, prefer transient commands or scratch artifacts that stay outside the persistent test suite. When the verification needs a repository artifact, keep that artifact scoped to the current work and clear it at the settled completion boundary.
-For provisional evidence, keep the substitute only while its settled replacement condition applies, then establish the complete evidence and discharge the pending verification obligation.
-
-Treat defect reproduction as evidence-lifetime neutral: its lifetime comes from the settled guarantee it establishes.
-Retire incidental assertions as directed by the settled planning decision.
-Return missing lifetime decisions and over-specified required definitions to `test-evidence-planning` before changing their obligations.
+Inspect existing tests or manual procedures and reuse sufficient evidence for the selected case and expected outcome.
+Treat incidental path execution as insufficient when it does not establish the guarantee.
+Apply the classification and retirement decisions from [`test-lifecycle`](https://github.com/supersovaa/test-lifecycle/blob/main/SKILL.md); implement manual procedures as manual verification and CI tests as ongoing automated protection.
+For temporary verification, prefer transient commands or scratch artifacts and clear repository artifacts at their settled completion boundary.
+For provisional evidence, establish the complete verification when its replacement condition is met, then discharge the pending obligation and remove the substitute.
+Return missing material planning decisions to `test-evidence-planning`. Execute an already-settled retirement condition directly.
 
 ## Establish executable evidence from the test plan
 
@@ -65,7 +61,7 @@ Follow the governing implementation plan and dependencies to sequence executable
 For each required case, add or reuse executable evidence and assess its result against the settled expected outcome. When a test runs before the required behavior exists, confirm that its failure identifies the missing behavior or contract. When it passes on its first run, confirm that it genuinely establishes the required case.
 Return implementation defects or remaining target behavior to the workflow that owns implementation execution.
 
-Run the focused tests and relevant regression tests against the completed target implementation. Treat the evidence as complete when it satisfies the settled test definitions for the current work boundary, applying the planned provisional-evidence conditions for staged work.
+Run the selected automated verification against the completed target implementation and carry out or obtain the required manual verification. Treat the evidence as complete when it satisfies the settled test definitions for the current work boundary, applying the planned provisional-evidence conditions for staged work.
 
 ## Use subtractive fixtures for staged implementation
 
@@ -95,9 +91,9 @@ Extract shared fixtures and helpers when multiple test files actually need them,
 Use the repository's established test framework, fixture structure, naming, placement, and traceability conventions.
 Follow explicit repository conventions governing test-file grouping; otherwise apply the responsibility-based initial grouping above.
 Use an existing documentation or mapping format when it can express the required relationship.
-Keep the repository documentation's identification of ongoing executable evidence aligned with tests added, materially changed, consolidated, replaced, or retired. Use the existing test names, files, or coherent groups to identify evidence at the granularity needed to distinguish its guarantees. Preserve the single authoritative explanation in settled test documentation and use documentation-side references; test source needs only the code and naming required to express the test.
+When introducing tests or manual procedures, establish their current test design under `test-lifecycle` and transfer explanatory responsibility from the test plan. Keep that design aligned with retained verification and remove obsolete references during retirement.
 
-This skill owns executable test establishment and lifecycle handling from settled test definitions and evidence-lifetime decisions.
+This skill owns implementing selected verification, establishing and maintaining its test design, and performing cleanup under lifecycle decisions owned by `test-lifecycle`.
 Test-evidence planning belongs to `test-evidence-planning`.
 Behavior-preserving evidence retention belongs to `test-evidence-preservation`.
 Use `test-evidence-review` when a focused review of test-evidence sufficiency is needed.

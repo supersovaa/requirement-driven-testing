@@ -7,7 +7,8 @@ description: Preserve the requirement and design guarantees intentionally establ
 
 Use this skill when behavior-preserving refactoring changes tests that already carry established requirement or design evidence.
 
-Treat the guarantee established by a test as the thing to preserve, not the test's current structure.
+Apply [`test-lifecycle`](https://github.com/supersovaa/test-lifecycle/blob/main/SKILL.md) to assess which tests still need retention before preserving their evidence.
+For retained tests, preserve their selected guarantees independently of the tests' current structure.
 When selecting or executing verification that may launch real complete games, simulations, episodes, or similarly costly end-to-end trials, apply [`test-execution-budget`](../execution/SKILL.md) before selecting commands to determine whether those trials are necessary and to bound justified execution.
 
 ## Identify established guarantees
@@ -22,27 +23,27 @@ When settled design disagrees with a settled requirement, return the design issu
 
 ## Preserve equivalent evidence
 
-Keep executable evidence for every still-applicable established guarantee affected by the refactoring.
-Keep the repository documentation's identification of that evidence current when tests move, merge, split, or are replaced; retain shared guarantee-level explanations when they remain accurate.
+Keep executable evidence for every guarantee still selected for automated verification under the current lifecycle decisions and affected by the refactoring. Preserve selected manual procedures through their current test design.
+Keep the current test design's identification of that evidence aligned when tests move, merge, split, or are replaced; retain shared explanations when they remain accurate.
 The test may change framework usage, fixture shape, placement, decomposition, or assertion structure when the resulting evidence remains sufficient.
 
 Reuse an existing replacement test when it already establishes the same guarantee.
-Retire incidental assertions and redundant tests while retaining sufficient evidence for the applicable guarantees.
+Retire incidental assertions and redundant tests while retaining sufficient evidence for the selected continuing verification.
 When a settled test definition itself fixes the incidental detail or requires redundant evidence, return that definition to `test-evidence-planning` for reassessment before changing its obligation.
 
 ## Verify discovered test evidence
 
 When refactoring moves, splits, merges, or re-registers test files and modules, inspect the tests actually discovered by the project's test runner for the affected targets and configurations. Compare with a pre-refactor discovered inventory when available. Use the runner's collection or list mode where supported, and trace test module registration, imports, feature gates, and target inclusion.
 
-For each still-applicable established guarantee, identify the discovered executable test or tests that now establish it. Treat source-level test annotations, file counts, test names, and total counts as signals for investigation. Judge preservation by executable evidence for the guarantees, allowing equivalent renamed, combined, or replacement tests.
+For each guarantee still selected for automated verification, identify the discovered executable test or tests that now establish it. Treat source-level test annotations, file counts, test names, and total counts as signals for investigation. Judge preservation by executable evidence for the guarantees, allowing equivalent renamed, combined, or replacement tests.
 
 When discovery reveals missing required evidence, route its registration or equivalent evidence repair to the owning implementation workflow, or to `test-gap-remediation` for a review-discovered gap. Re-check the affected test inventory after correction. Use the repository's verification workflow to establish that the discovered tests still exercise their intended assertions. Apply `test-execution-budget` when this verification may launch costly complete trials.
 
 ## Keep guarantee changes with their owner
 
-Weaken or remove an established guarantee only when its authoritative settled requirement or design contract has changed so that the guarantee no longer applies.
-
-When the authoritative source is ambiguous, return that ambiguity to its owning workflow before discarding the evidence.
+Product requirements and design workflows own changes to the product guarantee.
+Test retention follows `test-lifecycle`; retiring a test whose protective role has ended does not remove the product guarantee.
+When the expected product behavior is ambiguous, return that ambiguity to its owning workflow.
 
 ## Preserve repository conventions
 

@@ -1,23 +1,24 @@
 ---
 name: test-evidence-review
-description: Review executable test evidence against settled definitions for both sufficient coverage and unsupported pass/fail restrictions.
+description: Review automated or manual test evidence against the test plan or current test design for both sufficient coverage and unsupported pass/fail restrictions.
 ---
 
 # Test Evidence Review
 
-Use this skill when a review needs to judge whether settled required test definitions have sufficient executable test evidence.
+Use this skill when a review needs to judge automated or manual test evidence against the test plan or current test design for sufficient coverage and unsupported pass/fail restrictions.
 Apply it within the surrounding review workflow's existing scope when another review workflow already governs the work.
 
-Treat settled requirements and design contracts as authority, required test definitions as the review contract, and executable tests as evidence.
+Apply [`test-lifecycle`](https://github.com/supersovaa/test-lifecycle/blob/main/SKILL.md) when reviewing lifecycle decisions, documentation ownership, and retirement in the current scope.
+Treat settled product requirements and design contracts as authority, the test plan as the contract for pending verification, and current test design as the contract for introduced verification.
 When independently selecting or executing verification that may launch real complete games, simulations, episodes, or similarly costly end-to-end trials, apply [`test-execution-budget`](../execution/SKILL.md) before selecting commands to determine whether those trials are necessary and to bound justified execution.
 
 ## Establish the review authority
 
-Use the settled required test definitions produced by `test-evidence-planning` that fall within the current review scope.
+Use the settled test plan for pending verification and the current test design for introduced tests or manual procedures within the review scope.
 
 When work is governed by an implementation plan, use the required test definitions linked to that plan boundary.
 
-Return missing required test definitions, missing expected outcomes, or incomplete material testing decisions to `test-evidence-planning`.
+Return missing planning decisions to `test-evidence-planning` and missing current test design to `test-evidence-implementation`.
 When a settled test definition conflicts with applicable settled requirements or design, apply the authority rules below and return the definition mismatch to `test-evidence-planning`.
 
 Requirements take precedence over design, tests, and implementation.
@@ -26,10 +27,10 @@ When settled requirements or design do not determine an expected outcome, return
 
 ## Review evidence sufficiency
 
-For each required case, identify the executable test evidence intended to establish it.
-For ongoing tests added or materially changed in the review scope, confirm that settled test planning selected the required evidence within the applicable work boundary. Confirm that repository documentation explains the guarantees, violations, acceptable variations, and motivating problem or evidence gap at a useful guarantee, group, or case level, and identifies the corresponding executable evidence from the documentation side. Accept shared descriptions where they cover the relevant guarantees and tests. Route missing planning decisions or intent to `test-evidence-planning`, and stale test identifications to `test-evidence-implementation`.
+For each required case, identify the selected automated or manual evidence intended to establish it.
+For tests added or materially changed in the review scope, confirm that planning selected their verification role within the applicable work boundary and that their explanations meet `test-lifecycle`. Route missing planning decisions to `test-evidence-planning`, and missing or stale test design to `test-evidence-implementation`.
 
-Treat the evidence as sufficient only when the relevant test behavior and assertions actually establish the case and expected outcome.
+Treat the evidence as sufficient only when the automated assertions or manual execution actually establish the case and expected outcome.
 Incidental execution of a code path is not evidence for a guarantee the test does not verify, and an assertion on a path or mode outside the settled consumer contracts is not evidence for any guarantee.
 
 Accept combined or shared tests when they collectively establish the required cases.
@@ -38,7 +39,7 @@ Return over-specified or redundant required test definitions to `test-evidence-p
 
 Apply the settled validation scope, boundary coverage, combinations, regression scope, validation methods, and test-support constraints that govern the reviewed definitions.
 
-Identify evidence as missing or insufficient when a settled required case lacks executable coverage strong enough to detect a violation.
+Identify evidence as missing or insufficient when a currently required case lacks the selected verification strong enough to detect its violation. Apply settled retirement conditions without demanding replacement coverage or a deletion rationale for tests whose role has ended.
 
 ## Review assertion scope as well as sufficiency
 

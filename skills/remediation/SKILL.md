@@ -11,7 +11,8 @@ Treat the review finding as a request to restore settled evidence, not as author
 
 ## Confirm the gap is already settled
 
-Identify the settled required test case and its expected outcome.
+Apply [`test-lifecycle`](https://github.com/supersovaa/test-lifecycle/blob/main/SKILL.md) to confirm that the case remains a current verification obligation.
+Identify its expected outcome from the test plan before introduction or the current test design afterward.
 
 When the finding requires a case or material testing decision that is absent from the settled test definitions, return it to `test-evidence-planning`.
 
@@ -26,7 +27,7 @@ Apply [`test-evidence-implementation`](../implementation/SKILL.md) when implemen
 When the implementation is incorrect, return the defect and its settled required case to the workflow that owns implementation execution, and coordinate the fix with executable evidence establishment.
 When the implementation is already correct and only evidence is missing, the remediation test may pass on its first run.
 
-After the gap is closed, use the resulting test as regression protection for the remaining review fixes.
+After the gap is closed, use the resulting test for the remaining review fixes within its selected lifetime. Apply `test-lifecycle` to its continuing role and retirement.
 
 ## Preserve repository conventions
 
