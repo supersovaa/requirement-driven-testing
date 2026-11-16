@@ -9,6 +9,8 @@ Use this skill when deciding or reassessing automated or manual verification for
 
 Treat requirements and design as authority, and test definitions as a planning output that makes the required evidence explicit.
 
+When planning additions or expansions to automatically collected tests, apply [`ci-execution-efficiency`](https://github.com/supersovaa/ci-efficiency/blob/main/skills/execution/SKILL.md) to their recurring execution cost, including when CI workflow files stay unchanged.
+
 ## Establish the planning scope
 
 Use the settled requirements and design that govern the requested work.
@@ -55,7 +57,7 @@ Specify the required test cases and expected outcomes at the granularity guarant
 Fix exact values, counts, positions, sequences, complete collections, names, wording, and representations only when those properties are established by the guarantee and test conditions. Otherwise, constrain expectations to the relevant properties and relationships.
 For numeric outcomes, distinguish exact-value guarantees from floating-point results whose rounding can vary with operation order, including parallel reductions. Specify guaranteed invariants or justified absolute and/or relative tolerances based on the required accuracy and value scale; use exact equality when the contract requires it. Specify the treatment of non-finite values when relevant, and keep tolerances narrow enough to detect meaningful numerical violations.
 Consider whether a valid refactoring, extension, or rewording preserving the tested guarantee could change an expected outcome. If so, refine the expectation to remain valid under that change without weakening the guarantee being tested.
-Select the narrowest validation scope sufficient to detect a violation. Before selecting complete games, simulations, episodes, or other costly end-to-end trials as required evidence, identify the guarantee that depends on complete trial execution and the concrete violation it would detect. Prefer inspection, deterministic unit, component, or focused state-transition tests, controlled results, and reusable evidence when they establish the same guarantee; choose complete trials when the guarantee specifically depends on the complete lifecycle, actual end-to-end integration, or statistical observations that require real sampling.
+Select the narrowest validation scope sufficient to detect a violation, subject to the repetition rule below. Before selecting complete games, simulations, episodes, or other costly end-to-end trials as required evidence, identify the guarantee that depends on complete trial execution and the concrete violation it would detect. Prefer inspection, deterministic unit, component, or focused state-transition tests, controlled results, and reusable evidence when they establish the same guarantee; choose a small bounded set of complete trials only for guarantees that require the complete lifecycle or actual end-to-end integration.
 Define boundary coverage, combinations, regression scope, validation methods, and test-support constraints when they materially affect whether the evidence is sufficient.
 For each varied condition, tie its variation to a guarantee or concrete violation the evidence must distinguish.
 Combine conditions when their interaction or boundary creates a distinct violation that representative cases for the individual conditions would miss; use representative cases for independent conditions whose combinations establish the same guarantee.
@@ -66,6 +68,17 @@ Use design cases for APIs, invariants, type guarantees, responsibility boundarie
 
 Keep the definitions about what must be established.
 Leave test framework mechanics, fixture implementation, test decomposition, and assertion structure to test implementation unless a settled constraint requires them.
+
+## Prohibit high-volume repetition
+
+Do not plan, add, expand, or execute high-volume repetition as test evidence. This includes bulk randomized draws or allocations, seed sweeps, repeated save/restore or real connections, and large generated or parameterized case combinations, even inside a single local unit test. A 10,000-allocation loop is prohibited; that example is not a numerical threshold permitting slightly smaller loops.
+Apply this rule to temporary, provisional, manual, and CI verification, including definitions already present in a settled plan or current test design. Fast execution, a fixed seed, a timeout, or splitting work across tests, commands, or workers does not authorize the method. Assess the combined repetition across those boundaries.
+
+Select a small bounded set of cases, each tied to a distinct boundary, interaction, or concrete violation. Compare the required guarantee, lighter evidence, and total work before fixing the cases. Account for case count times repetitions and the setup, allocation, serialization, I/O, and connection work performed within them; a small number of discovered tests can still hide substantial work.
+For randomized behavior, use controlled draws and deterministic boundary or invariant checks. Verify save/restore and real integration separately at the scale each guarantee requires, combining them only for a distinct interaction that separate checks miss. Use controlled results or counting substitutes to check large-count inputs and dispatch behavior without performing that many real operations. Do not add sample counts or statistical acceptance bands merely to gain confidence through repetition.
+
+Return existing high-volume definitions to test planning for replacement with sufficient focused evidence. If a settled requirement or design specifically requires a statistical, load, or scale guarantee that focused checks cannot establish, keep that obligation pending and return the verification decision to its owning workflow before implementation or execution. Do not silently weaken the guarantee or treat the existing definition as an exception to this prohibition.
+Record the selected method, its sufficiency, and the bounded scope in the test plan or current test design. CI scheduling and recurring execution cost remain with `ci-execution-efficiency`.
 
 ## Plan provisional evidence for staged implementation
 

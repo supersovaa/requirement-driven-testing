@@ -12,6 +12,9 @@ Use the test plan for new verification and the current test design for introduce
 When selecting or executing verification that may launch real complete games, simulations, episodes, or similarly costly end-to-end trials, apply [`test-execution-budget`](../execution/SKILL.md) before selecting commands to determine whether those trials are necessary and to bound justified execution.
 Test planning belongs to `test-evidence-planning`.
 
+Apply the [prohibition on high-volume repetition](../planning/SKILL.md#prohibit-high-volume-repetition) before implementing or executing tests, including tests prescribed by an existing plan. Return prohibited repetition or unnecessary processing required by a definition to `test-evidence-planning`; implement sufficient focused evidence after that definition is revised. Keep fixtures and helpers within the selected bounded scope.
+When adding or expanding automatically collected tests, apply [`ci-execution-efficiency`](https://github.com/supersovaa/ci-efficiency/blob/main/skills/execution/SKILL.md), including when CI workflow files stay unchanged.
+
 ## Consume settled test definitions
 
 Use settled cases, expected outcomes, and lifecycle decisions from the test plan for pending verification or from current test design for introduced verification.

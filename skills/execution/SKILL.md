@@ -7,13 +7,15 @@ description: Choose verification for work that may exercise games, simulators, e
 
 Use this skill when selecting or running verification for a game, simulator, episode, or other workflow that may launch costly complete end-to-end trials. Inspect broad test commands and indirect test runners before choosing an execution command, including when a single trial is proposed.
 
+Apply the [prohibition on high-volume repetition](../planning/SKILL.md#prohibit-high-volume-repetition) before command selection. The necessity and budgeting rules below operate within that prohibition; a settled plan or execution budget does not authorize high-volume repetition. Return prohibited definitions to `test-evidence-planning` before execution.
+
 ## Establish whether real trials are necessary
 
 Identify the specific settled guarantee or diagnostic question, the failure to detect, and relevant existing evidence. Compare complete trials with source or contract inspection, compilation, deterministic unit or component tests, focused state-transition tests, controlled fixtures, injected results, and reusable verified evidence.
 
 **Choose zero complete trials** when a lighter method establishes the same guarantee. For example, verify large trial-count inputs, dispatch counts, progress reporting, aggregation, and stop handling using controlled results or a counting substitute when these establish the contract.
 
-Select complete real trials when the outstanding guarantee specifically depends on the complete game or episode lifecycle, an actual end-to-end integration path, or statistical observations requiring real sampling. Verify individual game-state transitions through focused tests when those establish the guarantee. For every selected complete trial, identify the evidence that a zero-trial method leaves uncovered. Existing loops, a broad test command, or a large number in an example prompt require examining the assertions and their owning guarantee.
+Select a small bounded set of complete real trials when the outstanding guarantee specifically depends on the complete game or episode lifecycle or an actual end-to-end integration path. Verify individual game-state transitions through focused tests when those establish the guarantee. For every selected complete trial, identify the evidence that a zero-trial method leaves uncovered. Existing loops, a broad test command, or a large number in an example prompt require examining the assertions and their owning guarantee.
 
 Treat settled required test definitions as obligations. When a required definition prescribes real trials but an equivalent lighter method appears sufficient, return the proposed change to `test-evidence-planning` for reassessment; preserve the original requirement as pending until revised or verified. Keep requirement or design changes with their owning workflow.
 
