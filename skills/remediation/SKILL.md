@@ -22,7 +22,7 @@ When requirements or design do not determine the expected result, return the amb
 
 Prioritize the test gap before ordinary cleanup or refactoring, except for prerequisites needed to build or run the required test.
 
-Apply [`test-evidence-implementation`](../implementation/SKILL.md) when implementing or strengthening the selected automated test or manual procedure, including its [sequencing rules](../implementation/SKILL.md#establish-executable-evidence-from-the-test-plan).
+Apply [`test-evidence-implementation`](../implementation/SKILL.md) when implementing, strengthening, or executing the selected automated test or manual procedure, including its validation of permitted verification methods and its [sequencing rules](../implementation/SKILL.md#establish-executable-evidence-from-the-test-plan).
 For a missing manual result, carry out or obtain the required manual verification and assess its result against current test design; keep the obligation pending until that result is available.
 
 When the implementation is incorrect, return the defect and its settled required case to the workflow that owns implementation execution, and coordinate the fix with the selected automated or manual verification.

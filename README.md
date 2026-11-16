@@ -8,7 +8,7 @@ Requirements and design define the guarantees.
 Test planning applies [test-lifecycle](https://github.com/supersovaa/test-lifecycle/blob/main/SKILL.md) to select the verification role, then settles concrete cases, expected outcomes, and validation scope before target implementation begins.
 Selected automated tests and manual procedures establish those cases while leaving incidental implementation choices free to change. The test plan explains verification before introduction, and the current test design explains it afterward, following `test-lifecycle`.
 Verification that may launch real end-to-end trials first receives an evidence-based necessity decision; justified runs use explicit bounds sized to the remaining guarantee and available resources.
-Test planning prohibits high-volume repetition, including loops hidden inside local tests, and selects sufficient focused evidence. Implementation, execution, and review apply that same rule even to previously settled definitions.
+Test planning owns verification-method selection and the prohibition on high-volume repetition. Implementation, execution, preservation, review, and remediation apply that rule to both new and previously settled verification.
 
 Continuing verification follows lifecycle decisions. During refactoring, preservation checks actual test discovery for retained automated evidence. Staged implementation keeps complete verification obligations explicit while substitute evidence is in use.
 

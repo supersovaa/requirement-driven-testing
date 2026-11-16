@@ -10,7 +10,7 @@ Apply it within the surrounding review workflow's existing scope when another re
 
 Apply [`test-lifecycle`](https://github.com/supersovaa/test-lifecycle/blob/main/SKILL.md) when reviewing lifecycle decisions, documentation ownership, and retirement in the current scope.
 Treat settled product requirements and design contracts as authority, the test plan as the contract for pending verification, and current test design as the contract for introduced verification.
-When independently selecting or executing verification that may launch real complete games, simulations, episodes, or similarly costly end-to-end trials, apply [`test-execution-budget`](../execution/SKILL.md) before selecting commands to determine whether those trials are necessary and to bound justified execution.
+When independently selecting or executing verification, apply the [prohibition on high-volume repetition](../planning/SKILL.md#prohibit-high-volume-repetition), including for unchanged tests reused as evidence. For verification that may launch real complete games, simulations, episodes, or similarly costly end-to-end trials, also apply [`test-execution-budget`](../execution/SKILL.md) before selecting commands.
 
 ## Establish the review authority
 
