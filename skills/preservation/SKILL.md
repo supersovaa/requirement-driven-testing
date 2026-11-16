@@ -8,7 +8,7 @@ description: Preserve the requirement and design guarantees intentionally establ
 Use this skill when behavior-preserving refactoring changes tests that already carry established requirement or design evidence.
 
 Apply [`test-lifecycle`](https://github.com/supersovaa/test-lifecycle/blob/main/SKILL.md) to assess which tests still need retention before preserving their evidence.
-For retained tests, preserve their selected guarantees independently of the tests' current structure.
+For retained tests, preserve their selected guarantees using methods allowed by the [prohibition on high-volume repetition](../planning/SKILL.md#prohibit-high-volume-repetition), applying it before retaining or executing the affected tests.
 When selecting or executing verification that may launch real complete games, simulations, episodes, or similarly costly end-to-end trials, apply [`test-execution-budget`](../execution/SKILL.md) before selecting commands to determine whether those trials are necessary and to bound justified execution.
 
 ## Identify established guarantees
@@ -29,7 +29,7 @@ The test may change framework usage, fixture shape, placement, decomposition, or
 
 Reuse an existing replacement test when it already establishes the same guarantee.
 Retire incidental assertions and redundant tests while retaining sufficient evidence for the selected continuing verification.
-When a settled test definition itself fixes the incidental detail or requires redundant evidence, return that definition to `test-evidence-planning` for reassessment before changing its obligation.
+When a settled test definition fixes incidental details, requires redundant evidence, or prescribes prohibited repetition or unnecessary processing, return it to `test-evidence-planning` before retaining or executing that method. Keep the guarantee pending until sufficient permitted evidence is established or its obligation is revised by the owning workflow.
 
 ## Verify discovered test evidence
 

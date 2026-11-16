@@ -1,16 +1,16 @@
 ---
 name: test-evidence-review
-description: Review automated or manual test evidence against the test plan or current test design for both sufficient coverage and unsupported pass/fail restrictions.
+description: Review automated or manual test evidence against the test plan or current test design for sufficient coverage, unsupported pass/fail restrictions, prohibited repetition, and unnecessary processing cost.
 ---
 
 # Test Evidence Review
 
-Use this skill when a review needs to judge automated or manual test evidence against the test plan or current test design for sufficient coverage and unsupported pass/fail restrictions.
+Use this skill when a review needs to judge automated or manual test evidence against the test plan or current test design for sufficient coverage, unsupported pass/fail restrictions, prohibited repetition, and unnecessary processing cost.
 Apply it within the surrounding review workflow's existing scope when another review workflow already governs the work.
 
 Apply [`test-lifecycle`](https://github.com/supersovaa/test-lifecycle/blob/main/SKILL.md) when reviewing lifecycle decisions, documentation ownership, and retirement in the current scope.
 Treat settled product requirements and design contracts as authority, the test plan as the contract for pending verification, and current test design as the contract for introduced verification.
-When independently selecting or executing verification that may launch real complete games, simulations, episodes, or similarly costly end-to-end trials, apply [`test-execution-budget`](../execution/SKILL.md) before selecting commands to determine whether those trials are necessary and to bound justified execution.
+When independently selecting or executing verification, apply the [prohibition on high-volume repetition](../planning/SKILL.md#prohibit-high-volume-repetition), including for unchanged tests reused as evidence. For verification that may launch real complete games, simulations, episodes, or similarly costly end-to-end trials, also apply [`test-execution-budget`](../execution/SKILL.md) before selecting commands.
 
 ## Establish the review authority
 
@@ -41,6 +41,12 @@ Apply the settled validation scope, boundary coverage, combinations, regression 
 
 Identify evidence as missing or insufficient when a currently required case lacks the selected verification strong enough to detect its violation. Apply settled retirement conditions without demanding replacement coverage or a deletion rationale for tests whose role has ended.
 
+## Review repetition and processing cost
+
+Apply the [prohibition on high-volume repetition](../planning/SKILL.md#prohibit-high-volume-repetition) to added or changed tests and their governing definitions, even when the implementation exactly follows a settled plan. Inspect loops, generated cases, seed sweeps, and repeated fixture, save/restore, and connection work across the affected tests; test count and passing results do not establish proportionate verification.
+Return prohibited repetition or unnecessary processing prescribed by the test plan or current test design to `test-evidence-planning`, identifying the guarantee and the focused evidence that can replace it, or the unresolved verification decision. Route excess work introduced only by fixtures, helpers, or test implementation to `test-evidence-implementation` for correction within the selected scope. Keep any guarantee not yet established visible as pending.
+When reviewing additions or expansions to automatically collected tests, apply [`ci-execution-efficiency`](https://github.com/supersovaa/ci-efficiency/blob/main/skills/execution/SKILL.md) to recurring execution cost, including when CI workflow files stay unchanged. Keep acceptance decisions and the applicable blocking threshold with the surrounding review workflow.
+
 ## Review assertion scope as well as sufficiency
 
 For tests added or changed within the review scope, inspect whether their pass/fail assertions also reject behavior permitted by the settled requirement, design, and required test case. Compare them with the documented permissible variations and request narrower assertions when valid changes would be rejected. A passing test can still contain an unjustified stronger expectation.
@@ -57,7 +63,7 @@ Report each test-evidence gap with the settled required case, the concrete guara
 Route an established test-evidence gap to `test-gap-remediation`.
 When sufficient evidence instead exposes incorrect implementation behavior, return that defect to the workflow that owns implementation review or execution.
 
-This skill provides focused criteria for reviewing executable evidence sufficiency and assertion scope.
+This skill provides focused criteria for reviewing executable evidence sufficiency, assertion scope, repetition, and processing cost.
 Test-evidence planning belongs to `test-evidence-planning`.
 The surrounding review workflow retains ownership of its review scope, acceptance decisions, and other findings.
 This skill does not define requirements or design, plan required test cases, repair tests, implement production behavior, or replace general implementation review.

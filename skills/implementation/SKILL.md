@@ -12,15 +12,17 @@ Use the test plan for new verification and the current test design for introduce
 When selecting or executing verification that may launch real complete games, simulations, episodes, or similarly costly end-to-end trials, apply [`test-execution-budget`](../execution/SKILL.md) before selecting commands to determine whether those trials are necessary and to bound justified execution.
 Test planning belongs to `test-evidence-planning`.
 
+When adding or expanding automatically collected tests, apply [`ci-execution-efficiency`](https://github.com/supersovaa/ci-efficiency/blob/main/skills/execution/SKILL.md), including when CI workflow files stay unchanged.
+
 ## Consume settled test definitions
 
-Use settled cases, expected outcomes, and lifecycle decisions from the test plan for pending verification or from current test design for introduced verification.
+Use settled cases, expected outcomes, and lifecycle decisions from the test plan for pending verification or from current test design for introduced verification, applying the [prohibition on high-volume repetition](../planning/SKILL.md#prohibit-high-volume-repetition) before implementation or execution.
 
 When establishing required evidence under an implementation plan, implement the required test definitions linked to the current plan boundary.
 Keep additions and expansions of persistent tests or manual procedures within the settled required definitions and current work boundary. Route any newly discovered need for distinct ongoing coverage to `test-evidence-planning` for selection and recording before implementing it.
-Apply the settled validation scope, boundary coverage, combinations, regression scope, validation methods, and test-support constraints that govern those definitions.
+Apply the settled validation scope, boundary coverage, combinations, regression scope, validation methods, and test-support constraints that govern those definitions. Keep fixtures and helpers within the selected bounded scope.
 
-Return absent or incomplete planning decisions to `test-evidence-planning`. Restore missing current test design under `test-lifecycle` before maintaining introduced verification.
+Return absent or incomplete planning decisions and definitions prescribing prohibited repetition or unnecessary processing to `test-evidence-planning` before implementing or executing their verification. Restore missing current test design under `test-lifecycle` before maintaining introduced verification.
 Treat identification of additional required cases, expected outcomes, or material testing decisions as `test-evidence-planning` work.
 When a settled test definition conflicts with applicable settled requirements or design, apply the authority rules below and return the definition mismatch to `test-evidence-planning`.
 When settled requirements or design do not determine an expected outcome, return that ambiguity to its owning workflow.
