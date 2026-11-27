@@ -1,11 +1,11 @@
 ---
 name: test-evidence-preservation
-description: Preserve the requirement and design guarantees intentionally established by existing tests when behavior-preserving refactoring changes test structure or placement.
+description: When refactoring changes test structure or placement without changing behavior, preserve the requirement and design guarantees the retained tests establish.
 ---
 
 # Test Evidence Preservation
 
-Use this skill when behavior-preserving refactoring changes tests that already carry established requirement or design evidence.
+When behavior-preserving refactoring moves or restructures tests, identify the requirement or design evidence they already provide.
 
 Apply [`test-lifecycle`](https://github.com/supersovaa/test-lifecycle/blob/main/SKILL.md) to assess which tests still need retention before preserving their evidence.
 For retained tests, preserve their selected guarantees using methods allowed by the [prohibition on high-volume repetition](../planning/SKILL.md#prohibit-high-volume-repetition), applying it before retaining or executing the affected tests.
