@@ -1,11 +1,11 @@
 ---
 name: test-evidence-planning
-description: Plan or reassess automated or manual verification for settled requirements and design or current diagnostic work, including required cases, expected outcomes, coverage, regression scope, validation methods, and test-support constraints under selected lifecycle decisions.
+description: Use when planning or reassessing automated or manual verification for requirements, design, or a diagnostic task.
 ---
 
 # Test Evidence Planning
 
-Use this skill when deciding or reassessing automated or manual verification for settled requirements and design or current diagnostic work, including required cases and expected outcomes for addition, consolidation, replacement, and retirement.
+When deciding what evidence the work needs, derive cases, expected outcomes, and coverage from settled requirements and design or the current diagnostic question. Apply the same planning rules to additions, consolidation, replacement, and retirement.
 
 Treat requirements and design as authority, and test definitions as a planning output that makes the required evidence explicit.
 
