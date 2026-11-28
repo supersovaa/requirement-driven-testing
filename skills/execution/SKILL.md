@@ -1,11 +1,11 @@
 ---
 name: test-execution-budget
-description: Choose verification for work that may exercise games, simulators, episodes, or costly end-to-end trials, assess whether real trials are necessary, and bound justified executions.
+description: Use when selecting or running verification for games, simulators, or episode-based systems, and for other workflows that may run costly end-to-end trials.
 ---
 
 # Test Execution Budget
 
-Use this skill when selecting or running verification for a game, simulator, episode, or other workflow that may launch costly complete end-to-end trials. Inspect broad test commands and indirect test runners before choosing an execution command, including when a single trial is proposed.
+Before choosing a command, check what its tests and indirect runners can launch. If a complete game, simulation, episode, or other costly trial is possible, assess necessity even for a single trial and bound the runs that are justified.
 
 Before command selection, apply the [prohibition on high-volume repetition](../planning/SKILL.md#prohibit-high-volume-repetition). Return definitions prescribing it to `test-evidence-planning` for replacement, keeping the governing guarantee pending. Apply the necessity and budgeting rules below only to permitted verification methods.
 
