@@ -43,6 +43,7 @@ These testing skills plan, establish, preserve, review, or restore selected auto
 ## Setup
 
 For each work type, link the needed public `SKILL.md` definitions above directly from its existing guidance entry point, such as `AGENTS.md` or a task-specific `SKILL.md`.
+For behavior-preserving refactoring, load `test-evidence-preservation` at the refactoring entry. Apply its preservation procedure when existing tests move or change structure.
 Read and apply the linked skills when that work begins, including `test-lifecycle` at the planning, implementation, preservation, review, and remediation entry points that reference it.
 At each repository planning, implementation, testing, and review guidance entry point, directly link [`ci-execution-efficiency`](https://github.com/supersovaa/ci-efficiency/blob/main/skills/execution/SKILL.md) and activate it for additions or expansions to automatically collected tests, including when CI workflow files stay unchanged. Use its existing rules to assess recurring execution cost.
 Keep local guidance focused on activation and responsibility; the public skill definitions in this repository remain the authority for the detailed rules.
