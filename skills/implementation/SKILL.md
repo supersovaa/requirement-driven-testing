@@ -1,11 +1,11 @@
 ---
 name: test-evidence-implementation
-description: Implement settled automated or manual verification and its test design. Apply the selected lifecycle decisions to temporary checks, consolidation, and retirement.
+description: Use when implementing or maintaining automated or manual test verification and its test design.
 ---
 
 # Test Evidence Implementation
 
-Implement the settled automated or manual verification and its test design. Follow the selected lifecycle decisions when adding temporary checks, handling provisional evidence, consolidating tests, or retiring them.
+Implement settled test definitions. When temporary checks, provisional evidence, consolidation, or retirement are involved, follow the selected lifecycle decisions.
 
 Apply [`test-lifecycle`](https://github.com/supersovaa/test-lifecycle/blob/main/SKILL.md) when introducing, changing, or retiring tests and their test design.
 Use the test plan for new verification and the current test design for introduced tests. Consume their selected role and completion or replacement condition.
