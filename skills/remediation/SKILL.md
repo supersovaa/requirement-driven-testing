@@ -1,11 +1,11 @@
 ---
 name: test-gap-remediation
-description: Repair missing or insufficient automated or manual evidence found in review for a settled test case. Coordinate the repair with any implementation fix.
+description: Use when addressing review findings about missing or insufficient automated or manual test evidence.
 ---
 
 # Test Gap Remediation
 
-When review finds insufficient automated or manual evidence for a settled case, restore the evidence that case requires. The review finding does not authorize a new case, requirement, or design contract.
+When a finding identifies a settled case, restore its required evidence. If the obligation itself is undecided, use the planning handoff below. A review finding does not authorize a new requirement or design contract.
 
 ## Confirm the gap is already settled
 
