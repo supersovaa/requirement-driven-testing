@@ -1,12 +1,11 @@
 ---
 name: test-evidence-review
-description: Review automated or manual test evidence against the test plan or current test design for sufficient coverage, unsupported pass/fail restrictions, prohibited repetition, and unnecessary processing cost.
+description: Use when reviewing tests, manual verification, or implementation evidence. Judge evidence against the applicable test plan or design.
 ---
 
 # Test Evidence Review
 
-Use this skill when a review needs to judge automated or manual test evidence against the test plan or current test design for sufficient coverage, unsupported pass/fail restrictions, prohibited repetition, and unnecessary processing cost.
-Apply it within the surrounding review workflow's existing scope when another review workflow already governs the work.
+For evidence in the surrounding review scope, use the test plan or current test design to check coverage, pass/fail assertions, repetition, and processing cost.
 
 Apply [`test-lifecycle`](https://github.com/supersovaa/test-lifecycle/blob/main/SKILL.md) when reviewing lifecycle decisions, documentation ownership, and retirement in the current scope.
 Treat settled product requirements and design contracts as authority, the test plan as the contract for pending verification, and current test design as the contract for introduced verification.
